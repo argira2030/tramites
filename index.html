@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDEAKEY · Demo de trámites (maqueta)</title>
+<style>
+:root{color-scheme:light dark;--bg:#fff;--tx:#1a1a1a;--mu:#555;--pri:#0b5cad;--pt:#fff;--bd:#8a8a8a;--ok:#0a6b2d;--mal:#9b1c1c;--tar:#f3f5f8;--a1:#0b5cad;--a2:#0a6b2d;--a3:#b45309;--a4:#6d28d9;--a5:#0e7490;--a6:#9b1c1c}
+@media (prefers-color-scheme:dark){:root{--bg:#14171a;--tx:#f0f0f0;--mu:#b5b5b5;--pri:#6db3ff;--pt:#0b1220;--bd:#777;--ok:#7be39d;--mal:#ff9b9b;--tar:#1f242a;--a1:#6db3ff;--a2:#7be39d;--a3:#fbbf24;--a4:#c4b5fd;--a5:#67e8f9;--a6:#ff9b9b}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:1.1rem/1.5 system-ui,sans-serif;padding:max(1rem,env(safe-area-inset-top)) 1rem max(1rem,env(safe-area-inset-bottom))}
+html{font-size:clamp(100%,.85rem + .45vw,125%)}
+main{max-width:40rem;margin:0 auto}
+.pdesp{margin:1.2rem 0;border:2px solid var(--bd);border-radius:1rem;background:var(--bg);overflow:hidden}
+.pdesp>summary,.grupo>summary{list-style:none;cursor:pointer}
+.pdesp>summary::-webkit-details-marker,.grupo>summary::-webkit-details-marker{display:none}
+.pdesp>summary::after,.grupo>summary::after{content:"";margin-left:auto;flex:none;width:.65rem;height:.65rem;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg);transition:transform .2s}
+.pdesp[open]>summary::after,.grupo[open]>summary::after{transform:rotate(-135deg)}
+.pdesp>summary{display:flex;align-items:center;gap:.7rem;min-height:56px;padding:.6rem 1rem;font-size:1.25rem;font-weight:700;background:var(--pri);color:var(--pt)}
+.pdesp>summary small{display:block;font-weight:400;font-size:.9rem}
+.pdesp>summary:focus-visible{outline-color:var(--pt);outline-offset:-6px}
+.pdesp .cuerpo{padding:1rem}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1rem}
+.pb{--c:var(--a1);border:1px solid var(--bd);border-top:6px solid var(--c);border-radius:1rem;padding:.9rem 1rem 1rem;background:var(--tar);box-shadow:0 2px 8px rgb(0 0 0 / .08);transition:transform .15s,box-shadow .15s}
+.pb:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgb(0 0 0 / .14)}
+.pb .ic{display:grid;place-items:center;width:3rem;height:3rem;border-radius:50%;border:2px solid var(--c);font-size:1.5rem;background:var(--bg)}
+.pb h3{margin:.6rem 0 .3rem}
+.pb p{margin:.3rem 0}.pb ul{margin:.3rem 0;padding-left:1.2rem}.pb li{margin:.3rem 0}
+.pb.c2{--c:var(--a2)}.pb.c3{--c:var(--a3)}.pb.c4{--c:var(--a4)}.pb.c5{--c:var(--a5)}.pb.c6{--c:var(--a6)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;margin:.5rem 0}
+.tile{border:2px solid var(--c);border-radius:.7rem;padding:.4rem .2rem;text-align:center;background:var(--bg);font-size:.85rem;overflow-wrap:anywhere}
+.tile b{display:block;font-size:1.5rem;line-height:1.15}
+.grupo{margin:.6rem 0;border:1px solid var(--bd);border-radius:.8rem;background:var(--bg)}
+.grupo>summary{display:flex;align-items:center;gap:.5rem;min-height:48px;padding:.4rem .8rem;font-weight:700}
+.grupo .cnt{font-weight:400;font-size:.9rem;color:var(--mu)}
+.ogrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,10rem),1fr));gap:.6rem;padding:0 .8rem .8rem}
+.ofil{width:100%;font:inherit;min-height:48px;padding:.4rem .8rem;border:2px solid var(--bd);border-radius:.7rem;background:var(--bg);color:var(--tx);margin:.4rem 0}
+@media (prefers-reduced-motion:reduce){.pb,.pdesp>summary::after,.grupo>summary::after{transition:none}.pb:hover{transform:none}}
+.per{--c:var(--a1);margin:.8rem 0;border:2px solid var(--c);border-radius:1rem;background:var(--bg);overflow:hidden}
+.per.c2{--c:var(--a2)}.per.c3{--c:var(--a3)}.per.c4{--c:var(--a4)}.per.c5{--c:var(--a5)}
+.per>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:.7rem;min-height:56px;padding:.6rem 1rem;background:var(--c);color:var(--pt);font-weight:700;font-size:1.15rem}
+.per>summary::-webkit-details-marker{display:none}
+.per>summary::after{content:"";margin-left:auto;flex:none;width:.65rem;height:.65rem;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg);transition:transform .2s}
+.per[open]>summary::after{transform:rotate(-135deg)}
+.per>summary small{display:block;font-weight:400;font-size:.9rem}
+.per>summary:focus-visible{outline-color:var(--pt);outline-offset:-6px}
+.per .pi{display:grid;place-items:center;flex:none;width:2.6rem;height:2.6rem;border-radius:50%;background:var(--bg);font-size:1.4rem}
+.per .pc{padding:.2rem 1rem 1rem}
+.per .pc h4{margin:.9rem 0 .2rem;font-size:1.05rem;color:var(--c)}
+.per .pc p,.per .pc ul,.per .pc ol{margin:.3rem 0}.per .pc ul,.per .pc ol{padding-left:1.3rem}
+.per .tiles{--c:var(--c)}
+.amp{margin-top:.9rem;border:2px dashed var(--c);border-radius:.8rem;padding:0 .8rem .8rem}
+.amp>summary{color:var(--c)}
+@media (prefers-reduced-motion:reduce){.per>summary::after{transition:none}}
+.hero{--c:var(--a1)}
+.cmp{display:grid;gap:.5rem;margin:.6rem 0}
+.cmp .lin{border:2px solid var(--c);border-radius:.7rem;padding:.5rem .6rem;background:var(--bg)}
+.cmp .lin.no{--c:var(--a6)}.cmp .lin.si{--c:var(--a2)}
+.cmp .lin>b{display:block;margin-bottom:.2rem}
+.paso{display:inline-block;border:1px solid var(--bd);border-radius:2rem;padding:.15rem .7rem;margin:.15rem .15rem .15rem 0;font-size:.95rem}
+.lect{min-height:48px;margin:.4rem 0}
+.pact{border:3px solid var(--pri);border-radius:.8rem;padding:.6rem .8rem;margin:.6rem 0;background:var(--tar)}
+.pact button{min-height:48px;margin-top:.4rem}
+.dw{animation:dw 1.5s linear forwards}
+@keyframes dw{from{box-shadow:inset 0 0 0 0 var(--pri)}to{box-shadow:inset 0 0 0 .7rem var(--pri)}}
+@media (prefers-reduced-motion:reduce){.dw{animation:none;outline:6px solid var(--pri)}}
+html[data-perfil=marta] button,html[data-perfil=marta] a.btn{min-height:72px}
+html[data-perfil=imanol] button,html[data-perfil=imanol] a.btn{min-height:72px}
+html[data-perfil=imanol] main{margin-left:0;max-width:26rem}
+html[data-perfil=jorge]{font-size:125%}
+html[data-perfil=jorge] button,html[data-perfil=jorge] a.btn,html[data-perfil=jorge] summary{min-height:96px}
+html[data-perfil=avelina]{font-size:135%}
+html[data-perfil=avelina] body{line-height:1.65}
+html[data-perfil=carmen]{font-size:165%;color-scheme:dark;--bg:#000;--tx:#fff;--mu:#e6e6e6;--pri:#ffd60a;--pt:#000;--bd:#fff;--tar:#111;--ok:#7be39d;--mal:#ff9b9b;--a1:#6db3ff;--a2:#7be39d;--a3:#fbbf24;--a4:#c4b5fd;--a5:#67e8f9;--a6:#ff9b9b}
+html[data-perfil=carmen] *{border-width:max(2px,var(--bw,2px))}
+.tel{--tb:var(--bg);--tt:var(--tx);--tp:var(--pri);--tpt:var(--pt);--tbd:var(--bd);max-width:24rem;margin:.8rem auto;border:10px solid #222;border-radius:2rem;background:var(--tb);color:var(--tt);overflow:hidden;box-shadow:0 6px 20px rgb(0 0 0 / .25)}
+.tel.alto{--tb:#000;--tt:#fff;--tp:#ffd60a;--tpt:#000;--tbd:#fff;--ok:#7be39d;--mal:#ff9b9b}
+.pant{font-size:calc(var(--fs,1)*1rem);padding:1rem .8rem;min-height:30rem;max-height:42rem;overflow:auto;display:flex;flex-direction:column;gap:.5rem;line-height:1.4}
+.pant h3{margin:.2rem 0;font-size:1.15em}.pant p{margin:.2rem 0}
+.tel button,.tel a.btn{min-height:calc(var(--bh,56)*1px);width:100%;background:var(--tb);color:var(--tt);border:2px solid var(--tbd)}
+.tel .pri,.tel button[aria-pressed=true]{background:var(--tp);color:var(--tpt);border-color:var(--tp);font-weight:700}
+.tel .nb{flex-direction:column;align-items:flex-start;text-align:left}.tel .nb small{font-weight:400;font-size:.8em}
+.tel .cg b{display:block;margin:.4rem 0 .2rem}.tel .cg .fila{margin:0}.tel .cg button{min-height:52px;width:auto;flex:1 1 auto}
+.tel .tm{font-size:.85em;margin:0;opacity:.9}
+.tel.mano .pant{justify-content:flex-end}.tel.mano .pant>button,.tel.mano .pant>a.btn{align-self:flex-start;width:85%}
+.dos{display:block}
+@media (min-width:60rem){main{max-width:68rem}.dos{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:start}.dos>section{min-width:0}}
+@media (max-width:26rem){body{padding-left:.7rem;padding-right:.7rem}}
+h1{font-size:1.5rem;margin:.2rem 0}h2{font-size:1.25rem;margin:1.2rem 0 .4rem}h3{font-size:1.15rem;margin:.6rem 0}
+.aviso{border:2px dashed var(--bd);border-radius:.6rem;padding:.6rem .8rem;font-size:.95rem;color:var(--mu)}
+.nota{color:var(--mu);font-size:.95rem;margin:.3rem 0}
+.fila{display:flex;flex-wrap:wrap;gap:.6rem;margin:.6rem 0}
+button,a.btn{font:inherit;min-height:56px;padding:.5rem 1rem;border-radius:.7rem;border:2px solid var(--bd);background:var(--tar);color:var(--tx);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+button[aria-pressed=true]{border-color:var(--pri);background:var(--pri);color:var(--pt);font-weight:700}
+.pri{background:var(--pri);color:var(--pt);border-color:var(--pri);font-weight:700}
+.opc{flex:1 1 100%}
+:focus-visible{outline:4px solid var(--pri);outline-offset:2px}
+.quien{font-weight:700;margin:.8rem 0 0}
+.mock{border:2px solid var(--bd);border-radius:.6rem;padding:.6rem;background:var(--tar)}
+.caja{border:1px solid var(--bd);border-radius:2rem;padding:.4rem .9rem;margin-bottom:.6rem;background:var(--bg)}
+.res{padding:.5rem 0;border-top:1px solid var(--bd)}
+.res b{display:block}.res small{color:var(--mu)}
+.ad{display:inline-block;border:1px solid var(--bd);border-radius:.3rem;padding:0 .35rem;font-size:.8rem;margin-right:.4rem}
+.card{border:3px solid var(--ok);border-radius:.7rem;padding:.8rem}
+.dom{font-size:1.3rem;font-weight:700;word-break:break-all}
+.org{min-height:100px;flex-direction:column;gap:.15rem;padding:.6rem .5rem;border-radius:.9rem;font-weight:700;overflow-wrap:anywhere}
+.org .oi{font-size:1.7rem;line-height:1.1}
+.org small{font-weight:400;font-size:.85rem;color:inherit}
+.org .chip{margin-top:.2rem;padding:0 .5rem;border:1px solid currentColor;border-radius:1rem;font-size:.75rem;font-weight:700;opacity:.85}
+.vb{display:inline-block;border:2px solid;border-radius:.4rem;padding:.1rem .5rem;font-weight:700;font-size:.95rem;margin:.2rem 0}
+.vb.ok{color:var(--ok);border-color:var(--ok)}.vb.no{color:var(--mal);border-color:var(--mal)}
+.card.pend{border-color:var(--mal);border-style:dashed}
+.leyenda{border:1px solid var(--bd);border-radius:.6rem;padding:.5rem .8rem;font-size:.95rem}
+.fu{overflow-wrap:anywhere;font-size:.95rem}
+[hidden]{display:none!important}
+hr{border:0;border-top:2px solid var(--bd);margin:1.6rem 0 .8rem}
+details{margin-top:1.2rem}summary{cursor:pointer;min-height:48px;padding:.6rem 0;font-weight:700}
+.lead{font-size:1.05rem;margin:.2rem 0 .8rem}#pflow:empty{display:none}#pflow{margin:.6rem 0}
+</style>
+</head>
+<body>
+<main>
+<h1>IDEAKEY · Trámites</h1>
+<div id="pact" class="pact" role="status" hidden></div>
+<p class="lead">Elige qué quieres hacer y te llevamos a la web oficial. IDEAKEY no pide ni escribe datos.</p>
+<section aria-labelledby="hm">
+<h2 id="hm">Lo más pedido</h2>
+<div id="mas" class="fila" role="group" aria-labelledby="hm"></div>
+<div id="pflow"></div>
+</section>
+
+<section aria-labelledby="ho">
+<h2 id="ho">O elige por organismo</h2>
+<input id="ofil" class="ofil" type="search" placeholder="Buscar organismo o trámite" aria-label="Buscar organismo o trámite" hidden>
+<div id="orgs" role="group" aria-labelledby="ho"></div>
+<p id="osub" class="nota"></p>
+<div id="oflow"></div>
+<p id="ovivo" class="nota" role="status" aria-live="polite"></p>
+<p class="leyenda"><strong>✔ Verificado:</strong> el enlace se ha visto en la web oficial (la fuente se indica en cada caso). <strong>⚠ Por verificar:</strong> no comprobado; revísalo a mano antes de usarlo. Fecha de la última revisión: 8 nov 2026. Los enlaces pueden cambiar.</p>
+</section>
+
+<details class="pdesp" id="presentacion" open>
+<summary><span aria-hidden="true">♿</span><span>IDEAKEY es accesibilidad<small>Pulsa para mostrar u ocultar</small></span></summary>
+<div class="cuerpo">
+<div id="hero"></div>
+<h3 id="hq">Ver el caso de:</h3>
+<div id="chips" class="fila" role="group" aria-labelledby="hq"></div>
+<p class="nota">Casos con personas ficticias. Abre uno y mira el ejemplo. El botón «Ver ejemplo de perfil» enseña cómo podría adaptarse IDEAKEY algún día: no es una función de esta maqueta.</p>
+<div id="perfiles"></div>
+<h3>Para todas las personas</h3>
+<div class="pgrid">
+<article class="pb c4"><div class="ic" aria-hidden="true">🔍</div>
+<h3>Lo habitual</h3>
+<ul><li>Leer una lista con anuncios delante.</li><li>Decidir cuál es la web oficial.</li><li>Abrir una, mirar el nombre y, si no es, volver atrás.</li></ul></article>
+<article class="pb c2"><div class="ic" aria-hidden="true">👀</div>
+<h3>Antes de abrir</h3>
+<p>IDEAKEY enseña el <strong>nombre de la web</strong> y si el enlace está <strong>✔ verificado</strong> o <strong>⚠ por verificar</strong>.</p>
+<p>La persona comprueba el nombre ella misma y decide si pulsa «Ir a la web oficial».</p></article>
+<article class="pb c6"><div class="ic" aria-hidden="true">🚫</div>
+<h3>Lo que IDEAKEY no hace</h3>
+<ul><li>No sustituye a la web oficial: lleva hasta ella.</li><li>No pide ni escribe datos, ni hace el trámite.</li><li>Solo cubre los trámites de la lista.</li><li>Los enlaces se revisan a mano y pueden cambiar.</li></ul></article>
+<article class="pb c3"><div class="ic" aria-hidden="true">🧪</div>
+<h3>Lo que falta por saber</h3>
+<p>Es una maqueta. No se han medido toques, tiempo, errores ni fatiga. Lo que se dice de cada persona es una hipótesis por probar.</p>
+<p>Falta probarla con personas.</p></article>
+</div>
+</div>
+</details>
+
+<details class="pdesp" id="inicio" open>
+<summary><span aria-hidden="true">📱</span><span>Ejemplo: pantalla de inicio por necesidad<small>Pulsa una tarjeta y mira cómo se adapta el móvil</small></span></summary>
+<div class="cuerpo">
+<p class="nota">Idea para la primera pantalla de la app general de IDEAKEY: la persona elige lo que le describe y todo se adapta. Con «Configurar» ajusta cada cosa a mano. Los ajustes de cada necesidad son hipótesis por probar.</p>
+<div class="tel" id="tel"><div class="pant" id="pant"></div></div>
+</div>
+</details>
+
+
+<hr>
+<p class="nota">Las escenas de ejemplo, una a una (también puedes abrirlas desde cada persona):</p>
+<h2 id="he">Elige una escena</h2>
+<div id="tabs" class="fila" role="group" aria-labelledby="he"></div>
+<p id="quien" class="quien"></p>
+
+<div class="dos">
+<section aria-labelledby="hh">
+<h2 id="hh">1. Lo habitual: buscar en un buscador</h2>
+<div id="mock" class="mock"></div>
+<p class="nota">Lo que hace la persona (descripción, no medido):</p>
+<ol id="hab"></ol>
+</section>
+
+<section aria-labelledby="hi">
+<h2 id="hi">2. Con IDEAKEY: ir a la web oficial</h2>
+<div id="flow"></div>
+<div class="fila"><button id="rei" type="button">Repetir la escena</button></div>
+<p id="vivo" class="nota" role="status" aria-live="polite"></p>
+</section>
+</div>
+
+<details>
+<summary>Fuentes y estado de los enlaces</summary>
+<div id="fuentes"></div>
+</details>
+
+</main>
+<script>
+/* Para añadir «Empadronamiento» de tu provincia: rellena esta lista con
+   ['Nombre del municipio','https://enlace-oficial-del-ayuntamiento'] y revísalo a mano.
+   Si está vacía, esa escena no aparece. */
+const AYTOS=[];
+
+const SC=[
+{t:'Cita para el DNI',n:'DNI',q:'Marta necesita pedir cita para renovar el DNI.',b:'cita previa dni',
+ r:[[1,'citas-dni-rapido.example','Tu cita del DNI en 24 horas'],[1,'tramitesya.example','Gestionamos tu cita previa'],[0,'citapreviadnie.es','Cita previa DNI y pasaporte']],
+ p:[['¿Qué quieres?',['Pedir cita','Qué papeles necesito','Teléfono'],0]],
+ d:['citapreviadnie.es','https://www.citapreviadnie.es/','La cita se pide en esa web o llamando al 060.',1,'Comprobado antes con fuente oficial (nota municipal de 22/05/2026 citada en el análisis).']},
+{t:'Cita en la Seguridad Social',n:'Seguridad Social',q:'Marta necesita cita en la Seguridad Social.',b:'cita previa seguridad social',
+ r:[[1,'citas-seg-social.example','Cita Seguridad Social sin esperas'],[1,'gestoria-rapida.example','Te lo tramitamos hoy'],[0,'sede.seg-social.gob.es','Sede electrónica de la Seguridad Social']],
+ p:[['¿Qué quieres?',['Pedir cita','Consultar mi cita','Teléfono'],0]],
+ d:['sede.seg-social.gob.es','https://sede.seg-social.gob.es/','La cita previa se pide por internet desde la sede electrónica.',1,'Comprobado antes con fuente oficial (lista del encargo).']},
+{t:'Ayuda por dependencia',n:'Dependencia',q:'Marta quiere informarse de la ayuda por dependencia.',b:'ayuda dependencia como pedirla',
+ r:[[1,'ayudas-dependencia-ya.example','Cobra tu ayuda ya'],[1,'subvenciones-ya.example','Solicítala con nosotros'],[0,'imserso.es','Órganos gestores de cada comunidad']],
+ p:[['¿Qué quieres?',['Cómo se pide','Qué papeles necesito','Cuánto me pagan'],0],['¿Dónde?',['Mi comunidad autónoma','Mi ciudad'],0]],
+ d:['imserso.es','https://imserso.es/en/autonomia-personal-dependencia/sistema-autonomia-atencion-dependencia-saad/organos-gestores-ca-direcciones-territoriales-imserso','La ayuda la gestiona cada comunidad. Esa página del Imserso indica dónde pedirla en la tuya.',1,'Comprobado antes con fuente oficial: Imserso (lista del encargo).']}
+];
+if(AYTOS.length)SC.push({t:'Empadronamiento',n:'Empadronamiento',q:'Marta quiere empadronarse en su municipio.',b:'empadronamiento ayuntamiento',
+ r:[[1,'empadronamiento-online.example','Empadrónate sin salir de casa'],[1,'certificados-ya.example','Certificados al instante'],[0,'ayuntamiento (web oficial)','Empadronamiento']],
+ p:[['¿Qué quieres?',['Cómo se hace','Qué papeles necesito'],0],['¿Dónde?',AYTOS.map(a=>a[0]),-1]],
+ d:null});
+
+const $=id=>document.getElementById(id);
+function badge(v,f){
+ const d=h('p','nota');
+ d.append(h('span','vb '+(v?'ok':'no'),v?'✔ Verificado':'⚠ Por verificar'));
+ d.append(document.createElement('br'));
+ d.append(f||(v?'':'Enlace sin comprobar: revísalo a mano.'));
+ return d;
+}
+const h=(tag,cls,txt)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e};
+let cur=0,k=0,taps=0,last='',who='Marta';
+
+function dest(s,pick){
+ if(s.d)return s.d;
+ const a=AYTOS.find(x=>x[0]===pick);let dom=a[1];
+ try{dom=new URL(a[1]).hostname}catch(e){}
+ return[dom,a[1],'Es la web de tu ayuntamiento. Comprueba el nombre antes de escribir ningún dato.'];
+}
+function pasos(s){return[['¿Qué necesitas hacer?',SC.map(x=>x.t),cur],...s.p]}
+
+function tabs(){
+ $('tabs').replaceChildren(...SC.map((s,i)=>{const b=h('button','',(i+1)+'. '+s.n);b.type='button';b.setAttribute('aria-pressed',i===cur);b.onclick=()=>{cur=i;k=0;taps=0;last='';render()};return b}));
+}
+function mock(s){
+ const m=$('mock');m.replaceChildren(h('div','caja','🔍 '+s.b));
+ s.r.forEach(([ad,dom,tit])=>{const d=h('div','res');const b=h('b');if(ad)b.append(h('span','ad','Anuncio'));b.append(tit);d.append(b,h('small','',dom));m.append(d)});
+ m.append(h('p','nota','Resultados de ejemplo inventados. Aquí la persona debe decidir cuál es la web oficial.'));
+ $('hab').replaceChildren(...['Escribir las palabras con una mano (cansa).','Mirar la lista: ¿cuál es la oficial?','Abrir una y comprobar el nombre de la web.','Si no es, volver atrás y probar otra.'].map(t=>h('li','',t)));
+}
+function flow(s){
+ const f=$('flow'),P=pasos(s);f.replaceChildren();
+ if(k<P.length){
+  const [q,ops,ok]=P[k];
+  const t=h('h3','',q);t.tabIndex=-1;f.append(t,h('p','nota','Paso '+(k+1)+' de '+P.length+' (más el botón final)'));
+  const g=h('div','fila');g.setAttribute('role','group');g.setAttribute('aria-label',q);
+  ops.forEach((o,i)=>{const b=h('button','opc',o);b.type='button';b.onclick=()=>{
+   if(ok>=0&&i!==ok){$('vivo').textContent='En esta maqueta, para esta escena, elige: «'+ops[ok]+'».';return}
+   taps++;if(ok<0)last=o;k++;flow(s);$('vivo').textContent='';};g.append(b)});
+  f.append(g);
+ }else{
+  const [dom,url,nota,v,fte]=dest(s,last),c=h('div','card'+(v?'':' pend'));
+  c.append(h('p','nota','Vas a abrir:'),h('p','dom',dom),h('p','',nota),badge(v,fte));
+  const a=h('a','btn pri','Ir a la web oficial');a.href=url;a.target='_blank';a.rel='noopener noreferrer';
+  c.append(a,h('p','nota','Has hecho '+taps+' toques para elegir y 1 para abrir. Al abrir, el navegador visita esa web. IDEAKEY no envía palabras de búsqueda.'),h('p','nota','Revisa que el nombre de la web coincide antes de escribir cualquier dato.'));
+  f.append(c);$('vivo').textContent='Listo: se abrirá '+dom;
+ }
+}
+function render(){const s=SC[cur];tabs();$('quien').textContent=s.q.replace('Marta',who);mock(s);flow(s)}
+$('rei').onclick=()=>{k=0;taps=0;last='';render()};
+render();
+
+/* ===== Elige organismo (nuevo) ===== */
+/* v:1 verificado · v:0 por verificar · f = fuente · a = aviso extra. Revisado el 8 nov 2026. */
+const OFICIAL='Página abierta el 8 nov 2026';
+const MENU=(s)=>'Enlace del menú oficial de '+s+', leído el 8 nov 2026';
+const TUYA='Comprobado antes con fuente oficial (lista del encargo); no reabierto el 8 nov 2026';
+const LANPAG='Enlace de la página oficial de Lanbide «¿Qué hacer si me he quedado en paro?», leído el 8 nov 2026';
+/* am = ámbito: mun (municipio), ccaa (comunidad), est (Estado). ic = icono. Un organismo nuevo = un bloque más. */
+const ORGS=[
+{n:'Lan Ekintza',s:'hoy Bilbao Ekintza',am:'mun',ic:'🏢',
+ nota:'Lan Ekintza Bilbao se integró en Bilbao Ekintza en 2011 (BORME). Las webs son de bilbaoekintza.eus.',
+ tr:[
+  {t:'Buscar trabajo',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'La página trata de planes de empleo; la selección va por Lanbide. En el menú del sitio también hay «Intermediación laboral».',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/empleo/mejora-de-la-empleabilidad','Mejora de la empleabilidad, de Bilbao Ekintza.']},
+  {t:'Intermediación laboral',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'Es sobre todo un servicio para empresas. Si estás en paro, la página indica escribir por su formulario de contacto, en el área «Empleo y talento».',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/empleo/intermediacion-laboral','Intermediación laboral: Bilbao Ekintza es agencia de colocación colaboradora de Lanbide.']},
+  {t:'Quiero emprender',w:'Ver la información',v:1,f:MENU('bilbaoekintza.eus'),
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/emprende','Apartado «Emprende» de Bilbao Ekintza.']},
+  {t:'Ver ayudas y convocatorias',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'La lista cambia con cada convocatoria: mira las fechas dentro de cada ayuda.',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/ayudas-y-convocatorias','Apartado «Ayudas» de Bilbao Ekintza.']},
+  {t:'Empleo público',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'Desde esa página se entra a la plataforma de los procesos selectivos (opebilbaoekintza.bilbao.eus).',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/conocenos/oferta-publica-de-empleo','Oferta Pública de Empleo de Bilbao Ekintza.']},
+  {t:'Contactar con Bilbao Ekintza',w:'Ver cómo contactar',v:1,f:MENU('bilbaoekintza.eus'),
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/contacto','Contacto y atención ciudadana de Bilbao Ekintza.']}]},
+{n:'Lanbide',s:'Servicio Vasco de Empleo',am:'ccaa',ic:'💼',
+ tr:[
+  {t:'Buscar empleo',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-empleo/es/empleo/buscar-empleo','Apartado «Buscar empleo» de Lanbide.']},
+  {t:'Me he quedado en paro',w:'Darme de alta',v:1,f:OFICIAL+' (lanbide.euskadi.eus)',
+   a:'Lanbide no gestiona la prestación por desempleo: la pide el SEPE (mira el organismo SEPE, en «Estado»). Antes hay que estar de alta como demandante en Lanbide.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/que-hacer-si-me-he-quedado-en-paro/weblan01-empleo/es/','Esa página explica qué hacer y cómo darte de alta en Lanbide.']},
+  {t:'Renovar mi demanda de empleo',w:'Ir a Mi Lanbide',v:0,f:'El enlace está en el menú oficial («Mi Lanbide»), pero no he comprobado que la renovación se haga ahí. La página antigua de «cómo renuevo mi demanda» ya no sale en el menú.',
+   a:'Es tu área personal: pide identificarte. IDEAKEY no escribe tus datos.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-app/es/mi-lanbide/mi-perfil','Área personal «Mi Lanbide».']},
+  {t:'Pedir cita en Lanbide',w:'Pedir cita',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-app/es/cita-previa','Apartado «Solicitar cita» de Lanbide.']},
+  {t:'Buscar cursos',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-formacion/es/formacion/buscar-cursos','Apartado «Buscar cursos» de Lanbide.']},
+  {t:'Renta de Garantía de Ingresos',w:'Ver la información',v:1,f:LANPAG,
+   a:'Los requisitos se leen en esa web.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/ayuda_subvencion/2016/renta-de-garantia-de-ingresos-rgi/weblan01-prestaciones/es/','Página de la RGI en Lanbide.']},
+  {t:'Empleo público',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/empleo-publico/weblan01-empleo/es/','Apartado «Empleo público» de Lanbide.']}]},
+{n:'Etxebide',s:'Vivienda protegida (Gobierno Vasco)',am:'ccaa',ic:'🏠',
+ tr:[
+  {t:'Apuntarme como solicitante de vivienda',w:'Ver cómo se hace',v:1,f:OFICIAL+' (etxebide.euskadi.eus)',
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/tramitar-solicitud-vivienda','«Cómo solicitar vivienda»: registro de solicitantes de vivienda.']},
+  {t:'Adjudicaciones de vivienda',w:'Ver la información',v:1,f:OFICIAL+' (etxebide.euskadi.eus)',
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/inscripcion-adjudicacion','Inscripción para participar en los procesos de adjudicación.']},
+  {t:'Mi solicitud',w:'Ver la información',v:1,f:MENU('etxebide.euskadi.eus'),
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/mi-solicitud','«Mi solicitud»: consulta y gestión de tu solicitud de vivienda.']},
+  {t:'Derecho a una vivienda',w:'Ver la información',v:1,f:MENU('etxebide.euskadi.eus'),
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/derecho-subjetivo-acceso-vivienda','Información sobre el derecho subjetivo de acceso a una vivienda. Los requisitos se leen en esa web.']}]},
+{n:'DNI',s:'Policía Nacional',am:'est',ic:'🆔',
+ tr:[
+  {t:'Cita para el DNI',w:'Pedir cita',v:1,f:SC[0].d[4],
+   d:[SC[0].d[0],SC[0].d[1],SC[0].d[2]]},
+  {t:'Información del DNI electrónico',w:'Ver la información',v:0,f:'No comprobado: lo enlaza una web oficial (Lanbide) como «DNI electrónico», pero yo no lo he abierto.',
+   d:['dnielectronico.es','https://www.dnielectronico.es/PortalDNIe/','Portal del DNI electrónico.']}]},
+{n:'SEPE',s:'Prestación por desempleo',am:'est',ic:'🧾',
+ tr:[
+  {t:'Pedir cita en el SEPE',w:'Pedir cita',v:1,f:LANPAG+'. No lo he abierto en la web del SEPE.',
+   d:['sede.sepe.gob.es','https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/cita-previa.html','Cita previa en la sede electrónica del SEPE.']},
+  {t:'Pedir la prestación por desempleo',w:'Ver cómo se pide',v:1,f:LANPAG+'. No lo he abierto en la web del SEPE.',
+   a:'Por internet hace falta Cl@ve, certificado digital o DNI electrónico (lo indica Lanbide).',
+   d:['sede.sepe.gob.es','https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/solicitud-de-prestaciones.html','Solicitud de prestaciones por internet en la sede del SEPE.']}]},
+{n:'Seguridad Social',s:'Sede electrónica',am:'est',ic:'🛡️',
+ tr:[
+  {t:'Cita en la Seguridad Social',w:'Pedir cita',v:SC[1].d[3],f:SC[1].d[4],
+   d:[SC[1].d[0],SC[1].d[1],SC[1].d[2]]}]},
+{n:'Imserso',s:'Dependencia: dónde pedirla',am:'est',ic:'🤝',
+ tr:[
+  {t:'Ayuda por dependencia',w:'Ver dónde se pide',v:SC[2].d[3],f:SC[2].d[4],
+   d:[SC[2].d[0],SC[2].d[1],SC[2].d[2]]}]}
+];
+let oo=-1,ot=-1,ok2=0,otaps=0;
+const GR=[['mun','📍','Municipio · Bilbao'],['ccaa','🏛️','Comunidad · Euskadi'],['est','🗺️','Estado · toda España']];
+const norm=t=>t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const cerrados=new Set();let ofq='';
+function orgs(){
+ const box=$('orgs'),q=norm(ofq.trim());
+ $('ofil').hidden=ORGS.length<=8; /* el buscador aparece solo cuando hay más de 8 organismos */
+ const ok=o=>!q||norm([o.n,o.s,...o.tr.map(x=>x.t)].join(' ')).includes(q);
+ box.replaceChildren();let hay=false;
+ GR.forEach(([k,ic,tit])=>{
+  const L=ORGS.map((o,i)=>[o,i]).filter(([o])=>(o.am||'est')===k&&ok(o));
+  if(!L.length)return;hay=true;
+  const d=h('details','grupo'),sm=h('summary');
+  const i1=h('span','',ic);i1.setAttribute('aria-hidden','true');
+  sm.append(i1,h('span','',tit),h('span','cnt','· '+L.length+(L.length===1?' organismo':' organismos')));
+  const g=h('div','ogrid');
+  L.forEach(([o,i])=>{const b=h('button','org');b.type='button';
+   const oi=h('span','oi',o.ic||'🏢');oi.setAttribute('aria-hidden','true');
+   b.append(oi,h('span','',o.n),h('small','',o.s),h('span','chip',o.tr.length+(o.tr.length===1?' trámite':' trámites')));
+   b.setAttribute('aria-pressed',i===oo);
+   b.onclick=()=>{oo=i;ot=-1;ok2=0;otaps=1;$('ovivo').textContent='';$('pflow').replaceChildren();orender();$('oflow').querySelector('h3')?.focus()};g.append(b)});
+  d.append(sm,g);d.open=!!q||!cerrados.has(k);
+  d.addEventListener('toggle',()=>{if(q)return;d.open?cerrados.delete(k):cerrados.add(k)});
+  box.append(d)});
+ if(!hay)box.append(h('p','nota','Ningún organismo coincide con «'+ofq+'».'));
+ $('osub').textContent=oo>=0?(ORGS[oo].nota||''):'';
+}
+$('ofil').oninput=e=>{ofq=e.target.value;orgs()};
+function oflow(){
+ const f=$('oflow');f.replaceChildren();if(oo<0)return;
+ const o=ORGS[oo];
+ if(ot<0){
+  const t=h('h3','','¿Qué necesitas?');t.tabIndex=-1;f.append(t,h('p','nota','Paso 1 de 2 (más el botón final)'));
+  const g=h('div','fila');g.setAttribute('role','group');g.setAttribute('aria-label','¿Qué necesitas?');
+  o.tr.forEach((x,i)=>{const b=h('button','opc',x.t);b.type='button';b.onclick=()=>{ot=i;otaps++;orender();$('oflow').querySelector('h3')?.focus()};g.append(b)});
+  f.append(g);return;
+ }
+ const x=o.tr[ot];
+ if(ok2<1){
+  const t=h('h3','','¿Qué quieres?');t.tabIndex=-1;f.append(t,h('p','nota','Paso 2 de 2 (más el botón final)'));
+  const g=h('div','fila');g.setAttribute('role','group');g.setAttribute('aria-label','¿Qué quieres?');
+  [x.w,'Teléfono','Horario'].forEach((tx,i)=>{const b=h('button','opc',tx);b.type='button';b.onclick=()=>{
+   if(i>0){$('ovivo').textContent='En esta maqueta no hay teléfonos ni horarios (no se han comprobado). Elige: «'+x.w+'».';return}
+   $('ovivo').textContent='';ok2=1;otaps++;orender();$('oflow').querySelector('h3')?.focus()};g.append(b)});
+  f.append(g);return;
+ }
+ const c=tarjeta(x,'Has hecho '+otaps+' toques para elegir (organismo, qué necesitas, qué quieres) y 1 para abrir. IDEAKEY no envía palabras de búsqueda ni pide datos.');
+ f.append(c);$('ovivo').textContent='Listo: se abrirá '+x.d[0];
+}
+function tarjeta(x,toques){
+ const [dom,url,nota]=x.d,c=h('div','card'+(x.v?'':' pend'));
+ const t=h('h3','',x.t);t.tabIndex=-1;
+ c.append(t,h('p','nota','Vas a abrir:'),h('p','dom',dom),h('p','',nota),badge(x.v,x.f));
+ if(x.a)c.append(h('p','nota','Ojo: '+x.a));
+ const a=h('a','btn pri','Ir a la web oficial');a.href=url;a.target='_blank';a.rel='noopener noreferrer';
+ c.append(a,h('p','nota',toques),h('p','nota','Revisa que el nombre de la web coincide antes de escribir cualquier dato.'));
+ return c;
+}
+function orender(){orgs();oflow();
+ const r=$('orei');if(r)r.hidden=oo<0}
+function fuentes(){
+ const box=$('fuentes');box.replaceChildren();
+ const add=(titulo,items)=>{box.append(h('h3','',titulo));const ul=h('ul','fu');items.forEach(([t,u,v,f])=>{const li=h('li');li.append(h('strong','',(v?'✔ ':'⚠ ')+t+': '),u+' · '+(f||'Sin comprobar'));ul.append(li)});box.append(ul)};
+ ORGS.forEach(o=>add(o.n,o.tr.map(x=>[x.t,x.d[1].replace('https://',''),x.v,x.f])));
+ add('Escenas de ejemplo',SC.map(s=>[s.t,s.d?s.d[1].replace('https://',''):'(depende del municipio)',s.d&&s.d[3],s.d&&s.d[4]]));
+}
+const rb=h('button','','Empezar de nuevo');rb.type='button';rb.id='orei';rb.hidden=true;
+rb.onclick=()=>{oo=-1;ot=-1;ok2=0;otaps=0;$('ovivo').textContent='';orender()};
+$('oflow').after(rb);
+orender();fuentes();
+/* Lo más pedido: atajos que abren directamente la web oficial (1 toque para elegir + 1 para abrir) */
+const MAS=[['DNI','Cita para el DNI','Cita para el DNI'],['Lanbide','Me he quedado en paro','Me he quedado en paro'],['Lanbide','Pedir cita en Lanbide','Cita en Lanbide'],['SEPE','Pedir la prestación por desempleo','Pedir la prestación por desempleo'],['Seguridad Social','Cita en la Seguridad Social','Cita en la Seguridad Social'],['Imserso','Ayuda por dependencia','Ayuda por dependencia']];
+MAS.forEach(([on,tt,lab])=>{const o=ORGS.find(z=>z.n===on),x=o&&o.tr.find(z=>z.t===tt);if(!x)return;
+ const b=h('button','opc',lab);b.type='button';
+ b.onclick=()=>{oo=-1;ot=-1;ok2=0;otaps=0;$('ovivo').textContent='';orender();
+  const pf=$('pflow');pf.replaceChildren();
+  const c=tarjeta(x,'Has hecho 1 toque para elegir y 1 para abrir. IDEAKEY no envía palabras de búsqueda ni pide datos.');
+  const r=h('button','','Volver a elegir');r.type='button';r.onclick=()=>{pf.replaceChildren();b.focus()};
+  const fr=h('div','fila');fr.append(r);pf.append(c,fr);
+  c.querySelector('h3').focus();c.scrollIntoView({block:'nearest'})};
+ $('mas').append(b)});
+
+/* ===== Perfiles de la presentación: todos con el mismo formato y un color cada uno ===== */
+const PERF=[
+{n:'Marta',ic:'🖐️',d:'Una mano · se cansa al escribir',c:'',g:[0,1,2],
+ q:'Usa una sola mano y se cansa al escribir. Su dificultad no es entender los trámites: es el esfuerzo de teclear y de repetir pasos.',
+ c1:'Escribir con una mano las palabras de búsqueda: de 15 a 30 letras en estas tres gestiones. Si se equivoca de web, tiene que volver a escribir.',
+ a:'Toca en vez de escribir y responde una pregunta cada vez. Menos letras y menos decisiones deberían cansar menos la mano.'},
+{n:'Imanol',ic:'🤚',d:'Solo la mano izquierda · usa el móvil con ella',c:'c2',g:[1],
+ q:'Solo tiene la mano izquierda y maneja el móvil con ella. Escribe despacio y llegar a ciertos botones le obliga a recolocar el móvil.',
+ c1:'Teclear con una mano y acertar en botones pequeños o pegados entre sí.',
+ a:'Botones grandes, de ancho completo y uno debajo de otro, sin teclado. Que sean cómodos para un solo pulgar es una hipótesis por probar.'},
+{n:'Jorge',ic:'🧑‍🦽',d:'ELA · cada gesto le cuesta esfuerzo',c:'c3',g:[2],
+ q:'Tiene ELA. Cada toque y cada gesto le cuestan esfuerzo, así que le importa llegar a su ayuda con los menos pasos posibles.',
+ c1:'Buscar, escribir y comparar resultados: demasiados gestos antes de llegar a la web de la ayuda.',
+ a:'No escribe nada y llega a la web oficial con pocos toques. Menos pasos deberían cansarle menos; no se ha medido.'},
+{n:'Avelina',ic:'👵',d:'79 años · quiere renovar el DNI',c:'c4',g:[0],
+ q:'Tiene 79 años y quiere renovar el DNI. Busca un teléfono para pedir cita, pero en el buscador se mezclan anuncios y webs que parecen oficiales.',
+ c1:'No sabe cuál de los resultados es la web oficial y la letra pequeña le cansa.',
+ a:'Letra grande, una pregunta cada vez y el nombre de la web a la vista con su ✔ verificado. En esta maqueta, el aviso del DNI dice que la cita se pide en la web o llamando al 060.'},
+{n:'Carmen',ic:'🔎',d:'Baja visión',c:'c5',g:[1],
+ q:'Tiene baja visión. Lee con la pantalla muy ampliada y se pierde cuando hay muchas cosas a la vez.',
+ c1:'Leer listas con letra pequeña y distinguir un anuncio de un resultado.',
+ a:'Texto grande que crece con la pantalla, bordes y contraste altos, y una sola cosa por pantalla. El color nunca va solo: siempre hay texto («✔ Verificado»).'}
+];
+const EF={marta:'Botones más grandes, de ancho completo.',imanol:'Una columna estrecha pegada a la izquierda y botones grandes.',jorge:'Letra y botones muy grandes. Dispositivo ocular activado (simulado): mantén el puntero 1,5 s sobre un botón para pulsarlo. Aquí no se usa cámara real.',avelina:'Letra más grande y más espacio entre líneas.',carmen:'Letra muy grande, fondo negro y contraste alto.'};
+const TTS='speechSynthesis' in window;let lectSet=null;
+function lector(texto){
+ const b=h('button','lect');b.type='button';
+ const T={i:['▶ Escuchar','Escuchar este texto'],p:['⏸ Pausa','Pausar la lectura'],s:['▶ Seguir','Seguir la lectura']};
+ const set=e=>{b.dataset.e=e;b.textContent=T[e][0];b.setAttribute('aria-label',T[e][1])};
+ set('i');
+ if(!TTS){b.disabled=true;b.textContent='Lector no disponible en este navegador';return b}
+ b.onclick=()=>{const e=b.dataset.e;
+  if(e==='p'){speechSynthesis.pause();set('s');return}
+  if(e==='s'){speechSynthesis.resume();set('p');return}
+  speechSynthesis.cancel();if(lectSet)lectSet('i');
+  const u=new SpeechSynthesisUtterance(texto());u.lang='es-ES';
+  u.onend=()=>{if(lectSet===set)set('i')};u.onerror=u.onend;
+  lectSet=set;set('p');speechSynthesis.speak(u)};
+ return b}
+function pasosEj(p){
+ const s=SC[p.g[0]],P=pasos(s),[dom,,,v]=dest(s,'');
+ const L=P.map(([q,ops,ok],i)=>(i?'Luego toca':'Toca')+' «'+ops[ok<0?0:ok]+'» ('+q+')');
+ L.push('Mira el nombre de la web: '+dom+' · '+(v?'✔ Verificado':'⚠ Por verificar')+'.','Pulsa «Ir a la web oficial».');return L}
+function ejemplo(p){const ol=h('ol');pasosEj(p).forEach(t=>ol.append(h('li','',t)));return ol}
+function textoPerfil(p){const n=pasosEj(p).length-2;
+ return p.n+'. '+p.d+'. Quién es: '+p.q+' Qué le cuesta: '+p.c1+' Cómo puede ayudarle IDEAKEY: '+p.a+' Ejemplo, '+SC[p.g[0]].t+': '+pasosEj(p).join('. ')+'.'}
+function aplicar(id){
+ const D=document.documentElement,pa=$('pact');
+ if(id)D.dataset.perfil=id;else delete D.dataset.perfil;
+ document.querySelectorAll('.apl').forEach(b=>{const on=b.dataset.p===id;b.setAttribute('aria-pressed',on);b.textContent=on?'✔ Ejemplo de '+b.dataset.n+' activo (pulsa para quitar)':'Ver ejemplo de perfil: '+b.dataset.n});
+ if(!id){pa.hidden=true;pa.replaceChildren();return}
+ const p=PERF.find(x=>x.n.toLowerCase()===id);
+ const q=h('button','','Quitar el ejemplo');q.type='button';q.onclick=()=>aplicar('');
+ pa.replaceChildren(h('strong','','Ejemplo de perfil: '+p.n+'. Idea para la app general de IDEAKEY, no una función de esta maqueta.'),h('p','nota',EF[id]),q);pa.hidden=false}
+/* Modo mirada SIMULADO con el puntero (en la app real usa la cámara; aquí no hay cámara). */
+let dwT=null,dwEl=null;const DW='button,summary,a.btn';
+document.addEventListener('pointerover',e=>{
+ if(document.documentElement.dataset.perfil!=='jorge'&&!e.target.closest('.tel.mirada'))return;
+ const t=e.target.closest(DW);if(!t||t===dwEl)return;
+ clearTimeout(dwT);if(dwEl)dwEl.classList.remove('dw');dwEl=t;t.classList.add('dw');
+ dwT=setTimeout(()=>{t.classList.remove('dw');t.click()},1500)});
+document.addEventListener('pointerout',e=>{
+ const t=e.target.closest(DW);if(!t||t!==dwEl)return;
+ if(e.relatedTarget&&t.contains(e.relatedTarget))return;
+ clearTimeout(dwT);t.classList.remove('dw');dwEl=null});
+
+function hero(){
+ const s=SC[0],n=pasos(s).length,letras=s.b.length;
+ const P=['Pedir una cita o una ayuda empieza casi siempre en un buscador. Escribir, leer una lista con anuncios y decidir cuál es la web oficial es un esfuerzo que no todas las personas pueden hacer igual.',
+  'Eso es una barrera de accesibilidad: no está en el trámite, está en el camino hasta él. IDEAKEY quita ese camino. La persona toca botones grandes en vez de escribir, responde una pregunta cada vez y llega a la web oficial con menos clics.',
+  'Ejemplo con la cita del DNI. Con el buscador: escribir unas '+letras+' letras, leer la lista, decidir cuál es la oficial y volver atrás si no lo es. Con IDEAKEY: '+n+' toques para elegir y 1 para abrir.'];
+ const c=h('article','pb hero'),ic=h('div','ic','♿');ic.setAttribute('aria-hidden','true');
+ const cmp=h('div','cmp'),l1=h('div','lin no'),l2=h('div','lin si');
+ l1.append(h('b','','Con el buscador'));
+ ['⌨️ Escribir ~'+letras+' letras','👀 Leer la lista','🤔 Decidir cuál es la oficial','↩️ Volver si no es'].forEach(t=>l1.append(h('span','paso',t)));
+ l2.append(h('b','','Con IDEAKEY: '+n+' toques + 1'));
+ [...pasos(s).map(([q,o,ok])=>'👆 '+o[ok<0?0:ok]),'✔ Ir a la web oficial'].forEach(t=>l2.append(h('span','paso',t)));
+ cmp.append(l1,l2);
+ c.append(ic,h('h3','','IDEAKEY es accesibilidad: llegar al trámite con menos clics'),h('p','',P[0]),h('p','',P[1]),cmp,h('p','nota','Es un recuento de pasos en esta maqueta, no una medición con personas.'),lector(()=>'IDEAKEY es accesibilidad. '+P.join(' ')));
+ $('hero').replaceChildren(c)}
+function perfiles(){
+ $('chips').replaceChildren(...PERF.map(p=>{const b=h('button','',p.ic+' '+p.d.split(' · ')[0]);b.type='button';
+  b.onclick=()=>{const d=$('per-'+p.n);document.querySelectorAll('.per').forEach(x=>x.open=false);d.open=true;d.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'});d.querySelector('summary').focus()};return b}));
+ $('perfiles').replaceChildren(...PERF.map(p=>{
+  const d=h('details','per '+p.c),sm=h('summary'),pi=h('span','pi',p.ic);d.id='per-'+p.n;pi.setAttribute('aria-hidden','true');
+  const tx=h('span','',p.n);tx.append(h('small','',p.d));sm.append(pi,tx);
+  const c=h('div','pc');
+  c.append(lector(()=>textoPerfil(p)),h('h4','','Quién es'),h('p','',p.q));
+  c.append(h('h4','','Sus gestiones'));
+  const t=h('div','tiles');
+  p.g.forEach(i=>{const x=SC[i],n=pasos(x).length;const e=h('div','tile');e.append(h('b','',n+'+1'),x.n);t.append(e)});
+  c.append(t,h('p','nota','Toques para elegir + 1 para abrir la web. Es un recuento, no una medición.'));
+  c.append(h('h4','','Qué le cuesta'),h('p','',p.c1));
+  c.append(h('h4','','Cómo puede ayudarle IDEAKEY'),h('p','',p.a));
+  const am=h('details','amp'),as=h('summary','','Ampliar el ejemplo: '+SC[p.g[0]].t);
+  const id=p.n.toLowerCase();
+  const ap=h('button','pri apl','Ver ejemplo de perfil: '+p.n);ap.type='button';ap.dataset.p=id;ap.dataset.n=p.n;ap.setAttribute('aria-pressed','false');
+  ap.onclick=()=>aplicar(document.documentElement.dataset.perfil===id?'':id);
+  const b=h('button','','Probar esta escena');b.type='button';
+  b.onclick=()=>{cur=p.g[0];who=p.n;k=0;taps=0;last='';render();$('he').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion:reduce)').matches?'auto':'smooth'})};
+  const fl=h('div','fila');fl.append(ap,b);
+  am.append(as,ejemplo(p),fl);
+  c.append(am);d.append(sm,c);return d}));
+ $('perfiles').firstChild.open=true;
+}
+hero();perfiles();
+
+/* ===== Ejemplo: pantalla de inicio por necesidad (móvil de muestra) ===== */
+const DEF={fs:1,alto:0,bh:56,mano:0,mirada:0};
+const NEC=[
+{id:'carmen',ic:'🔎',t:'Veo poco',d:'Baja visión: letra muy grande y contraste alto',s:{fs:1.6,alto:1,bh:80}},
+{id:'imanol',ic:'🤚',t:'Uso una sola mano',d:'Botones abajo y a la izquierda, más grandes',s:{fs:1.1,bh:80,mano:1}},
+{id:'marta',ic:'🖐️',t:'Me canso al escribir',d:'Botones grandes: tocar en vez de teclear',s:{fs:1.1,bh:72}},
+{id:'avelina',ic:'👵',t:'Prefiero letra grande',d:'Letra grande y más espacio',s:{fs:1.3,bh:72}},
+{id:'jorge',ic:'👁️',t:'Uso la mirada (ELA)',d:'Botones muy grandes y dispositivo ocular (simulado)',s:{fs:1.3,bh:104,mirada:1}}];
+const TS={v:'home',nec:null,c:{...DEF},tr:-1,back:'home'};
+function inicio(foc){
+ const t=$('tel'),P=$('pant'),c=TS.c;
+ t.classList.toggle('alto',!!c.alto);t.classList.toggle('mano',!!c.mano);t.classList.toggle('mirada',!!c.mirada);
+ t.style.setProperty('--fs',c.fs);t.style.setProperty('--bh',c.bh);
+ P.replaceChildren();
+ const B=(tx,fn,k,cl,pr)=>{const b=h('button',cl||'',tx);b.type='button';b.dataset.k=k;if(pr!==undefined)b.setAttribute('aria-pressed',pr);b.onclick=fn;return b};
+ const T=x=>{const e=h('h3','',x);e.tabIndex=-1;e.dataset.k='h';P.append(e)};
+ const go=(v,k)=>{TS.v=v;inicio(k||'h')};
+ if(TS.v==='conf'){
+  T('Configurar');
+  const G=(tit,campo,ops)=>{const d=h('div','cg');d.append(h('b','',tit));const r=h('div','fila');
+   ops.forEach(([l,v])=>r.append(B(l,()=>{c[campo]=v;inicio(campo+v)},campo+v,'',c[campo]===v)));d.append(r);P.append(d)};
+  G('Letra','fs',[['Normal',1],['Grande',1.3],['Muy grande',1.6]]);
+  G('Contraste','alto',[['Normal',0],['Alto',1]]);
+  G('Botones','bh',[['Normales',56],['Grandes',80],['Muy grandes',104]]);
+  G('Una mano (todo abajo y a la izquierda)','mano',[['No',0],['Sí',1]]);
+  G('Mirada (simulada: mantén el puntero 1,5 s)','mirada',[['No',0],['Sí',1]]);
+  P.append(B('Listo',()=>go(TS.back),'ok','pri'));
+ }else if(TS.v==='home'){
+  T('Elige lo que te describe');
+  NEC.forEach(n=>{const b=B(n.ic+' '+n.t,()=>{TS.nec=n;TS.c=Object.assign(TS.c,DEF,n.s);TS.tr=-1;go('tram')},'n-'+n.id,'nb');b.append(h('small','',n.d));P.append(b)});
+  P.append(B('⚙️ Configurar',()=>{TS.back='home';go('conf')},'cf','pri'));
+ }else{
+  T('¿Qué trámite necesitas?');
+  P.append(h('p','tm','Ajustado para: '+TS.nec.t));
+  if(TS.tr<0){
+   SC.slice(0,3).forEach((x,i)=>P.append(B(x.t,()=>{TS.tr=i;inicio()},'t'+i)));
+  }else{
+   const x=SC[TS.tr],[dom,url,nota,v]=dest(x,'');
+   P.append(h('p','',nota),h('p','dom',dom),h('span','vb '+(v?'ok':'no'),v?'✔ Verificado':'⚠ Por verificar'));
+   const a=h('a','btn pri','Ir a la web oficial');a.href=url;a.target='_blank';a.rel='noopener noreferrer';P.append(a,B('Otro trámite',()=>{TS.tr=-1;inicio()},'otro'));
+  }
+  P.append(B('⚙️ Configurar',()=>{TS.back='tram';go('conf')},'cf'),B('Cambiar de necesidad',()=>go('home'),'cam'));
+ }
+ const e=P.querySelector('[data-k="'+foc+'"]');if(e)e.focus({preventScroll:foc==='h'});
+}
+inicio();
+</script>
+</body>
+</html>
