@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trámites · webs oficiales</title><style>
+:root{color-scheme:light dark;--bg:#FBF5EC;--tx:#2a1d14;--mu:#5d4b3e;--pri:#B4532A;--pt:#fff;--bd:#8c6a55;--ok:#176a2e;--wn:#8a4b00;--tar:#fff;--soft:#F3E6D4;--hi:#ffe3a8}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1511;--tx:#f6ebe0;--mu:#cdb9a8;--pri:#F0A07A;--pt:#1c1511;--bd:#a88b76;--ok:#8be0a4;--wn:#ffc46b;--tar:#271d17;--soft:#33261d;--hi:#4d3a14}}
+@media (prefers-contrast:more){:root{--bg:#fff;--tx:#000;--mu:#1a1a1a;--pri:#7a2a0c;--pt:#fff;--bd:#000;--ok:#0b4a1e;--wn:#5a2f00;--tar:#fff;--soft:#f0f0f0;--hi:#ffe08a}.org,.atajos,.pill,.pop,.bd,input[type=search],.xb,.op,.gp{border-width:3px}}
+@media (prefers-contrast:more) and (prefers-color-scheme:dark){:root{--bg:#000;--tx:#fff;--mu:#fff;--pri:#ffc9ad;--pt:#000;--bd:#fff;--ok:#a8f0bd;--wn:#ffd88a;--tar:#000;--soft:#1a1a1a;--hi:#5a4200}}
+@media (max-width:20em){details.tr>summary{flex-wrap:wrap}}
+.ikp a{color:var(--pri);font-weight:700;text-underline-offset:.15em} .vik{display:inline-flex;align-items:center;min-height:48px;padding:.3rem 1.1rem;border:2px solid var(--bd);border-radius:999px;background:var(--tar);color:var(--tx);font-weight:700;text-decoration:none} #vik{margin:.4rem 0}
+@media (forced-colors:active){:focus-visible{outline-color:Highlight}.pill[aria-pressed=true]{forced-color-adjust:none;background:Highlight;color:HighlightText;border-color:Highlight}}
+*{box-sizing:border-box}html{font-size:clamp(100%,.85rem + .45vw,125%)}
+body{margin:0;background:var(--bg);color:var(--tx);font:1.05rem/1.5 system-ui,sans-serif;padding:max(1rem,env(safe-area-inset-top)) 1rem max(1.5rem,env(safe-area-inset-bottom))}
+main{max-width:40rem;margin:0 auto}h1{font-size:1.7rem;margin:.3rem 0}h2{font-size:1.25rem;margin:1.6rem 0 .6rem}
+.nota{color:var(--mu);font-size:.95rem;margin:.4rem 0}
+:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+button,summary,input,a.btn{font:inherit;min-height:56px}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.pill,.pop{border:2px solid var(--bd);background:var(--tar);color:var(--tx);border-radius:999px;padding:.5rem 1.1rem;cursor:pointer}
+.pill[aria-pressed=true]{background:var(--pri);color:var(--pt);border-color:var(--pri);font-weight:700}
+.atajos{border:2px solid var(--bd);border-radius:1rem;margin:1.2rem 0;background:var(--tar)}.atajos>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;font-size:1.2rem;font-weight:700}.atajos>summary::after{content:"";width:.6rem;height:.6rem;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg)}.atajos[open]>summary::after{transform:rotate(-135deg)}.atajos>p,.atajos>.pops{margin:.4rem 1rem 1rem}.pops{display:grid;gap:.6rem}.pop{border-radius:1rem;text-align:left;font-weight:600;display:flex;gap:.6rem;align-items:center}
+input[type=search]{width:100%;border:2px solid var(--bd);border-radius:999px;padding:.5rem 1.1rem;background:var(--tar);color:var(--tx)}
+.org{background:var(--tar);border:2px solid var(--bd);border-radius:1.1rem;padding:1rem;margin:1rem 0}
+.org h4{margin:0;font-size:1.2rem}.lvh{font-size:1.2rem;margin:1.4rem 0 .2rem}.org header{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.6rem}
+.ic{font-size:1.8rem;line-height:1}.lv{display:inline-block;background:var(--soft);border-radius:999px;padding:.1rem .7rem;font-size:.85rem;font-weight:700;margin-top:.3rem}
+details.tr{border:2px solid var(--bd);border-radius:1rem;margin:.5rem 0;background:var(--bg)}
+details.tr>summary{list-style:none;cursor:pointer;display:flex;gap:.6rem;align-items:center;justify-content:space-between;padding:.5rem .9rem;font-weight:700}
+details.tr>summary::-webkit-details-marker{display:none}
+details.tr>summary::after{content:"";flex:none;width:.6rem;height:.6rem;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg)}
+details.tr[open]>summary::after{transform:rotate(-135deg)}details.tr[open]>summary{background:var(--soft);border-radius:.9rem .9rem 0 0}
+details.hi{outline:4px solid var(--pri);background:var(--hi)}
+.bd{display:inline-block;border:2px solid currentColor;border-radius:999px;padding:0 .6rem;font-size:.85rem;font-weight:700;white-space:normal;max-width:100%}.bd.ok{color:var(--ok)}.bd.no{color:var(--wn)}.bd.rd{color:var(--mu);border-style:dashed}.bd.pc{color:var(--wn);border-style:dotted}.bd.fe{color:var(--tx);font-weight:600}
+.body{padding:.2rem 1rem 1rem}ol{padding-left:1.3rem}li{margin:.4rem 0}
+a.btn{display:flex;align-items:center;justify-content:center;background:var(--pri);color:var(--pt);border-radius:999px;font-weight:700;text-decoration:none;padding:.5rem 1.2rem;margin-top:.8rem}
+.xb{border-top:2px solid var(--bd);margin-top:.8rem;padding-top:.3rem}.xb h5{font-size:1.05rem;margin:.4rem 0;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.xb p{margin:.3rem 0}.aviso{border-left:5px solid var(--wn);padding-left:.7rem}
+.gp{border:2px solid var(--bd);border-radius:1rem;padding:.6rem 1rem 1rem;margin:.8rem 0;background:var(--tar)}.gp h4{font-size:1.15rem;margin:.6rem 0 .3rem}.gp h4:focus{outline:none}.gp h4:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+.op{display:block;width:100%;text-align:left;border:2px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:1rem;padding:.5rem 1rem;margin:.5rem 0;cursor:pointer}.gnav{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}
+.sos{border:3px solid var(--wn);border-radius:1rem;padding:.4rem .9rem .8rem;margin:.6rem 0}
+@media (forced-colors:active){.op,.gp,.sos{border-color:CanvasText}}
+.ay-txt{margin:.4rem 1rem}.ay-txt ol{padding-left:1.3rem}.ayb{margin:.4rem 1rem 1rem;min-height:48px;padding:.5rem 1rem;font:inherit;font-weight:700;background:transparent;color:inherit;border:2px solid currentColor;border-radius:999px;cursor:pointer}
+.proptx{white-space:pre-wrap;overflow-wrap:anywhere;border:2px solid var(--bd);background:var(--tar);color:var(--tx);border-radius:8px;padding:.8rem;font:inherit;margin:.6rem 0}[hidden]{display:none!important}</style></head><body><main>
+<h1>Trámites</h1>
+<p id="vik" hidden><a id="vikl" class="vik" href="https://argira.eus/ideakey/?from=tramites">Volver a IDEAKEY</a></p>
+<p>Trámites te lleva a la web oficial de cada gestión: la cita del DNI, pedir el paro, pedir información a un ayuntamiento…</p>
+<ol><li>Elige un trámite en los atajos o busca por organismo.</li><li>Lee los pasos y qué necesitas.</li><li>Pulsa «Ir a la web oficial».</li></ol>
+<p class="nota">No pide ni guarda tus datos y no hace el trámite por ti: solo te acompaña hasta la web oficial.</p>
+<section id="prop" class="atajos" hidden aria-labelledby="prop-h"><h2 id="prop-h" tabindex="-1">Tu ficha de IMAGINE</h2><p class="nota">Es un borrador, no una solicitud presentada. Para presentarla, elige abajo el trámite, abre la web oficial y pega el texto donde corresponda.</p><pre id="prop-t" class="proptx"></pre><div class="pills"><button type="button" id="prop-c" class="pill">Copiar ficha</button><button type="button" id="prop-x" class="pill">Quitar de esta página</button></div><p id="prop-m" class="nota" role="status" aria-live="polite"></p>
+<h3 id="prop-dh">Dónde presentarla</h3><p id="prop-dt" class="nota" role="status" aria-live="polite"></p><label for="prop-ty">¿Qué quieres comunicar?</label> <select id="prop-ty"><option value="">No lo sé / prefiero no decirlo</option><option value="a">Un problema o aviso</option><option value="q">Una queja</option><option value="s">Una sugerencia</option><option value="i">Pedir información pública</option></select> <label for="prop-ds">Cambiar destino</label> <select id="prop-ds"></select> <button type="button" id="prop-go" class="pill">Ver el trámite</button></section>
+<details class="atajos" id="ay"><summary>Qué es y cómo se usa</summary><div id="ay-txt" class="ay-txt"><p><strong>Qué hace.</strong> Trámites te lleva a la web oficial de cada gestión y te cuenta qué necesitas antes de ir. No hace el trámite por ti.</p><p><strong>Cómo se usa.</strong></p><ol><li>Elige un atajo o busca el organismo o el trámite en el buscador.</li><li>Toca el trámite para abrirlo. Verás para qué sirve, qué necesitas, los plazos y cómo se hace.</li><li>Mira la etiqueta de cada ficha. Verificado quiere decir que se abrió la página oficial y se contrastó. Leído, no abierto quiere decir que se leyó un extracto. Pendiente de comprobar quiere decir que falta confirmar algún dato. Por verificar quiere decir que la fuente aún no se ha comprobado.</li><li>Pulsa «Ir a la web oficial» y comprueba que el nombre de la web es el que indica la ficha.</li><li>Si quieres preguntar a un ayuntamiento, algunas fichas te llevan a IDEAKEY para preparar el texto. Lo copias tú; nada se envía solo.</li></ol><p><strong>El recorrido completo.</strong> IMAGINE crea → IDEAKEY prepara el texto → la IA lo redacta → el verificador comprueba → Trámites te lleva a la web oficial → tú decides y presentas. Aquí estás en el penúltimo paso.</p><p><strong>De dónde vienes y adónde puedes ir.</strong> Si vienes de IMAGINE, arriba verás tu ficha o tu carta. Desde aquí puedes ir a <a href="https://argira.eus/ideakey/?from=tramites">IDEAKEY</a> para preparar el texto, o al <a href="https://argira.eus/AIproposesCodeVerifies/">verificador</a> para comprobar lo que redacte tu IA.</p><p><strong>Qué viaja y qué no.</strong> La ficha o la carta de IMAGINE llegan dentro del enlace, sin servidor, y solo si no llevan datos personales. El texto de la IA lo pegas siempre tú. Nada se envía solo.</p><p><strong>Mensajes raros y extensiones.</strong> «Revísalo aquí» analiza el mensaje en tu dispositivo, sin enviarlo. Aparte hay dos extensiones de Chrome: Argira Integrity Shield (señales de estafa; su análisis profundo pide cuenta y envía el texto a su servidor) y la del verificador (comprueba que la IA no cambió datos importantes; según su ficha, sin servidores).</p><p class="nota">Esta página no pide ni guarda tus datos.</p></div><button type="button" id="ay-voz" class="pill ayb">🔊 Escuchar la ayuda</button></details>
+<details id="rv" class="atajos"><summary>¿Te ha llegado un mensaje raro? Revísalo aquí</summary><p class="nota">Pega un SMS, WhatsApp o correo. Se revisa en tu dispositivo con reglas sencillas: no se envía, no se guarda y no sustituye a tu criterio.</p><label for="rv-t" class="nota">Mensaje que has recibido (sin tus datos personales)</label><textarea id="rv-t" rows="5" autocomplete="off" spellcheck="false" style="min-height:7rem;width:100%;box-sizing:border-box;border:2px solid var(--bd);border-radius:.6rem;padding:.6rem;background:var(--tar);color:var(--tx);font:inherit"></textarea><div class="pills" style="display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0"><button type="button" class="pill" id="rv-go">Revisar mensaje</button> <button type="button" class="pill" id="rv-x">Borrar</button></div><p class="nota">¿Usas Chrome en el ordenador? Hay una <a href="https://chromewebstore.google.com/detail/cpljjbemcmnhcddlplbnnnnpgmfblobb" target="_blank" rel="noopener noreferrer">extensión de Argira Integrity Shield en Chrome Web Store (se abre en pestaña nueva)</a> que puede avisarte sola mientras lees; es opcional y viene desactivada. Es una herramienta aparte: su análisis profundo pide cuenta y envía el texto a su servidor; la vigilancia automática es local.</p><div id="rv-o" role="status" aria-live="polite"></div></details>
+<details class="atajos" open><summary>Atajos: donde más gente se atasca</summary><p class="nota">Elegidos por las esperas de cita previa (OCU), no medidos: esta web no cuenta lo que haces.</p><div id="pop" class="pops"></div></details>
+<h2>Todos los organismos</h2>
+<input id="q" type="search" placeholder="Buscar organismo o trámite" aria-label="Buscar organismo o trámite">
+<div id="lv" class="pills" role="group" aria-label="Nivel"></div>
+<p id="cnt" class="nota" role="status" aria-live="polite"></p><div id="orgs"></div>
+<p class="nota">No sustituye a la web oficial. Los enlaces se revisan a mano y pueden cambiar.</p>
+<details class="nota"><summary>Qué significa cada etiqueta</summary><ul><li><strong>✔ Verificado:</strong> página oficial abierta y contenido contrastado, sin datos pendientes.</li><li><strong>👁 Leído, no abierto:</strong> el contenido sale de un extracto; no se ha abierto la página completa.</li><li><strong>◐ Pendiente de comprobar:</strong> falta confirmar algún dato concreto. Está marcado en su campo.</li><li><strong>⚠ Por verificar:</strong> la fuente o el enlace todavía no se han comprobado.</li></ul></details>
+<p class="nota" id="ver">Trámites · versión 11e · 11/11/2026 · candidata a estable (ver registro de versiones).</p></main><script>
+const SC=[
+{t:'Cita para el DNI',n:'DNI',q:'Marta necesita pedir cita para renovar el DNI.',b:'cita previa dni',
+ r:[[1,'citas-dni-rapido.example','Tu cita del DNI en 24 horas'],[1,'tramitesya.example','Gestionamos tu cita previa'],[0,'citapreviadnie.es','Cita previa DNI y pasaporte']],
+ p:[['¿Qué quieres?',['Pedir cita','Qué papeles necesito','Teléfono'],0]],
+ d:['citapreviadnie.es','https://www.citapreviadnie.es/','La cita se pide en esa web o llamando al 060.',1,'Comprobado antes con fuente oficial (nota municipal de 22/05/2026 citada en el análisis).']},
+{t:'Cita en la Seguridad Social',n:'Seguridad Social',q:'Marta necesita cita en la Seguridad Social.',b:'cita previa seguridad social',
+ r:[[1,'citas-seg-social.example','Cita Seguridad Social sin esperas'],[1,'gestoria-rapida.example','Te lo tramitamos hoy'],[0,'sede.seg-social.gob.es','Sede electrónica de la Seguridad Social']],
+ p:[['¿Qué quieres?',['Pedir cita','Consultar mi cita','Teléfono'],0]],
+ d:['sede.seg-social.gob.es','https://sede.seg-social.gob.es/','La cita previa se pide por internet desde la sede electrónica.',1,'Comprobado antes con fuente oficial (lista del encargo).']},
+{t:'Ayuda por dependencia',n:'Dependencia',q:'Marta quiere informarse de la ayuda por dependencia.',b:'ayuda dependencia como pedirla',
+ r:[[1,'ayudas-dependencia-ya.example','Cobra tu ayuda ya'],[1,'subvenciones-ya.example','Solicítala con nosotros'],[0,'imserso.es','Órganos gestores de cada comunidad']],
+ p:[['¿Qué quieres?',['Cómo se pide','Qué papeles necesito','Cuánto me pagan'],0],['¿Dónde?',['Mi comunidad autónoma','Mi ciudad'],0]],
+ d:['imserso.es','https://imserso.es/en/autonomia-personal-dependencia/sistema-autonomia-atencion-dependencia-saad/organos-gestores-ca-direcciones-territoriales-imserso','La ayuda la gestiona cada comunidad. Esa página del Imserso indica dónde pedirla en la tuya.',1,'Comprobado antes con fuente oficial: Imserso (lista del encargo).']}
+];
+const OFICIAL='Página abierta el 8 nov 2026';
+const MENU=(s)=>'Enlace del menú oficial de '+s+', leído el 8 nov 2026';
+const TUYA='Comprobado antes con fuente oficial (lista del encargo); no reabierto el 8 nov 2026';
+const LEIDO11='Texto de la página oficial leído el 11 nov 2026, sin abrirla en el navegador';
+const ABIERTA11='Página abierta el 11 nov 2026';
+const LANPAG='Enlace de la página oficial de Lanbide «¿Qué hacer si me he quedado en paro?», leído el 8 nov 2026';
+/* am = ámbito: mun (municipio), ccaa (comunidad), est (Estado). ic = icono. Un organismo nuevo = un bloque más. */
+const ORGS=[
+{n:'Ayuntamiento de Getxo',s:'Primer grupo de trámites municipales incorporado en la ampliación del catálogo',am:'mun',ic:'🌊',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Getxo. Los datos se han contrastado con páginas oficiales abiertas el 11 nov 2026. No se extrapolan a otros municipios.',
+ tr:[
+  {id:'volante-getxo',ik:'m=Getxo&c=País Vasco&d=a',t:'Volante de empadronamiento',w:'Ver cómo obtenerlo',v:1,f:'Páginas oficiales del Ayuntamiento de Getxo abiertas el 11 nov 2026 (trámite y formulario).',
+   d:['getxo.eus','https://www.getxo.eus/es/tramites/volantes','Volantes de empadronamiento y justificante de distancia.'],
+   links:[['Ver la ficha detallada del trámite','https://www.getxo.eus/es/servicios/detalle-tramite-sede/69']],
+   fc:{sirve:['Acreditar la situación de empadronamiento o no empadronamiento de una persona, un colectivo o una familia respecto a un domicilio de Getxo.','Ficha detallada del trámite, unidad de Estadística.'],
+    quien:null,
+    req:['Para volantes con datos posteriores al 1 de abril de 1986, la ficha indica DNI/NIF. Para antigüedad anterior, indica una solicitud específica.','Ficha detallada del trámite.'],
+    docs:['DNI/NIF; si se necesita información anterior al 1 de abril de 1986, la ficha indica presentar la solicitud específica de volante.','Ficha detallada del trámite.'],
+    plazo:['La ficha detallada indica plazo máximo de resolución inmediato.','Ficha detallada del trámite.'],coste:null,
+    ident:['La Oficina de Administración Electrónica admite ONA o DNI electrónico. El formulario web alternativo pide DNI y la página indica que se envíe una fotocopia del DNI a errolda@getxo.eus.','Páginas oficiales del trámite y del formulario.'],
+    cita:['En las OAC se recomienda pedir cita previa; la página no la presenta como obligatoria para esta gestión.','Ficha detallada y página de oficinas municipales.'],
+    dir:['OAC Algorta: Torrene 3, 48991 Algorta. OAC Las Arenas/Romo: calle Las Mercedes 13, 48930 Las Arenas. Ambas atienden de lunes a viernes, de 08:00 a 14:00.','Ficha detallada del trámite y página de oficinas municipales.'],
+    tel:['944 660 000 (información telefónica, lunes a viernes de 08:00 a 14:00).','Ficha detallada del trámite.'],
+    hor:['Lunes a viernes, de 08:00 a 14:00.','Ficha detallada del trámite.'],
+    web:['Con ONA o DNI electrónico, en la Oficina de Administración Electrónica. Sin certificado, el formulario municipal pide datos personales y señala que debe enviarse una fotocopia del DNI a errolda@getxo.eus.','Página oficial de volantes.'],
+    pres:['En las OAC de Algorta o Las Arenas/Romo. Se recomienda solicitar cita previa.','Ficha detallada del trámite.'],
+    llam:['Para información telefónica: 944 660 000, de lunes a viernes de 08:00 a 14:00.','Ficha detallada del trámite.'],
+    btn:{ini:'https://www.getxo.eus/es/tramites/volantes',tel:['944 660 000','944660000']}}},
+  {id:'info-getxo',ik:'m=Getxo&c=País Vasco&d=a',t:'Pedir información pública al Ayuntamiento de Getxo',w:'Ver cómo solicitarla',v:1,f:'Página oficial de Transparencia y formulario oficial abiertos el 11 nov 2026.',
+   d:['getxo.eus','https://www.getxo.eus/es/gobierno-abierto/portal-transparencianuevo/solicitud-acceso-informacion-01','Acceso a la información pública del Ayuntamiento de Getxo.'],
+   links:[['Descargar el formulario oficial (PDF)','https://www.getxo.eus/DocsPublic/transparencia/solicitud_acceso_informacion_publica_2020.pdf']],
+   fc:{sirve:['Solicitar contenidos o documentos que estén en poder del Ayuntamiento de Getxo, con los límites legales y protección de datos de terceras personas.','Página municipal de Transparencia.'],
+    quien:null,
+    req:['La solicitud debe indicar identidad, información solicitada y dirección de contacto; también puede señalarse la modalidad preferida para acceder a la información. No es obligatorio explicar los motivos.','Página municipal de Transparencia y formulario oficial.'],
+    docs:['El formulario recoge nombre y apellidos o razón social, DNI/NIF/pasaporte, datos de contacto y descripción concreta de la información solicitada. Si actúa una persona representante, recoge también sus datos.','Formulario oficial DN.285.'],
+    plazo:null,coste:null,
+    ident:['El formulario oficial solicita DNI/NIF/pasaporte. La página consultada no especifica qué sistema de identificación electrónica exige el canal online.','Formulario oficial y página municipal; requisito digital pendiente de confirmar.'],
+    cita:null,
+    dir:['La página indica que también puede presentarse presencialmente en las Oficinas de Atención Ciudadana (OAC).','Página municipal de Transparencia.'],
+    tel:['Ayuntamiento de Getxo: 944 660 000.','Página oficial de contactos.'],hor:null,
+    web:['La página municipal ofrece un formulario para ejercer el derecho de acceso. El formulario permite elegir notificación postal o electrónica y modalidad de acceso a la información.','Página municipal y formulario oficial.'],
+    pres:['Se puede presentar en las Oficinas de Atención Ciudadana (OAC), dejando constancia de los datos previstos en el artículo 17.2 de la Ley 19/2013.','Página municipal de Transparencia.'],
+    info:['El departamento municipal responsable del derecho de acceso es Calidad.','Página municipal de Transparencia.'],
+    btn:{ini:'https://www.getxo.eus/es/gobierno-abierto/portal-transparencianuevo/solicitud-acceso-informacion-01',doc:'https://www.getxo.eus/DocsPublic/transparencia/solicitud_acceso_informacion_publica_2020.pdf',tel:['944 660 000','944660000']}}},
+  {id:'avisos-getxo',ik:'m=Getxo&c=País Vasco&d=a',t:'Avisos, quejas y sugerencias municipales',w:'Ver cómo comunicarlo',v:1,f:'Páginas oficiales del Ayuntamiento de Getxo abiertas el 11 nov 2026 (ficha del trámite y formulario).',
+   d:['getxo.eus','https://www.getxo.eus/es/servicios/detalle-tramite-sede/46','Avisos, quejas y sugerencias del Ayuntamiento de Getxo.'],
+   links:[['Abrir el formulario web de avisos y quejas','https://www.getxo.eus/es/servicios/solicitudes/incidencias-web']],
+   fc:{sirve:['Comunicar avisos, quejas o sugerencias sobre asuntos de competencia municipal que no requieran un acuerdo expreso de un órgano municipal. Si se requiere ese acuerdo, se inicia el expediente administrativo correspondiente.','Ficha oficial del trámite.'],
+    quien:null,req:null,
+    docs:['La ficha del trámite menciona el impreso «Presentación de Avisos, Quejas y Sugerencias». El formulario web permite adjuntar fotografías e indicar la ubicación.','Ficha oficial del trámite.'],
+    plazo:null,coste:null,ident:null,cita:['Para la atención presencial se recomienda pedir cita previa.','Ficha oficial del trámite.'],
+    dir:['OAC Las Arenas/Romo: calle Las Mercedes 13, 48930. OAC Algorta: Torrene 3, 48991. Horario de ambas: lunes a viernes, de 08:00 a 14:00. También se indica como dirección postal del Ayuntamiento: calle Fueros 1, 48992 Getxo.','Ficha oficial del trámite.'],
+    tel:['944 660 000 (lunes a viernes, de 08:00 a 14:00).','Ficha oficial del trámite.'],hor:['Lunes a viernes, de 08:00 a 14:00.','Ficha oficial del trámite.'],
+    web:['El formulario web sirve para avisos o quejas por mal funcionamiento de servicios municipales y sugerencias de mejora. No sirve para consultar expedientes, presentar recursos, solicitar licencias o subvenciones, reclamar responsabilidad patrimonial ni alegar sanciones de tráfico; para esos asuntos hay que presentar una solicitud por registro. La web informa de que los datos enviados se incorporan al tratamiento municipal «Avisos, Quejas y Sugerencias»; no afirma que el canal sea anónimo.','Página oficial del formulario y aviso de protección de datos.'],
+    pres:['La ficha indica presentación presencial en las OAC de Las Arenas/Romo o Algorta.','Ficha oficial del trámite.'],
+    corr:['Correo postal ordinario o certificado al Ayuntamiento de Getxo, calle Fueros 1, 48992 Algorta.','Ficha oficial del trámite.'],
+    llam:['Para información: 944 660 000, de lunes a viernes de 08:00 a 14:00.','Ficha oficial del trámite.'],
+    info:['La página de privacidad informa de que los datos del formulario se incorporan al tratamiento municipal «Avisos, Quejas y Sugerencias». No hemos confirmado si todos los campos del formulario son obligatorios; no se debe dar por hecho que el envío sea anónimo.','Aviso de protección de datos del formulario.'],
+    btn:{ini:'https://www.getxo.eus/es/servicios/solicitudes/incidencias-web',tel:['944 660 000','944660000']}}}
+ ]},
+{n:'Ayuntamiento de Basauri',s:'Avisos, quejas y sugerencias',am:'mun',ic:'🏙️',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Basauri. No se extrapolan a otros municipios.',
+ tr:[
+  {id:'avisos-basauri',ik:'m=Basauri&c=País Vasco&d=a',t:'Avisos, quejas y sugerencias',w:'Ver cómo comunicarlo',v:1,f:'Texto de páginas oficiales leído el 11 nov 2026 mediante resumen automático, sin abrirlas en el navegador. No se abrió el formulario real.',
+   d:['sede.basauri.eus','https://sede.basauri.eus/es/avisos-quejas-y-sugerencias','Avisos, quejas y sugerencias del Ayuntamiento de Basauri.'],
+   links:[['Página del Servicio de Atención Ciudadana (SAC)','https://www.basauri.eus/es/area-de-competencia-departamentos/servicio-atencion-ciudadana-sac']],
+   fc:{sirve:['Según el SAC, sirve para comunicar averías o desperfectos en la vía pública y para presentar quejas, sugerencias y preguntas al Ayuntamiento. La sede lo presenta como servicio multicanal.','Páginas del SAC y de la sede electrónica de Basauri.'],
+    quien:null,req:null,docs:null,plazo:null,coste:null,
+    ident:['La web municipal dice que es aconsejable indicar al menos los datos identificativos, para completar la información y comunicar el estado de la incidencia. No consta que exija certificado digital.','Web municipal; requisitos exactos sin confirmar.'],
+    cita:['La sede enlaza a la cita previa; ninguna página consultada dice si es obligatoria para este trámite.','Sede electrónica de Basauri.'],
+    dir:['Calle Kareaga Goikoa 52, 48970 Basauri (dirección que figura en la web municipal y en la sede).','Web municipal.'],
+    tel:['94 466 63 00 (Ayuntamiento; otra página lo escribe 944 666 300, es el mismo número). Línea de atención ciudadana: 944 466 600. Mensajes 24 horas: 900 840 841. No he podido aclarar a qué servicio corresponde cada teléfono.','Páginas oficiales de Basauri.'],
+    hor:null,
+    web:['Formulario en la sede electrónica («Enviar aviso, queja o sugerencia»). Las solicitudes y escritos formales van por el Registro electrónico, no por este buzón.','Sede electrónica de Basauri.']}}
+ ]},
+{n:'Ayuntamiento de Leioa',s:'Avisos, quejas y sugerencias',am:'mun',ic:'🎓',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Leioa. No se extrapolan a otros municipios. Solo avisos: no he encontrado una ficha oficial de quejas y sugerencias.',
+ tr:[
+  {id:'avisos-leioa',ik:'m=Leioa&c=País Vasco&d=a',t:'Avisos e incidencias municipales',w:'Ver cómo comunicarlos',v:1,f:'Texto de páginas oficiales leído el 11 nov 2026 mediante resumen automático, sin abrirlas en el navegador. No se abrió la app ni el formulario de contacto.',
+   d:['leioazabalik.leioa.net','https://leioazabalik.leioa.net/cortes-de-trafico-e-incidencias-municipales','Cómo comunicar incidencias o avisos sobre servicios municipales de Leioa.'],
+   fc:{sirve:['Según la página, las incidencias o avisos sobre servicios municipales pueden comunicarse por teléfono, por correo o desde la app gratuita de Leioa («envío de incidencias»). No he encontrado una ficha oficial de quejas ni de sugerencias; una página dice que existe un buzón, pero no da enlace.','Página municipal de incidencias y de relaciones ciudadanas.'],
+    quien:null,req:null,docs:null,plazo:null,coste:null,ident:null,cita:null,
+    dir:['Servicio de Atención Ciudadana (SAC) en el Ayuntamiento, barrio Elexalde 1, 48940 Leioa; y SAC Gaztelubide, calle Langileria 202.','Páginas municipales.'],
+    tel:['94 400 80 00 (Ayuntamiento y SAC). SAC Gaztelubide: 94 464 67 22. Correo: leioa.zabalik@leioa.eus.','Páginas municipales.'],
+    hor:null,
+    web:['Desde la app de Leioa (iOS y Android). Para presentar escritos formales existe la instancia general en la sede electrónica, que pide certificado digital o Giltza.','Páginas municipales.']}}
+ ]},
+{n:'Ayuntamiento de Vitoria-Gasteiz',s:'Avisos, quejas y sugerencias',am:'mun',ic:'🏛️',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Vitoria-Gasteiz. No se extrapolan a otros municipios.',
+ tr:[
+  {id:'avisos-vitoria-gasteiz',ik:'m=Vitoria-Gasteiz&c=País Vasco&d=a',t:'Buzón ciudadano: dudas, quejas y sugerencias',w:'Ver cómo comunicarlo',v:1,f:'Texto de páginas oficiales leído el 11 nov 2026 mediante resumen automático, sin abrirlas en el navegador. No se leyeron las condiciones de uso ni las preguntas frecuentes del buzón.',
+   d:['vitoria-gasteiz.org','https://sedeelectronica.vitoria-gasteiz.org/portal/es/dudas-quejas-sugerencias','Buzón ciudadano del Ayuntamiento de Vitoria-Gasteiz.'],
+   links:[['Abrir el Buzón ciudadano','https://www.vitoria-gasteiz.org/wb021/was/buzonAction.do?idioma=es&accion=presentacion&idBuzon=1']],
+   fc:{sirve:['El buzón permite enviar aportaciones y sugerencias sobre servicios y actividades municipales, reportar problemas en la vía pública (por ejemplo, baldosas sueltas o farolas averiadas) y plantear dudas. VGarbi es un servicio de mensajería para avisar de problemas de limpieza viaria.','Sede electrónica y ficha del Buzón ciudadano.'],
+    quien:null,req:null,docs:null,plazo:null,coste:null,
+    ident:['No queda claro si hace falta identificarse para enviar una aportación. Para ver «Mis asuntos» hace falta identificación digital.','Ficha del Buzón ciudadano.'],
+    cita:['La sede enlaza a la cita previa en las Oficinas de Atención Ciudadana; esa página no se abrió.','Sede electrónica.'],
+    dir:null,
+    tel:['010 (desde fuera, 945 16 11 00). VGarbi, solo mensajes de WhatsApp o Telegram: 681 102 020; no atiende llamadas.','Sede electrónica y página de VGarbi.'],
+    hor:null,
+    web:['Buzón ciudadano en la web municipal. Las solicitudes, escritos y comunicaciones formales van por el Registro electrónico, no por el buzón.','Sede electrónica.']}}
+ ]},
+{n:'Ayuntamiento de Donostia / San Sebastián',s:'Avisos, quejas y sugerencias',am:'mun',ic:'🌊',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Donostia / San Sebastián. No se extrapolan a otros municipios.',
+ tr:[
+  {id:'avisos-donostia',ik:'m=Donostia&c=País Vasco&d=a',t:'Buzón de la Ciudadanía (Nire Karpeta)',w:'Ver cómo comunicarlo',v:1,f:'Texto de páginas oficiales leído el 11 nov 2026 mediante resumen automático, sin abrirlas en el navegador. La ficha de trámite del catálogo no se pudo abrir.',
+   d:['donostia.eus','https://www.donostia.eus/es/web/nirekarpeta/herritarren-postontziaren-zerbitzua','Buzón de la Ciudadanía del Ayuntamiento de Donostia / San Sebastián.'],
+   links:[['Abrir el formulario de comunicación','https://www.donostia.eus/es/web/nirekarpeta/nueva-sugerencia']],
+   fc:{sirve:['Permite presentar consultas, quejas, sugerencias o avisos. Se recibe un correo de confirmación y la respuesta llega al correo indicado. Las comunicaciones son solo informativas y no abren expediente administrativo; para reclamaciones o trámites hay que usar el trámite correspondiente. Los mensajes con insultos se descartan sin respuesta.','Página del Buzón de la Ciudadanía.'],
+    quien:null,req:null,docs:null,plazo:null,coste:null,
+    ident:['La página no indica requisitos de identificación. Hace falta un correo electrónico para recibir la confirmación y la respuesta.','Página del Buzón de la Ciudadanía.'],
+    cita:null,dir:null,
+    tel:['Udalinfo: 010 o 943 48 10 00. Si hay peligro: Guardia Municipal 092 o emergencias 112.','Página del Buzón de la Ciudadanía.'],
+    hor:null,
+    web:['Formulario web del Buzón de la Ciudadanía; también la app Donostia Eskura (Android e iOS).','Página del Buzón de la Ciudadanía.']}}
+ ]},
+{n:'Ayuntamiento de Barakaldo',s:'Avisos, quejas y sugerencias',am:'mun',ic:'🏭',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Barakaldo. No se extrapolan a otros municipios. Ficha sin comprobar: solo he visto el título y el enlace en un buscador; la web no me dejó abrirla.',
+ tr:[
+  {id:'avisos-barakaldo',ik:'m=Barakaldo&c=País Vasco&d=a',t:'Avisos, quejas, sugerencias, consultas y felicitaciones',w:'Ver el trámite',v:0,f:'No comprobado: el título y el enlace salen de un resultado de búsqueda; la web de barakaldo.eus no pudo abrirse el 11 nov 2026. Comprueba el enlace y los datos tú misma o tú mismo.',
+   d:['barakaldo.eus','https://www.barakaldo.eus/OficinaVirtualBarakaldo/tramites/acceso.do?id=11','Ficha del Ayuntamiento de Barakaldo sobre avisos, quejas y sugerencias (sin comprobar).']}
+ ]},
+{n:'Ayuntamiento de Sestao',s:'Avisos, quejas y sugerencias',am:'mun',ic:'⚓',
+ nota:'Estas fichas son solo para gestiones del Ayuntamiento de Sestao. No se extrapolan a otros municipios. Ficha sin comprobar: solo he visto el título y el enlace en un buscador.',
+ tr:[
+  {id:'avisos-sestao',ik:'m=Sestao&c=País Vasco&d=a',t:'Buzón de sugerencias',w:'Ver el trámite',v:0,f:'No comprobado: el título y el enlace salen de un resultado de búsqueda; la web de sestao.eus no pudo abrirse el 11 nov 2026. Comprueba el enlace y los datos tú misma o tú mismo.',
+   d:['sestao.eus','http://www.sestao.eus/es-ES/Ayuntamiento/Buzon/Paginas/default.aspx','Buzón de sugerencias del Ayuntamiento de Sestao (sin comprobar).']}
+ ]},
+{n:'Lan Ekintza',s:'hoy Bilbao Ekintza',am:'mun',ic:'🏢',
+ nota:'Lan Ekintza Bilbao se integró en Bilbao Ekintza en 2011 (BORME). Las webs son de bilbaoekintza.eus.',
+ tr:[
+  {t:'Buscar trabajo',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'La página trata de planes de empleo; la selección va por Lanbide. En el menú del sitio también hay «Intermediación laboral».',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/empleo/mejora-de-la-empleabilidad','Mejora de la empleabilidad, de Bilbao Ekintza.']},
+  {t:'Intermediación laboral',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'Es sobre todo un servicio para empresas. Si estás en paro, la página indica escribir por su formulario de contacto, en el área «Empleo y talento».',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/empleo/intermediacion-laboral','Intermediación laboral: Bilbao Ekintza es agencia de colocación colaboradora de Lanbide.']},
+  {t:'Quiero emprender',w:'Ver la información',v:1,f:MENU('bilbaoekintza.eus'),
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/emprende','Apartado «Emprende» de Bilbao Ekintza.']},
+  {t:'Ver ayudas y convocatorias',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'La lista cambia con cada convocatoria: mira las fechas dentro de cada ayuda.',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/ayudas-y-convocatorias','Apartado «Ayudas» de Bilbao Ekintza.']},
+  {t:'Empleo público',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'Desde esa página se entra a la plataforma de los procesos selectivos (opebilbaoekintza.bilbao.eus).',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/conocenos/oferta-publica-de-empleo','Oferta Pública de Empleo de Bilbao Ekintza.']},
+  {t:'Contactar con Bilbao Ekintza',w:'Ver cómo contactar',v:1,f:MENU('bilbaoekintza.eus'),
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/contacto','Contacto y atención ciudadana de Bilbao Ekintza.']}]},
+{n:'Ayuntamiento de Bilbao',s:'Información pública y gestiones municipales',am:'mun',ic:'🏙️',
+ nota:'Para pedir información pública se usa la Ley 19/2013. Para otro municipio, usa la web de ese ayuntamiento.',
+ tr:[
+  {id:'info-bilbao',f:LEIDO11+' (bilbao.eus, varias páginas del catálogo y de las áreas)',fc:{"sirve": ["Conocer contenidos o documentos que tiene el Ayuntamiento de Bilbao, con algunos límites legales y protegiendo los datos de terceras personas.", "Página «Solicitud de acceso a la información pública»."], "quien": null, "req": ["La solicitud debe dejar constancia de: identidad de quien solicita, información que pide, dirección de contacto (preferentemente electrónica) y, si quieres, cómo prefieres recibir la información (art. 17.2 de la Ley 19/2013).", "Página de Transparencia."], "docs": null, "plazo": ["Un mes para resolver, ampliable otro mes. Sin respuesta se entiende denegada.", "Según la página de procedimiento del Ayuntamiento, leída el 11 nov 2026."], "coste": null, "ident": ["Por internet: certificado digital o BakQ. En persona: no he leído que se pida identificación electrónica.", "Ficha del trámite electrónico."], "cita": {"dis": ["El Registro General indica atención presencial con y sin cita previa (la cita es opcional, para evitar esperas).", "La ficha del trámite presencial enlazada más abajo indica que se atiende con cita previa."], "fin": "Te recomendamos confirmarlo en el 010."}, "dir": {"dis": ["Una ficha (la de BakQ) sitúa el Registro General en el Edificio San Agustín, Plaza Ernesto Erkoreka 12, 48007 Bilbao.", "Otras páginas dan, como dirección del Registro o de su unidad responsable, Paseo Campo Volantín 1-Bis, 5º.", "Otra página da Plaza Ernesto Erkoreka 1, 2º."], "fin": "No indicamos ninguna como definitiva: confírmala en el 010 antes de ir."}, "tel": "944 010 010 y 010", "hor": ["Invierno: lunes a viernes de 8:30 a 14:00 h; jueves, además, de 16:30 a 19:30 h (cerrado en Navidad y Semana Santa). Verano: lunes a viernes de 8:30 a 13:00 h.", "Ficha del Registro General."], "web": "Formulario electrónico de la página de Transparencia; hay que identificarse con certificado digital o BakQ.", "pres": ["En el Registro General o en los registros de distrito, dejando constancia de los datos indicados en «Requisitos». Se entrega copia sellada con el número de solicitud.", "Ficha del Registro General."], "corr": ["Las oficinas de Correos figuran entre los registros donde se pueden presentar escritos dirigidos al Ayuntamiento, junto con los de otras administraciones. No he comprobado si vale para esta solicitud.", "Ficha del Registro General."], "llam": "Para resolver dudas o confirmar cita y condiciones: 944 010 010 o 010.", "info": "registro@bilbao.eus es el correo de contacto del Registro. Escribir para preguntar no equivale a presentar la solicitud.", "btn": {"tel": ["944 010 010", "944010010"]}},ik:'m=Bilbao&c=País Vasco&d=a',t:'Pedir información pública',w:'Ir al formulario',v:1,
+   a:'El Ayuntamiento presenta las vías en páginas distintas. La página de Transparencia indica que puedes presentar la solicitud por el formulario electrónico o presencialmente en el Registro General o en los registros de distrito. La ficha del trámite presencial especifica que se atiende con cita previa y también ofrece el canal electrónico. Puedes elegir una de estas vías: si vas presencialmente, confirma la cita y las condiciones en el 010 (944 010 010).',
+   links:[['Ver la ficha de la opción presencial','https://www.bilbao.eus/cs/Satellite?c=BIO_Tramite_FA&cid=1279148691396&language=es&pagename=Bilbaonet%2FBIO_Tramite_FA%2FBIO_Tramite&pestana=4']],
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite/transparencia/es/derecho-de-acceso-a-la-informacion/acceso-a-la-informacion-publica/solicitud-acceso-a-la-informacion-publica','Solicitud de acceso a la información pública: formulario y presentación presencial en Registro General o registros de distrito.']},
+  {id:'info-bilbao-plazos',t:'Cómo funciona y qué plazos hay',w:'Ver la información',v:1,f:LEIDO11+' (bilbao.eus)',
+   a:'La página indica un mes para resolver, ampliable otro mes, y que sin respuesta se entiende denegada.',
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite/transparencia/es/derecho-de-acceso-a-la-informacion/acceso-a-la-informacion-publica/procedimiento-ejercicio-derecho-acceso-informacion-publica','Procedimiento para ejercer el derecho de acceso: qué debe contener la solicitud, plazos y silencio.']},
+  {id:'info-bilbao-seguimiento',t:'Seguir mi solicitud',w:'Ver cómo se sigue',v:1,f:LEIDO11+' (bilbao.eus)',
+   a:'La página da un correo de contacto: registro@bilbao.eus.',
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite/transparencia/es/derecho-de-acceso-a-la-informacion/seguimiento-mi-solicitud','Seguimiento de mi solicitud de acceso a información pública.']},
+  {id:'avisar-problema-bilbao',gp:1,ik:'m=Bilbao&c=País Vasco&d=a',t:'Avisar de un problema',w:'Comunicar un problema',v:1,f:LEIDO11+' (bilbao.eus y euskadi.eus). La guía ambiental del Gobierno Vasco indica última modificación 30/11/2016.',
+   a:'Elige el canal según lo que ocurre. Para un problema de un servicio municipal (por ejemplo, limpieza, alumbrado o mantenimiento), puedes usar «Tu Ayuntamiento te escucha». Importante: ese formulario no genera un asiento en el Registro electrónico; si necesitas presentar una solicitud formal, un recurso, alegaciones o documentación, utiliza la sede electrónica. Si observas una posible infracción ambiental que se repite y no requiere intervención inmediata (por ejemplo, emisiones, ruido o vertidos), el Gobierno Vasco indica que debe comunicarse por escrito al órgano competente; la administración competente depende del hecho y de quién autorizó la actividad. Si hay peligro inmediato, contacta con la Policía Municipal o la Ertzaintza; si existe una emergencia o riesgo urgente, llama al 112. No te acerques ni manipules sustancias u objetos peligrosos.',
+   links:[['Guía oficial: quejas y denuncias ambientales (Gobierno Vasco)','https://www.euskadi.eus/gobierno-vasco/-/informacion/como-realizar-peticiones-y-presentar-quejas-o-denuncias-sobre-medio-ambiente/'],['Llamar al 112 (emergencias)','tel:112'],['Información oficial sobre el 112 en España','https://administracion.gob.es/tu-espacio-europeo/derechos-obligaciones/ciudadanos/asistencia-sanitaria/numeros-urgencia']],
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite?c=Page&cid=3009011008&language=es&pageid=3000070107&pagename=Bilbaonet%2FPage%2FBIO_formulario','Formulario municipal «Tu Ayuntamiento te escucha» para avisos, quejas, sugerencias y otras comunicaciones. No es un registro electrónico.']},
+  {id:"volante-bilbao",t:"Volante de empadronamiento",w:"Ver el trámite",v:1,d:["bilbao.eus", "https://www.bilbao.eus/cs/Satellite?c=BIO_Procedimiento_FA&categoria=temas&cid=1279101110710&language=es&menuAcordeonActivo=-1&pageid=1279127425574&pagename=Bilbaonet%2FBIO_Procedimiento_FA%2FBIO_ProcResumen&perfil=ciudadano", "Volante de empadronamiento en el catálogo de trámites del Ayuntamiento de Bilbao: emisión online y solicitud."],f:LEIDO11+' (bilbao.eus, varias páginas del catálogo y de las áreas)',fc:{"sirve": "Documento que informa de dónde está empadronada una persona (volante individual) y con quién (volante colectivo).", "quien": ["Personas inscritas en el Padrón Municipal de Habitantes de Bilbao. Si es menor, lo solicita una persona mayor de edad empadronada en su mismo domicilio.", "Página «Volante de empadronamiento» de bilbao.eus."], "req": ["Los datos que facilites deben coincidir exactamente con los del Padrón; si no, hay que corregir antes los errores. Por teléfono: aportar verbalmente los datos de identificación del Padrón que te pidan.", "Pasos y ficha de la solicitud por teléfono."], "docs": ["Según la ficha de la solicitud: DNI original; para personas extranjeras, tarjeta de residencia o pasaporte originales; autorización para gestionar en nombre de otra persona (doc. AP.1), en su caso. En persona, si acude un tercero: documento original de la persona afectada o autorización con fotocopia de su documento.", "Fichas de solicitud y de la oficina de atención."], "plazo": ["Con certificado digital: se obtiene al momento. Sin identificación: se recibe en el domicilio de empadronamiento en un máximo de 10 días. En persona: entrega inmediata.", "Página del volante y ficha presencial."], "coste": null, "ident": ["La emisión online exige certificado electrónico (con Idazki Desktop) o BakQ. La solicitud de volante se puede enviar sin identificación previa.", "Páginas de acceso del trámite."], "cita": ["La ficha de atención en oficina indica «presencial sin cita previa».", "Depende de lo indicado en «En persona»."], "dir": ["Oficina Central de Atención Ciudadana u Oficinas Municipales de Distrito (la ficha no da aquí la dirección). Unidad responsable: Subárea de Población y Territorio, Paseo Campo Volantín 1-Bis, 5º, 48007 Bilbao.", "Aún no sabemos cuál de estas direcciones atiende al público para este trámite."], "tel": "944 010 010 y 010", "hor": ["Atención al público: invierno de 8:30 a 14:00 h; verano de 8:30 a 13:00 h.", "Ficha de atención en oficina."], "web": "Emisión online: hay que identificarse con certificado electrónico o BakQ. Solicitud de volante: acceso directo, sin identificación previa.", "pres": {"txt": "Con documento identificativo, en la Oficina Central de Atención Ciudadana o en las Oficinas Municipales de Distrito.", "dis": ["El catálogo de trámites indica, para la emisión online, que no se puede realizar por otros canales.", "Otra ficha de bilbao.eus ofrece este trámite de forma presencial y sin cita previa."], "fin": "Te recomendamos confirmarlo en el 010 antes de ir."}, "corr": null, "llam": "Se puede solicitar el volante por teléfono, aportando verbalmente los datos de identificación: 944 010 010 o 010.", "info": "Correo de la unidad responsable: padron@bilbao.eus. No he leído que sirva para presentar el trámite.", "btn": {"tel": ["944 010 010", "944010010"]}}},
+  {id:"aes-bilbao",t:"Ayudas de Emergencia Social (AES)",w:"Ver el trámite",v:1,d:["bilbao.eus", "https://www.bilbao.eus/cs/Satellite?c=BIO_Procedimiento_FA&cid=1279199818692&language=es&pageid=3000047380&pagename=Bilbaonet%2FBIO_Procedimiento_FA%2FBIO_Procedimiento", "Ayudas de Emergencia Social (AES) del Área de Acción Social del Ayuntamiento de Bilbao."],f:LEIDO11+' (bilbao.eus, varias páginas del catálogo y de las áreas)',fc:{"sirve": ["Ayudas económicas del Ayuntamiento para gastos concretos de personas con necesidades económicas (según el Ayuntamiento: alquiler, gastos de la vivienda, necesidades sanitarias primarias, alimentación, entre otros).", "Página AES y nota municipal."], "quien": "Personas con necesidades económicas que cumplan los requisitos. Solo se puede presentar una solicitud por unidad familiar; las demás se desestiman.", "req": ["Estar empadronada en Bilbao al solicitar y tener al menos 6 meses de antigüedad en la Comunidad Autónoma Vasca. Hay más requisitos en los Criterios Generales de AES 2026, que no he podido leer (el PDF que encontré es de 2023).", "No doy límites de ingresos: solo los he visto en prensa de años anteriores."], "docs": ["Laboral y de ingresos de la persona titular y de la unidad familiar (nóminas del año en curso, pensión, ayudas); patrimonial (valor catastral de otros inmuebles, cuentas, ahorro); gastos (recibos, alquiler); movimientos de 12 meses y saldo de todas las cuentas; nº de cuenta para el pago. La lista completa está en «Documentación a aportar».", "Formulario y ficha del trámite."], "plazo": {"txt": "Solicitud: del 1 de enero al 31 de diciembre de 2026.", "dis": ["Una página indica que la documentación justificativa se presenta en el plazo de un mes desde la notificación de la resolución, y siempre dentro del año.", "Otra página indica que se presenta una vez recibida la ayuda, siempre dentro del año."], "fin": "Te recomendamos confirmarlo con el Área de Acción Social (94 420 59 66)."}, "coste": ["Las cantidades dependen de cada concepto, según los Criterios Generales de AES 2026 (aprobados por la Junta de Gobierno Local).", "Página AES."], "ident": null, "cita": ["En persona, con cita previa en el 94 420 59 66.", "Página AES."], "dir": ["Servicios Sociales centrales, Negociado de Prestaciones Económicas, Edificio Aznar, Plaza Venezuela 2 bajo, 48001 Bilbao.", "Es la unidad responsable; no he confirmado que sea el lugar de atención en persona."], "tel": "94 420 59 66", "hor": null, "web": "Formulario en la web municipal. Queda formalizada al terminar de rellenarlo y el sistema emite un justificante de registro.", "pres": {"txt": "En persona, en las oficinas centrales de Servicios Sociales, con cita previa (94 420 59 66).", "dis": ["La ficha del catálogo indica que el trámite solo puede hacerse por vía electrónica.", "Una nota municipal indica atención presencial con cita previa para quien tenga dificultad tecnológica."], "fin": "Te recomendamos confirmarlo por teléfono (94 420 59 66)."}, "corr": {"txt": "Para aportar documentación: aes@bilbao.eus. En lo leído no consta que el correo equivalga a presentar la solicitud.", "dis": ["Una página pide indicar en el asunto el nombre del titular, el motivo y el número de registro del justificante.", "Otra página pide el nombre del titular, el DNI o NIE y el motivo."], "fin": "Confírmalo antes de enviar nada."}, "llam": "Consultas y ayuda para hacer la solicitud por internet: 94 420 59 66.", "info": "Correo para dudas: aes.web@bilbao.eus.", "btn": {"tel": ["94 420 59 66", "944205966"]}}}]},
+{n:'Lanbide',s:'Servicio Vasco de Empleo',am:'ccaa',ic:'💼',
+ tr:[
+  {t:'Buscar empleo',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-empleo/es/empleo/buscar-empleo','Apartado «Buscar empleo» de Lanbide.']},
+  {t:'Me he quedado en paro',w:'Darme de alta',v:1,f:OFICIAL+' (lanbide.euskadi.eus)',
+   a:'Lanbide no gestiona la prestación por desempleo: la pide el SEPE (mira el organismo SEPE, en «Estado»). Antes hay que estar de alta como demandante en Lanbide.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/que-hacer-si-me-he-quedado-en-paro/weblan01-empleo/es/','Esa página explica qué hacer y cómo darte de alta en Lanbide.']},
+  {t:'Renovar mi demanda de empleo',w:'Ir a Mi Lanbide',v:1,f:'Enlace del menú oficial («Mi Lanbide»). La renovación se hace ahí: comprobado por el responsable de la web en la web oficial el 11 nov 2026.',
+   a:'Es tu área personal: pide identificarte. IDEAKEY no escribe tus datos.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-app/es/mi-lanbide/mi-perfil','Área personal «Mi Lanbide».']},
+  {t:'Pedir cita en Lanbide',w:'Pedir cita',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-app/es/cita-previa','Apartado «Solicitar cita» de Lanbide.']},
+  {t:'Buscar cursos',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-formacion/es/formacion/buscar-cursos','Apartado «Buscar cursos» de Lanbide.']},
+  {t:'Renta de Garantía de Ingresos',w:'Ver la información',v:1,f:LANPAG,
+   a:'Los requisitos se leen en esa web.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/ayuda_subvencion/2016/renta-de-garantia-de-ingresos-rgi/weblan01-prestaciones/es/','Página de la RGI en Lanbide.']},
+  {t:'Empleo público',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/empleo-publico/weblan01-empleo/es/','Apartado «Empleo público» de Lanbide.']}]},
+{n:'Etxebide',s:'Vivienda protegida (Gobierno Vasco)',am:'ccaa',ic:'🏠',
+ tr:[
+  {t:'Apuntarme como solicitante de vivienda',w:'Ver cómo se hace',v:1,f:OFICIAL+' (etxebide.euskadi.eus)',
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/tramitar-solicitud-vivienda','«Cómo solicitar vivienda»: registro de solicitantes de vivienda.']},
+  {t:'Adjudicaciones de vivienda',w:'Ver la información',v:1,f:OFICIAL+' (etxebide.euskadi.eus)',
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/inscripcion-adjudicacion','Inscripción para participar en los procesos de adjudicación.']},
+  {t:'Mi solicitud',w:'Ver la información',v:1,f:MENU('etxebide.euskadi.eus'),
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/mi-solicitud','«Mi solicitud»: consulta y gestión de tu solicitud de vivienda.']},
+  {t:'Derecho a una vivienda',w:'Ver la información',v:1,f:MENU('etxebide.euskadi.eus'),
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/derecho-subjetivo-acceso-vivienda','Información sobre el derecho subjetivo de acceso a una vivienda. Los requisitos se leen en esa web.']}]},
+{n:'Información pública · Euskadi',s:'Gobierno Vasco y Comisión Vasca',am:'ccaa',ic:'⚖️',
+ nota:'El formulario es solo para el Gobierno Vasco y su administración institucional. La reclamación vale también para ayuntamientos y otras entidades públicas vascas.',
+ tr:[
+  {id:'info-euskadi',ik:'c=País Vasco&d=c',t:'Pedir información al Gobierno Vasco',w:'Ir al formulario',v:1,f:ABIERTA11+' (euskadi.eus)',
+   a:'No es para ayuntamientos: cada uno tiene su propia web. Para presentarla por internet hace falta un medio de identificación electrónica. Ojo: esta web dice 20 días para resolver, y la Ley 19/2013 y la web de Bilbao dicen un mes; confírmalo en tu resolución.',
+   d:['euskadi.eus','https://www.euskadi.eus/interaccion_ciudadania/acceso-a-la-informacion-publica/web01-sede/es/','Trámite «Acceso a la información pública» de la sede electrónica del Gobierno Vasco.']},
+  {id:'reclamar-euskadi',t:'Reclamar si me deniegan o no responden',w:'Ver cómo se reclama',v:1,f:ABIERTA11+' (euskadi.eus)',
+   a:'Baja hasta «Reclamación ante la Comisión Vasca». Según esa web: 1 mes si te han contestado que no; si no te han contestado, no hay plazo. Es previa a ir a los tribunales.',
+   d:['euskadi.eus','https://www.euskadi.eus/interaccion_ciudadania/acceso-a-la-informacion-publica/web01-sede/es/','Reclamación ante la Comisión Vasca de Acceso a la Información Pública (administración autonómica y local).']},
+  {id:'gardena-euskadi',t:'Ver la información ya publicada',w:'Ver la información',v:1,f:ABIERTA11+' (enlace del menú de euskadi.eus)',
+   d:['gardena.euskadi.eus','https://www.gardena.euskadi.eus/inicio/','Gardena, portal de transparencia del Gobierno Vasco.']}]},
+{n:'DNI',s:'Policía Nacional',am:'est',ic:'🆔',
+ tr:[
+  {t:'Cita para el DNI',w:'Pedir cita',x:{mano:['DNI actual (si lo perdiste, la denuncia). Si cambias de domicilio: certificado de empadronamiento de menos de 3 meses. Tasa: 12 € (hay exenciones, por ejemplo familia numerosa). Foto: las fuentes no coinciden (unas piden foto reciente, otras dicen que la hace la comisaría); pregúntalo al pedir la cita.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],vias:['Cita por internet en la web de cita previa de la Policía Nacional, o por teléfono en el 060. La tasa se puede pagar por internet al confirmar la cita o en la oficina; las fuentes no coinciden en si se admite tarjeta o solo efectivo.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.']},v:1,f:SC[0].d[4],
+   d:[SC[0].d[0],SC[0].d[1],SC[0].d[2]]},
+  {t:'Información del DNI electrónico',w:'Ver la información',v:0,f:'No comprobado: lo enlaza una web oficial (Lanbide) como «DNI electrónico», pero yo no lo he abierto.',
+   d:['dnielectronico.es','https://www.dnielectronico.es/PortalDNIe/','Portal del DNI electrónico.']}]},
+{n:'SEPE',s:'Prestación por desempleo',am:'est',ic:'🧾',
+ tr:[
+  {t:'Pedir cita en el SEPE',w:'Pedir cita',v:1,f:LANPAG+'. No lo he abierto en la web del SEPE.',
+   d:['sede.sepe.gob.es','https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/cita-previa.html','Cita previa en la sede electrónica del SEPE.']},
+  {t:'Pedir la prestación por desempleo',x:{mano:['Estar inscrito como demandante de empleo. Por internet hace falta Cl@ve, DNI electrónico o certificado digital. Ten a mano el DNI o NIE en vigor.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],plazo:['15 días hábiles desde el cese (no cuentan sábados, domingos ni festivos). Si la empresa te pagó vacaciones al terminar, cuentan desde que acaban. Fuera de plazo no se pierde el derecho, pero no se cobran los días de retraso.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],vias:['Sede electrónica del SEPE; formulario de pre-solicitud por internet (evita pedir cita); oficina de prestaciones con cita previa; registro público; correo administrativo.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.']},w:'Ver cómo se pide',v:1,f:LANPAG+'. No lo he abierto en la web del SEPE.',
+   a:'Por internet hace falta Cl@ve, certificado digital o DNI electrónico (lo indica Lanbide).',
+   d:['sede.sepe.gob.es','https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/solicitud-de-prestaciones.html','Solicitud de prestaciones por internet en la sede del SEPE.']}]},
+{n:'Seguridad Social',s:'Sede electrónica',am:'est',ic:'🛡️',
+ tr:[
+  {t:'Cita en la Seguridad Social',w:'Pedir cita',fc:{sirve:'Reservar cita previa en la Seguridad Social.',quien:null,docs:['DNI, NIE o pasaporte y teléfono móvil, para reservar la cita.','Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],ident:['No hace falta certificado digital ni Cl@ve para pedir la cita.','Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],tel:['91 541 25 30 o 901 10 65 70','Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],web:['En la sede electrónica, apartado de cita previa (con o sin certificado). Los formularios oficiales de la Seguridad Social también citan run.gob.es/trdcita.','Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],llam:['Se puede pedir la cita por teléfono.','Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],btn:{tel:['91 541 25 30','915412530']}},x:{mano:['Para reservar la cita: DNI, NIE o pasaporte y teléfono móvil. No hace falta certificado digital ni Cl@ve para pedirla.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],vias:['Por internet en la sede electrónica (apartado de cita previa, con o sin certificado) o por teléfono: 91 541 25 30 o 901 10 65 70. Los formularios oficiales de la Seguridad Social también citan run.gob.es/trdcita.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.']},v:SC[1].d[3],f:SC[1].d[4],
+   d:[SC[1].d[0],SC[1].d[1],SC[1].d[2]]}]},
+{n:'Imserso',s:'Dependencia: dónde pedirla',am:'est',ic:'🤝',
+ tr:[
+  {t:'Ayuda por dependencia',w:'Ver dónde se pide',v:SC[2].d[3],f:SC[2].d[4],
+   d:[SC[2].d[0],SC[2].d[1],SC[2].d[2]]}]},
+{n:'Transparencia del Estado',s:'Información pública de la Administración del Estado',am:'est',ic:'🔎',
+ nota:'Solo para ministerios y organismos del Estado. El Portal no tiene la información de comunidades ni ayuntamientos.',
+ tr:[
+  {id:'info-estado',fc:{sirve:'Pedir información pública a ministerios y organismos del Estado.',quien:null,req:null,docs:null,plazo:null,coste:null,ident:'Para presentarla por internet: Cl@ve, o usuario y contraseña.',cita:null,dir:null,tel:null,hor:null,web:'Por internet en el Portal de la Transparencia, identificándote.',pres:'En una oficina de registro.',corr:null},ik:'d=e',t:'Pedir información pública al Estado',w:'Ir a pedirla',v:1,f:LEIDO11+' (transparencia.gob.es)',
+   a:'Por internet hay que identificarse con Cl@ve o con usuario y contraseña. También se puede presentar en una oficina de registro.',
+   d:['transparencia.gob.es','https://transparencia.gob.es/derecho-acceso/solicite-informacion-publica','Solicite información pública, en el Portal de la Transparencia de la Administración General del Estado.']},
+  {id:'info-estado-pasos',t:'Ver los pasos de la solicitud',w:'Ver los pasos',v:1,f:LEIDO11+' (sede.transparencia.gob.es)',
+   d:['sede.transparencia.gob.es','https://sede.transparencia.gob.es/pagina/index/directorio/PasosSolicitudAcceso','Pasos de la solicitud de acceso, en la sede electrónica del Portal de la Transparencia.']},
+  {id:'reclamar-estado',t:'Reclamar al Consejo de Transparencia',w:'Ver cómo se reclama',v:1,f:ABIERTA11+' (consejodetransparencia.es, «Qué debes saber para reclamar»)',
+   a:'Es opcional y gratuita; también puedes ir directo a los tribunales. Si te contestó el Portal de la Transparencia del Estado: 1 mes desde que te notifican. Si no te contestaron: sin plazo límite. El Consejo estatal solo resuelve lo del Estado y de Asturias, Illes Balears, Cantabria, Extremadura, La Rioja, Ceuta y Melilla. En otras comunidades, como Euskadi, reclama ante su órgano propio (mira «Información pública · Euskadi»); algunas tienen plazos más cortos.',
+   d:['consejodetransparencia.es','https://consejodetransparencia.es/reclamaciones/como_reclamar/que-debes-saber','Qué debes saber para reclamar: plazo, quién resuelve y dónde se presenta.']}]}
+];
+
+const $=id=>document.getElementById(id);
+const h=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const norm=t=>t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const slug=t=>norm(t).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const LV={mun:'Municipal · Bilbao y Getxo',ccaa:'Autonómico · Euskadi',est:'Estatal · toda España'};
+/* Fase 8: se elimina el bloque que forzaba u=1 y v=1 en todos los trámites. Ocultaba el estado real de cada ficha (por ejemplo, un v:0 «No comprobado» se mostraba como «Verificado»). Ahora el estado sale solo de v, de f y de los datos pendientes (ver ST). */
+ORGS.forEach(o=>o.tr.forEach(t=>{if(!t.id)t.id=slug(o.n+' '+t.t)}));
+// Nota: la ficha avisar-problema-bilbao usa fuentes oficiales consultadas; la guía ambiental del Gobierno Vasco conserva fecha de modificación de 2016.
+/* Ids cortos fijados a mano. El id largo antiguo (slug) sigue valiendo como alias para enlaces ya guardados. */
+const IDS={'lan-ekintza-buscar-trabajo':'ekintza-trabajo','lan-ekintza-intermediacion-laboral':'ekintza-intermediacion','lan-ekintza-quiero-emprender':'ekintza-emprender','lan-ekintza-ver-ayudas-y-convocatorias':'ekintza-ayudas','lan-ekintza-empleo-publico':'ekintza-empleo-publico','lan-ekintza-contactar-con-bilbao-ekintza':'ekintza-contacto','lanbide-buscar-empleo':'lanbide-empleo','lanbide-me-he-quedado-en-paro':'lanbide-paro','lanbide-renovar-mi-demanda-de-empleo':'lanbide-renovar','lanbide-pedir-cita-en-lanbide':'lanbide-cita','lanbide-buscar-cursos':'lanbide-cursos','lanbide-renta-de-garantia-de-ingresos':'lanbide-rgi','lanbide-empleo-publico':'lanbide-empleo-publico','etxebide-apuntarme-como-solicitante-de-vivienda':'etxebide-apuntarme','etxebide-adjudicaciones-de-vivienda':'etxebide-adjudicaciones','etxebide-mi-solicitud':'etxebide-solicitud','etxebide-derecho-a-una-vivienda':'etxebide-derecho','dni-cita-para-el-dni':'dni-cita','dni-informacion-del-dni-electronico':'dni-electronico','sepe-pedir-cita-en-el-sepe':'sepe-cita','sepe-pedir-la-prestacion-por-desempleo':'sepe-prestacion','seguridad-social-cita-en-la-seguridad-social':'segsocial-cita','imserso-ayuda-por-dependencia':'dependencia'};const ALIAS=Object.create(null);
+ORGS.forEach(o=>o.tr.forEach(t=>{if(IDS[t.id]){ALIAS[t.id]=IDS[t.id];t.id=IDS[t.id]}}));
+const POP=[['avisar-problema-bilbao','📣'],['info-bilbao','🏙️'],['info-euskadi','⚖️'],['info-estado','🔎'],['dni-cita','🆔'],['sepe-prestacion','🧾'],['segsocial-cita','🛡️']];
+const find=id=>{for(const o of ORGS){const t=o.tr.find(x=>x.id===id);if(t)return[o,t]}return null};
+let lv='',q='';
+/* ESTADOS DEL CATÁLOGO (Fase 8). Cuatro, de menor a mayor confianza; el primero que se cumple gana:
+   no  «Por verificar»          la fuente o el enlace aún no se han comprobado (v:0).
+   rd  «Leído, no abierto»      el contenido sale de un extracto; la página completa no se ha abierto.
+   pc  «Pendiente de comprobar» la fuente se abrió, pero falta confirmar algún dato concreto (campo null, «Sin confirmar» o bloque sin verificar).
+   ok  «Verificado»             página oficial abierta, contenido contrastado y sin datos pendientes.
+   El estado de la ficha nunca sube por encima del de sus datos: una ficha con datos pendientes no es «Verificado».
+   El indicador u:1 ya no cambia ningún estado: solo un responsable humano puede decir que abrió y contrastó la fuente, y eso se escribe en f. */
+const ST=t=>!t.v?['no','⚠ Por verificar']:/sin abrirla|No lo he abierto|leído el/.test(t.f||'')?['rd','👁 Leído, no abierto']:PEND(t).length?['pc','◐ Pendiente de comprobar']:['ok','✔ Verificado'];
+const FE=t=>{const m=(t.f||'').match(/\d{1,2} nov 2026/);return /no reabierto/.test(t.f||'')?'Última apertura: antes del '+(m?m[0]:'8 nov 2026'):m?'Revisado: '+m[0]:'Sin fecha de revisión'};
+/* PLANTILLA DE FICHA (Fase 2). Un trámite con ficha lleva fc:{...}. Reglas, para cada campo:
+   · clave ausente  = no aplica: no se muestra.
+   · clave: null    = aplica pero falta el dato oficial: se muestra «Pendiente de comprobar».
+   · clave: {txt:'dato',dis:['una página dice…','otra página dice…'],fin:'qué conviene hacer'} = las páginas oficiales no coinciden: se muestran ambas, con «Sin confirmar». No se elige una por nuestra cuenta.
+   · clave: 'texto' o ['texto','nota de fuente'] = dato con fuente (la fuente y la fecha de la ficha están abajo).
+   Campos: sirve quien req docs plazo coste ident cita dir tel hor.
+   Cómo se hace: web (por internet) pres (en persona) corr (por correo) llam (consulta por teléfono) info (atención informativa, no es presentación formal).
+   Botones (fc.btn, todos opcionales; si falta el dato, el botón no sale): ini, req, doc (URL), tel ['texto','cifras'], mapa:1 (usa fc.dir).
+   Un trámite sin fc se muestra como antes. */
+const FK=[['sirve','Para qué sirve'],['quien','Quién puede pedirlo'],['req','Requisitos'],['docs','Documentación necesaria'],['plazo','Plazos'],['coste','Costes o tasas'],['ident','Identificación digital'],['cita','Cita previa'],['dir','Dirección de la oficina'],['tel','Teléfono oficial'],['hor','Horario de atención']];
+const FCH=[['web','Por internet'],['pres','En persona'],['corr','Por correo'],['llam','Consulta por teléfono'],['info','Atención informativa (no es presentación formal)']];
+const ent=v=>v==null?null:Array.isArray(v)?v:[v];
+const DISP='Las páginas oficiales no coinciden en este punto. Esto es lo que tenemos ahora:';
+const PEND=t=>{const n=[];
+  if(t.fc)[...FK,...FCH].forEach(([k,l])=>{if(!(k in t.fc))return;const v=t.fc[k];if(v==null||(typeof v==='object'&&!Array.isArray(v)))n.push(l)});
+  else if(t.x)[['mano','Qué tener a mano'],['plazo','Plazo'],['vias','Otras vías']].forEach(([k,l])=>{if(t.x[k]&&!t.x[k][1])n.push(l)});
+  return n};
+function blk(l,v){const d=h('div','xb'),hd=h('h5','',l+' '),e=ent(v);
+  if(v&&!Array.isArray(v)&&typeof v==='object'){hd.append(h('span','bd no','⚠ Sin confirmar'));d.append(hd);if(v.txt)d.append(h('p','',v.txt));
+   if(v.dis){d.append(h('p','',DISP));const u=h('ul');v.dis.forEach(x=>u.append(h('li','',x)));d.append(u,h('p','nota','Aún no está confirmado cuál es la correcta. '+(v.fin||'')))}return d}
+  if(!e){hd.append(h('span','bd pc','◐ Pendiente de comprobar'));d.append(hd)}
+  else{d.append(hd,h('p','',e[0]));if(e[1])d.append(h('p','nota',e[1]))}return d}
+function fch(t){const c=t.fc,out=[];
+ const e=ST(t)[0];
+ if(e==='rd'||e==='no')out.push(h('p','nota aviso','Datos leídos en extractos de páginas oficiales; aún sin confirmar. Antes de ir o de enviar nada, comprueba el dato en la web oficial o por teléfono.'));
+ else if(e==='pc')out.push(h('p','nota aviso','Esta ficha tiene datos que todavía no están comprobados: los verás marcados abajo como «Pendiente de comprobar» o «Sin confirmar». No los des por ciertos; compruébalos en la web oficial o por teléfono.'));
+ FK.forEach(([k,l])=>{if(k in c)out.push(blk(l,c[k]))});
+ const ch=FCH.filter(([k])=>k in c);
+ if(ch.length){out.push(h('h4','lvh','Cómo se hace'),h('p','nota','Llamar o escribir un correo para preguntar no equivale a presentar la solicitud, salvo que la web oficial lo indique.'));ch.forEach(([k,l])=>out.push(blk(l,c[k])))}
+ return out}
+function fbt(t){const c=t.fc,b=c.btn||{},o=[];
+ const L=(l,u,ext)=>{const a=h('a','btn',l);a.href=u;if(ext){a.target='_blank';a.rel='noopener noreferrer'}o.push(a)};
+ if(b.ini)L('Iniciar el trámite',b.ini,1);
+ if(b.req)L('Consultar requisitos',b.req,1);
+ if(b.doc)L('Descargar documentación',b.doc,1);
+ if(b.tel)L('Llamar al '+b.tel[0],'tel:'+b.tel[1]);
+ const d=ent(c.dir);if(b.mapa&&d)L('Ver ubicación','https://www.openstreetmap.org/search?query='+encodeURIComponent(d[0]),1);
+ return o}
+/* GUÍA «AVISAR DE UN PROBLEMA» (Fase 4). Una pregunta por pantalla; no guarda nada ni envía nada.
+   Reglas: las emergencias van siempre al 112 y no usan formulario. Un dato no confirmado se muestra como «Pendiente de comprobar».
+   «Sin identificarse» solo se afirma si una fuente lo confirma expresamente; si no, queda pendiente.
+   Solo vale para Bilbao y Euskadi: fuera de ahí se dice que no está cubierto. */
+const GPQ={
+ a1:['¿Qué ocurre?',[['peligro','Hay peligro ahora o alguien necesita ayuda'],['mun','Algo falla en un servicio o espacio municipal (limpieza, alumbrado, mantenimiento…)'],['amb','Algo contamina o molesta al entorno (ruido, humo, vertidos, olores…)'],['nose','No lo tengo claro']]],
+ dnd:['¿Dónde ocurre?',[['bil','En Bilbao'],['eus','En otro municipio de Euskadi'],['fuera','Fuera de Euskadi']]],
+ urg:['¿Es urgente?',[['si','Sí: hay peligro ahora'],['rep','No hay peligro, pero se repite'],['pun','No hay peligro y ha pasado una vez']]],
+ cat:['¿Es un servicio municipal o un problema ambiental?',[['mun','Un servicio o espacio municipal'],['amb','Un problema ambiental (ruido, humo, vertidos…)'],['dudas','Sigo sin saberlo']]],
+ tipo:['¿Qué quieres hacer?',[['inc','Avisar de una incidencia o hacer una queja'],['den','Presentar una denuncia o una solicitud formal']]]
+};
+const GPCAT=s=>s.a1==='nose'?s.cat:s.a1;
+function gpNext(s){
+ if(!s.a1)return 'a1';
+ if(s.a1==='peligro')return 'R:emerg';
+ if(!s.dnd)return 'dnd';
+ if(!s.urg)return 'urg';
+ if(s.urg==='si')return 'R:emerg';
+ if(s.dnd==='fuera')return 'R:fuera';
+ if(s.a1==='nose'&&!s.cat)return 'cat';
+ const c=GPCAT(s);
+ if(c==='dudas')return 'R:dudas';
+ if(c==='mun'&&s.dnd==='eus')return 'R:otro';
+ if(!s.tipo)return 'tipo';
+ return 'R:'+c+'-'+s.tipo}
+const GP_TEL='Llamar al 944 010 010',GP_FUENTE_G='Según el extracto de la guía del Gobierno Vasco leído el 11 nov 2026 (última modificación de la guía: 30/11/2016).';
+function gpResult(s,t){
+ const form=t.d[1],guia=(t.links||[])[0]?t.links[0][1]:null;
+ const org010=['010 o 944 010 010 (atención general del Ayuntamiento).','Según bilbao.eus. No está confirmado que por teléfono se pueda dejar este aviso.'];
+ const amb={org:['Depende del hecho y de quién autorizó la actividad.','La guía del Gobierno Vasco reconoce que en la práctica es difícil saber a qué organismo dirigirse. No elegimos uno por ti.'],
+  reg:['Todavía no lo sabemos: depende del organismo y del canal que uses.','Hasta que se confirme, no des por hecho que un correo o un formulario simple tenga efectos de registro administrativo.'],
+  nota:'Antigüedad de la guía: la guía consultada indica última modificación en 2016. Después se aprobó la Ley 10/2021, de Administración Ambiental de Euskadi, que entró en vigor el 1 de enero de 2022. No hemos comprobado si sus instrucciones siguen siendo aplicables en todos sus puntos: se ofrece como orientación, no como confirmación del procedimiento vigente.'};
+ const ext=(l,u)=>['x',l,u],tel=(l,n)=>['t',l,n],int=(l,u)=>['i',l,u];
+ const R={
+  emerg:{t:'Es una emergencia: llama al 112',sos:1,rows:[
+   ['Tipo de comunicación','Emergencia. No se usa ningún formulario ni se deja un aviso: se llama.'],
+   ['Qué hacer ahora',['Llama al 112. Si hay peligro inmediato, también puedes contactar con la Policía Municipal o la Ertzaintza.','Según la ficha de Bilbao, que se basa en el Ayuntamiento y el Gobierno Vasco.']],
+   ['Mientras tanto','No te acerques ni manipules sustancias u objetos peligrosos.'],
+   ['Qué decir al llamar','Dónde estás y qué está ocurriendo. Es un consejo nuestro, no un requisito oficial.']],
+   btn:[tel('Llamar al 112','112'),ext('Información oficial sobre el 112 en España','https://administracion.gob.es/tu-espacio-europeo/derechos-obligaciones/ciudadanos/asistencia-sanitaria/numeros-urgencia')],
+   nota:s.dnd==='fuera'?'El 112 es el número de emergencias. El resto de esta guía solo recoge Bilbao y Euskadi.':''},
+  fuera:{t:'Esta guía no cubre ese lugar',rows:[
+   ['Qué hacer','Esta guía solo recoge Bilbao y Euskadi. Busca el canal en la web oficial de tu ayuntamiento o de tu comunidad.'],
+   ['Si hay peligro inmediato','Llama al 112.']],btn:[tel('Llamar al 112','112')]},
+  otro:{t:'El formulario es solo de Bilbao',rows:[
+   ['Qué hacer',['«Tu Ayuntamiento te escucha» es del Ayuntamiento de Bilbao. Para otro municipio, busca el canal en la web oficial de ese ayuntamiento.','No sabemos si tu ayuntamiento tiene uno parecido.']],
+   ['Si es un problema ambiental','Vuelve atrás y elige «Un problema ambiental»: la guía del Gobierno Vasco es para Euskadi.']]},
+  dudas:{t:'Aún no sabemos qué canal es',rows:[
+   ['Dos posibilidades',['Un servicio municipal de Bilbao: «Tu Ayuntamiento te escucha». Una posible infracción ambiental: la guía del Gobierno Vasco.','Vuelve atrás y elige la que más se parezca.']]].concat(s.dnd==='bil'?[['Teléfono oficial',org010]]:[]),
+   btn:s.dnd==='bil'?[tel(GP_TEL,'944010010')]:[]},
+  'mun-inc':{t:'Aviso o queja sobre un servicio municipal',rows:[
+   ['Tipo de comunicación','Aviso, incidencia o queja sobre un servicio municipal (por ejemplo, limpieza, alumbrado o mantenimiento).'],
+   ['Organismo competente',['Ayuntamiento de Bilbao.','Qué área lo atiende: pendiente de comprobar.']],
+   ['Canal','Formulario web «Tu Ayuntamiento te escucha».'],
+   ['Formulario oficial',['Se abre con el botón de abajo.','Página municipal leída el 11 nov 2026, sin abrirla en el navegador.']],
+   ['Teléfono oficial',org010],
+   ['Dirección',null],
+   ['Qué información aportar',['Qué ocurre, dónde está y desde cuándo.','Sugerencia nuestra: no sabemos qué datos pide el formulario.']],
+   ['¿Se puede sin identificarse?',null],
+   ['Efectos de registro',['No tiene: el Ayuntamiento indica que este formulario no genera un asiento en el Registro electrónico.','Para una solicitud formal, un recurso, alegaciones o documentación hay que usar la sede electrónica.']]],
+   btn:[ext('Abrir «Tu Ayuntamiento te escucha»',form),tel(GP_TEL,'944010010')]},
+  'mun-den':{t:'Denuncia o solicitud formal al Ayuntamiento',rows:[
+   ['Tipo de comunicación','Denuncia, solicitud formal, recurso o alegaciones. No es un aviso ni una queja por el formulario ordinario.'],
+   ['Organismo competente',['Ayuntamiento de Bilbao.','Qué área lo atiende: pendiente de comprobar.']],
+   ['Canal',['Sede electrónica del Ayuntamiento: así lo indica el Ayuntamiento para solicitudes formales, recursos, alegaciones o documentación.','El Registro General también atiende en persona; mira la ficha «Información pública».']],
+   ['Formulario oficial',null],
+   ['Teléfono oficial',org010],
+   ['Dirección',{dis:['Las páginas oficiales dan varias direcciones para el Registro General.'],fin:'Mira la ficha «Información pública» y confírmala en el 010 antes de ir.'}],
+   ['Qué información aportar',['Qué ocurre, dónde, cuándo y, si lo sabes, quién lo hace.','Sugerencia nuestra: los datos exigidos los marca el organismo.']],
+   ['¿Se puede sin identificarse?',null],
+   ['Efectos de registro',['Pendiente de comprobar para este caso concreto.','El Ayuntamiento remite a la sede electrónica, y no al formulario «Tu Ayuntamiento te escucha», para lo formal.']]],
+   btn:[int('Ver la ficha «Información pública» (Registro General)','#info-bilbao'),tel(GP_TEL,'944010010')]},
+  'amb-inc':{t:'Queja o petición por escrito sobre un problema ambiental',rows:[
+   ['Tipo de comunicación',['Queja o petición por escrito sobre un posible problema ambiental (ruido, vertidos, emisiones…). No es una denuncia.','Para algo que se repite y no necesita intervención inmediata.']],
+   ['Organismo competente',amb.org],
+   ['Canal',['Por escrito, por cualquier medio (también electrónico con firma digital).','Para peticiones. '+GP_FUENTE_G]],
+   ['Formulario oficial',null],
+   ['Teléfono oficial',null],
+   ['Dirección',null],
+   ['Qué información aportar',['A quién se dirige y qué pides; tu identidad y nacionalidad; y dónde o cómo quieres recibir la respuesta.',GP_FUENTE_G]],
+   ['¿Se puede sin identificarse?',['La guía pide la identidad de quien presenta la petición. No hemos visto una vía sin identificarse.',GP_FUENTE_G]],
+   ['Efectos de registro',amb.reg]],
+   btn:guia?[ext('Abrir la guía oficial del Gobierno Vasco',guia)]:[],nota:amb.nota},
+  'amb-den':{t:'Denuncia por una posible infracción ambiental',rows:[
+   ['Tipo de comunicación',['Denuncia por escrito de una posible infracción ambiental (por ejemplo, emisiones, ruido o vertidos).','Para hechos que se repiten y no necesitan intervención inmediata.']],
+   ['Organismo competente',amb.org],
+   ['Canal',['Por escrito ante el órgano competente.',GP_FUENTE_G]],
+   ['Formulario oficial',null],
+   ['Teléfono oficial',null],
+   ['Dirección',null],
+   ['Qué información aportar',['Tu identidad, un relato de los hechos, la fecha en que ocurrieron y, si es posible, quién crees que es responsable.',GP_FUENTE_G]],
+   ['¿Se puede sin identificarse?',['La guía indica que la denuncia debe expresar la identidad de quien la presenta.',GP_FUENTE_G]],
+   ['Efectos de registro',amb.reg]],
+   btn:guia?[ext('Abrir la guía oficial del Gobierno Vasco',guia)]:[],nota:amb.nota}
+ };
+ return R}
+function gpFlow(t){
+ const box=h('div','gp');box.setAttribute('role','group');box.setAttribute('aria-label','Guía: avisar de un problema');
+ let stack=[],focus=false;
+ const st=()=>Object.fromEntries(stack);
+ function draw(){
+  box.replaceChildren();const s=st(),n=gpNext(s);
+  const hd=h('h4','');hd.tabIndex=-1;
+  if(n[0]!=='R'){
+   const q=GPQ[n];hd.textContent='Pregunta '+(stack.length+1)+': '+q[0];box.append(hd);
+   q[1].forEach(([v,l])=>{const b=h('button','op',l);b.type='button';b.onclick=()=>{stack.push([n,v]);focus=true;draw()};box.append(b)});
+   if(n==='a1')box.append(h('p','nota','Si hay peligro ahora, elige la primera opción: te llevará al 112.'));
+  }else{
+   const r=gpResult(s,t)[n.slice(2)];hd.textContent=r.t;
+   const wrap=h('div',r.sos?'sos':'');wrap.append(hd);
+   if(!r.sos&&n!=='R:fuera'&&n!=='R:otro')wrap.append(h('p','nota aviso','Datos leídos en extractos de páginas oficiales; aún sin confirmar. Antes de ir o de enviar nada, comprueba el dato en la web oficial o por teléfono.'));
+   r.rows.forEach(([l,v])=>wrap.append(blk(l,v)));
+   if(r.nota)wrap.append(h('p','nota aviso',r.nota));
+   (r.btn||[]).forEach(([k,l,u])=>{const a=h('a','btn',l);a.href=k==='t'?'tel:'+u:u;if(k==='x'){a.target='_blank';a.rel='noopener noreferrer'}wrap.append(a)});
+   box.append(wrap);
+  }
+  const nav=h('div','gnav');
+  if(stack.length){const b=h('button','pill','← Atrás');b.type='button';b.onclick=()=>{stack.pop();focus=true;draw()};nav.append(b);
+   const r=h('button','pill','Empezar de nuevo');r.type='button';r.onclick=()=>{stack=[];focus=true;draw()};nav.append(r)}
+  box.append(nav);
+  if(focus)hd.focus({preventScroll:false});
+ }
+ draw();return box}
+function trm(o,t){
+ const d=h('details','tr');d.id=t.id;
+ const s=h('summary');s.append(h('span','',t.t),h('span','bd '+ST(t)[0],ST(t)[1]));
+ const b=h('div','body');
+ const ol=h('ol');
+ ol.append(h('li','','Qué encontrarás: '+t.d[2]+' Para ir, pulsa «Ir a la web oficial».'));
+ if(t.a&&!t.fc&&!t.gp)ol.append(h('li','',t.a));
+ ol.append(h('li','','Antes de escribir ningún dato, comprueba que el nombre de la web es «'+t.d[0]+'».'));
+ const gpx=[];if(t.gp){const dt=h('details','');dt.append(h('summary','','Ver el resumen en un solo texto'),h('p','',t.a));gpx.push(gpFlow(t),dt)}
+ const xs=[];[['mano','Qué tener a mano'],['plazo','Plazo'],['vias','Otras vías']].forEach(([k,l])=>{const x=!t.fc&&t.x&&t.x[k];if(!x)return;
+  const d=h('div','xb'),hd=h('h5','',l+' ');hd.append(h('span','bd '+(x[1]?'ok':'pc'),x[1]?'✔ Verificado':'◐ Pendiente de comprobar'));d.append(hd,h('p','',x[0]),h('p','nota',x[2]));xs.push(d)});
+ const f=h('p','nota'+(t.v?'':' aviso'));f.append(h('strong','',ST(t)[1]+'. '),(t.f||'Enlace sin comprobar: revísalo a mano.')+(PEND(t).length?' Datos aún sin confirmar: '+PEND(t).join(', ')+'.':''));
+ const a=h('a','btn','Ir a la web oficial');a.href=t.d[1];a.target='_blank';a.rel='noopener noreferrer';
+ const fe=h('p','');fe.append(h('span','bd fe','📅 '+FE(t)));b.append(ol,...gpx,...xs,...(t.fc?fch(t):[]),fe,f,a);
+ (t.links||[]).forEach(([label,url])=>{const extra=h('a','btn',label);extra.href=url;extra.target='_blank';extra.rel='noopener noreferrer';b.append(extra)});
+ if(t.fc)fbt(t).forEach(e=>b.append(e));
+ const from=new URLSearchParams(location.search).get('from')||'';const ref=document.referrer||'';const cameFromHelper=['imagine','ideakey'].includes(from)||/argira\.eus\/(imagine|ideakey)(\/|$)/i.test(ref);
+ if(t.ik!==undefined&&!cameFromHelper){const p=h('p','nota ikp'),l=h('a','','Prepara el texto con IdeaKey');l.href='https://argira.eus/ideakey/?from=tramites&t='+encodeURIComponent(t.id)+'#preguntar'+(t.ik?'?'+new URLSearchParams(t.ik).toString():'');
+  p.append('¿No sabes qué escribir? ',l,'. Es opcional: se abre en esta pestaña y crea un texto para tu IA. El texto no pasa solo de una herramienta a otra: lo copias tú.');b.append(p)}d.append(s,b);return d}
+function render(){
+ const box=$('orgs'),n=norm(q.trim());box.replaceChildren();let hay=false;
+ let cnt=0;
+ Object.keys(LV).forEach(k=>{
+  const L=ORGS.filter(o=>(o.am||'est')===k&&(!lv||lv===k)&&(!n||norm([o.n,o.s,...o.tr.map(x=>x.t)].join(' ')).includes(n)));
+  if(!L.length)return;hay=true;cnt+=L.length;box.append(h('h3','lvh',LV[k]));
+  L.forEach(o=>{const c=h('section','org');c.setAttribute('aria-label',o.n);
+   const hd=h('header'),ic=h('span','ic',o.ic||'🏢');ic.setAttribute('aria-hidden','true');
+   const w=h('div');w.append(h('h4','',o.n),h('div','nota',o.s),h('span','lv',LV[k]));hd.append(ic,w);c.append(hd);
+   if(o.nota)c.append(h('p','nota',o.nota));
+   o.tr.forEach(t=>c.append(trm(o,t)));box.append(c)})});
+ $('cnt').textContent=cnt+(cnt===1?' organismo':' organismos');
+ if(!hay)box.append(h('p','nota','Nada coincide con «'+q+'».'));
+}
+function irAlTramite(id,noHash){
+ id=String(id||'').toLowerCase();id=ALIAS[id]||id;if(!/^[a-z0-9-]+$/.test(id)||!find(id))return false;
+ if(lv||q){lv='';q='';$('q').value='';pills();render()}
+ const d=$(id);if(!d)return false;d.open=true;
+ document.querySelectorAll('details.hi').forEach(x=>x.classList.remove('hi'));d.classList.add('hi');
+ d.scrollIntoView({block:'start'});d.querySelector('summary').focus({preventScroll:true});
+ if(!noHash&&location.hash!=='#'+id)history.replaceState(null,'','#'+id);return true}
+function pills(){
+ $('lv').replaceChildren(...[['','Todos'],['mun','Municipal'],['ccaa','Autonómico'],['est','Estatal']].map(([k,t])=>{
+  const b=h('button','pill',t);b.type='button';b.setAttribute('aria-pressed',lv===k);b.onclick=()=>{lv=k;pills();render()};return b}))}
+$('pop').replaceChildren(...POP.map(([id,ic])=>{const [o,t]=find(id)||[];if(!t)return h('span');
+ const b=h('button','pop');b.type='button';const i=h('span','',ic);i.setAttribute('aria-hidden','true');b.append(i,h('span','',t.t+' · '+o.n));b.onclick=()=>irAlTramite(id);return b}));
+$('q').oninput=e=>{q=e.target.value;render()};
+pills();render();
+/* Destino sugerido para la ficha de IMAGINE. Solo avisos y sugerencias de Bilbao y Getxo (únicos trámites de ese tipo en esta web). Se deduce del lugar escrito, nunca se da por seguro, y se puede cambiar. */
+const AQS=id=>({'':id,a:id,q:id,s:id});
+const DEST=[[/\bbilbao\b/,{'':'avisar-problema-bilbao',a:'avisar-problema-bilbao',i:'info-bilbao'}],[/\bgetxo\b/,AQS('avisos-getxo')],[/\bbasauri\b/,AQS('avisos-basauri')],[/\bleioa\b/,{'':'avisos-leioa',a:'avisos-leioa'}],[/\b(vitoria|gasteiz)\b/,AQS('avisos-vitoria-gasteiz')],[/\b(donostia|san sebastian)\b/,AQS('avisos-donostia')],[/\bbarakaldo\b/,AQS('avisos-barakaldo')],[/\bsestao\b/,{'':'avisos-sestao',s:'avisos-sestao'}]];
+const DESTIDS=['avisar-problema-bilbao','info-bilbao','info-euskadi','avisos-getxo','avisos-basauri','avisos-leioa','avisos-vitoria-gasteiz','avisos-donostia','avisos-barakaldo','avisos-sestao'];
+function destDe(m,ty){const n=norm(m||'');ty=ty||'';for(const d of DEST)if(d[0].test(n)){const id=d[1][ty]||'';return id&&find(id)?id:''}return ''}
+function lugarCubierto(m){const n=norm(m||'');return DEST.some(d=>d[0].test(n))}
+function destUi(m,t0){const sel=$('prop-ds'),tys=$('prop-ty');tys.value='';
+ sel.replaceChildren();const o0=document.createElement('option');o0.value='';o0.textContent='Otro lugar: ninguno de estos';sel.append(o0);
+ DESTIDS.forEach(id=>{const x=find(id);if(!x)return;const o=document.createElement('option');o.value=id;o.textContent=x[0].n+' · '+x[1].t;sel.append(o)});
+ let det=t0||destDe(m,''),src=t0?'c':'l';
+ const upd=()=>{const id=sel.value,x=id&&find(id),tx=$('prop-dt'),go=$('prop-go'),ty=tys.value;
+  if(x){tx.textContent='Organismo probable: '+x[0].n+'. Confianza: media. '+(id===det&&src==='c'?'Viene de lo que elegiste en el asistente de IMAGINE (ayuntamiento o comunidad), no de una comprobación mía; no sé si ese organismo es el competente. ':id===det?'Lo deduzco del lugar que escribiste'+(m?' («'+m+'»)':'')+(ty?' y de lo que quieres comunicar':'; no sé si tu propuesta es un aviso, una queja, una sugerencia o una petición de información')+', y no sé si ese organismo es el competente. ':'Lo has elegido tú. ')+'Estado de la ficha del trámite: '+ST(x[1])[1]+'. Comprueba en la web oficial que sirve para lo que quieres comunicar.';go.hidden=false;go.onclick=()=>irAlTramite(id)}
+  else{const cub=lugarCubierto(m);tx.textContent=(det?'Has descartado el trámite sugerido. ':cub?'Para «'+m+'» no tengo una ficha para '+({q:'quejas',s:'sugerencias',i:'pedir información',a:'avisos'}[ty]||'eso')+'. ':m?'No tengo un trámite para «'+m+'». ':'No indicaste el lugar. ')+'Hoy cubro Bilbao, Getxo, Basauri, Leioa, Vitoria-Gasteiz, Donostia, Barakaldo y Sestao (no todo en cada uno; algunas fichas están sin comprobar). Busca en la web de tu ayuntamiento el registro o buzón que corresponda, o mira todos los organismos más abajo.';go.hidden=true}};
+ tys.onchange=()=>{src='l';det=destDe(m,tys.value);sel.value=det;upd()};
+ sel.value=det;sel.onchange=upd;upd()}
+/* Ficha de IMAGINE: llega en el fragmento #propuesta?x=… (el fragmento no se envía al servidor). Solo se muestra como texto; tope 6000 caracteres. */
+function fichaIM(){const m=/^#propuesta\?(.*)$/.exec(location.hash);if(!m)return false;
+ let x='',pl='',k='',t='';try{const q=new URLSearchParams(m[1]);x=(q.get('x')||'').replace(/\u0000/g,'').slice(0,6000);pl=(q.get('m')||'').replace(/[<>]/g,'').trim().slice(0,60);k=q.get('k')==='c'?'c':'';t=(q.get('t')||'').toLowerCase();if(!/^[a-z0-9-]{1,60}$/.test(t)||DESTIDS.indexOf(t)<0||!find(t))t=''}catch(e){}
+ try{history.replaceState(null,'',location.pathname+location.search)}catch(e){}
+ const box=$('prop');if(!x.trim()){return false}
+ const cn=k==='c'?'carta':'ficha';$('prop-h').textContent='Tu '+cn+' de IMAGINE';$('prop-c').textContent='Copiar '+cn;
+ $('prop-t').textContent=x;$('prop-m').textContent='';destUi(pl,t);box.hidden=false;
+ $('prop-c').onclick=async()=>{try{await navigator.clipboard.writeText(x);$('prop-m').textContent=(k==='c'?'Carta':'Ficha')+' copiada.'}catch(e){const r=document.createRange();r.selectNodeContents($('prop-t'));const g=getSelection();g.removeAllRanges();g.addRange(r);$('prop-m').textContent='No se pudo copiar: el texto está seleccionado, cópialo.'}};
+ $('prop-x').onclick=()=>{$('prop-t').textContent='';box.hidden=true};
+ $('prop-h').focus({preventScroll:false});return true}
+const hash=()=>{if(fichaIM())return;const id=location.hash.slice(1);if(id)irAlTramite(id,true)};
+addEventListener('hashchange',hash);hash();
+</script><script>
+(function(){
+ var ok='speechSynthesis' in window&&typeof SpeechSynthesisUtterance!=='undefined',b=document.getElementById('ay-voz'),box=document.getElementById('ay-txt'),d=document.getElementById('ay'),tok=0,on=false,tm=0;
+ if(!b||!box)return;
+ if(!ok){b.hidden=true;return}
+ var er=document.createElement('p');er.className='nota';er.setAttribute('role','status');er.hidden=true;var host=b.parentNode.classList.contains('row')?b.parentNode:b;host.parentNode.insertBefore(er,host.nextSibling);
+ var EM={es:'Tu dispositivo no tiene voz disponible o no ha podido usarla. Puedes leer el texto en pantalla.',en:'Your device has no voice available or could not use it. You can read the text on screen.',zh:'你的设备没有可用的语音，或无法朗读。请直接在屏幕上阅读。'};
+ function lang(){return (window.__ayLang&&window.__ayLang())||{c:'es-ES',p:'🔊 Escuchar la ayuda',s:'⏹ Parar la lectura'}}
+ function ui(){b.textContent=on?lang().s:lang().p}
+ function parar(){tok++;on=false;clearTimeout(tm);er.hidden=true;try{speechSynthesis.cancel()}catch(e){}ui()}
+ window.__ayUi=ui;window.__ayParar=parar;
+ b.addEventListener('click',function(){
+  if(on){parar();return}
+  try{if(typeof vzParar==='function')vzParar()}catch(e){}
+  var t=(box.innerText||box.textContent).replace(/\s+/g,' ').trim();if(!t)return;
+  var fr=(t.match(/[^.!?;:。！？；：]+[.!?;:。！？；：]*\s*/g)||[t]).reduce(function(a,x){var l=a.length-1;if(l>=0&&(a[l]+x).length<170)a[l]+=x;else a.push(x);return a},[]);
+  var k=++tok,i=0,c=lang().c,oyo=false;on=true;er.hidden=true;ui();clearTimeout(tm);tm=setTimeout(function(){if(k===tok&&!oyo)sinVoz()},4000);
+  function fin(){if(k===tok){on=false;clearTimeout(tm);ui()}}
+  function sinVoz(){if(k!==tok)return;tok++;try{speechSynthesis.cancel()}catch(e){}on=false;clearTimeout(tm);er.textContent=EM[c.slice(0,2)]||EM.es;er.hidden=false;ui()}
+  function sig(){
+   if(k!==tok)return;if(i>=fr.length){fin();return}
+   var u=new SpeechSynthesisUtterance(fr[i++]);u.lang=c;u.rate=.95;
+   try{var v=speechSynthesis.getVoices().filter(function(v){return v.lang&&v.lang.toLowerCase().indexOf(c.slice(0,2).toLowerCase())===0})[0];if(v){u.voice=v;u.lang=v.lang}}catch(e){}
+   u.onstart=function(){oyo=true};u.onend=sig;u.onerror=function(){if(!oyo)sinVoz();else fin()};try{speechSynthesis.speak(u)}catch(e){sinVoz()}
+  }
+  try{speechSynthesis.cancel()}catch(e){}
+  setTimeout(sig,60);
+ });
+ if(d)d.addEventListener('toggle',function(){if(!d.open&&on)parar()});
+ window.addEventListener('pagehide',parar);
+ ui();
+})();
+</script>
+<script>
+/* Detector local de señales de estafa. Origen: Argira Integrity Shield (rules.js), copiado con permiso de su autor para ARGIRA D15. No usa red, no guarda nada. Pesos y umbrales provisionales. */
+// rules.js — Detector LOCAL de señales de estafa (no usa red, no gasta créditos).
+// Se carga como content script antes de content.js. Los pesos y umbrales son
+// provisionales: ajústalos con casos reales (ver LEVELS al final).
+(function (root) {
+    const norm = (s) => String(s || '').toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    // Los patrones se escriben SIN tildes porque el texto se normaliza antes.
+    const TEXT_RULES = [
+        { id: 'advance_fee', w: 3,
+          es: 'Pide dinero o un pago por adelantado', en: 'Asks for money or an upfront payment',
+          re: /pago (por )?adelantado|pagar (una |un )?(pequena |pequeno )?(tasa|cuota|fianza|deposito)|tasa de (inscripcion|registro|activacion|desbloqueo)|transferencia previa|(solo )?(tienes|debes|tendras|hay) que pagar (el |los )?(envio|gastos de envio)|paga(r)? (solo )?(el )?(coste|gastos) del? envio|deposito (inicial )?(requerido|obligatorio)|upfront (fee|payment)|pay (a|an|the) (small )?(fee|deposit) (to|before|first)|western union|moneygram|compra(r|s)? (unas? )?(tarjetas? (de )?regalo|gift ?cards?)|buy (some |the )?gift ?cards?|we will reimburse you|te reembolsamos/ },
+        // Mención suelta (tiendas, aerolíneas…): pesa poco; el pago fuerte de arriba prevalece.
+        { id: 'fee_mention', w: 1, skipIf: 'advance_fee',
+          es: 'Menciona tasas o tarjetas regalo', en: 'Mentions fees or gift cards',
+          re: /gift ?cards?|tarjetas? (de )?regalo|registration fee|processing fee/ },
+        { id: 'task_scam', w: 3,
+          es: 'Típico fraude de "tareas sencillas a cambio de comisión"', en: 'Typical "simple tasks for commission" job scam',
+          re: /(tareas|pedidos) (sencillas|simples|faciles)|simple (online )?tasks?|comision por (cada )?(tarea|pedido)|optimizacion de (pedidos|productos)|boost (orders|products)|dar (me gusta|likes?) .{0,30}gana|(like|liking) (videos|posts) .{0,30}earn/ },
+        { id: 'crypto_invest', w: 4,
+          es: 'Promete inversión o rentabilidad garantizada', en: 'Promises guaranteed investment returns',
+          re: /duplica(r)? (tu|su) (inversion|dinero|capital)|double your (investment|money|crypto)|(rentabilidad|retorno|beneficios?|ganancias?) garantizad[oa]s?|guaranteed (returns?|profits?|income)|100% (seguro|garantizado|safe|guaranteed)|(inversion|inversiones|ganancias|trading|beneficios) sin riesgo|risk[- ]free (investment|profit|trading)|opciones binarias|binary options|senales de (trading|forex)|(forex|crypto|trading) signals|minado en la nube|cloud mining|garantizamos .{0,40}(capital|inversion|dinero|beneficios|ganancias)|(triplica|multiplica|duplica)(r|s)? (tu|su) (capital|inversion|dinero)|(triplicar|multiplicar|duplicar)as (tu|su) (capital|inversion|dinero)/ },
+        { id: 'phishing_account', w: 3,
+          es: 'Intenta que verifiques tu cuenta o des tus claves', en: 'Tries to get you to verify your account or share credentials',
+          re: /(verifica|verifique|valida|valide|confirma|confirme|reactiva|reactive) (hoy |ahora |inmediatamente )?(tu|su|tus|sus|los datos de tu|los datos de su) (cuenta|contrasena|identidad|tarjeta|datos|informacion)|(actualiza|actualice) (tu|su|tus|sus) (cuenta|contrasena|tarjeta|datos (bancarios|de pago|de tarjeta)|informacion de pago|metodo de pago)|(tu|su) cuenta (sera|ha sido|esta|va a ser|quedara|fue|podria ser) (suspendida|bloqueada|limitada|restringida|comprometida|cancelada|desactivada)|(acceso|actividad|inicio de sesion|intento de acceso) (inusual|sospechos[oa])|hemos detectado (un|una) .{0,30}(sospechos|inusual)|(introduce|introduzca|ingresa|ingrese|facilita|facilite|indica|indique|envia|envie)(nos)? (tus|sus) datos (de )?(tarjeta|pago|bancarios)|(verify|confirm|update|validate|reactivate) your (account|password|identity|card|payment|billing)|your account (will be|has been|is) (suspended|locked|limited|restricted|compromised|disabled)|unusual (sign[- ]?in|activity) (detected|on your)|(introduce|ingresa|envia|comparte)(nos)? tu (contrasena|clave|pin|codigo (de )?(verificacion|sms|seguridad))|(enter|send|share|provide) your (password|pin|otp|verification code|security code)/ },
+        { id: 'payment_failed', w: 2,
+          es: 'Dice que tu pago falló y que perderás el servicio', en: 'Says your payment failed and you will lose the service',
+          re: /(su|tu) (pago|cobro|tarjeta) (ha sido|fue|esta) (rechazad[oa]|denegad[oa]|declinad[oa])|(perdera|perderas|perdera usted) (el |tu |su )?(servicio|acceso|cuenta)|your payment (was|has been) (declined|rejected)/ },
+        { id: 'deadline_threat', w: 2,
+          es: 'Plazo corto unido a una amenaza (bloqueo, pérdida, cancelación)', en: 'Short deadline combined with a threat (block, loss, cancellation)',
+          re: /(en|dentro de) (las proximas )?\d+ (horas|minutos).{0,60}(bloque|suspend|cancel|perder|cierre|eliminac)|(bloque|suspend|cancel|elimin)\w*.{0,60}(en|dentro de) (las proximas )?\d+ (horas|minutos)|(hoy mismo|inmediatamente|ahora mismo|de inmediato|antes de manana).{0,60}(bloque|suspend|cancel|perdera|multa|corte)|(bloque|suspend|cancel)\w*.{0,80}(hoy mismo|inmediatamente)|within \d+ (hours|minutes).{0,60}(suspend|lock|close|cancel)/ },
+        { id: 'parcel_fee', w: 3,
+          es: 'Paquete retenido y tasas que hay que pagar', en: 'Held parcel and fees you must pay',
+          re: /(paquete|envio|pedido) (esta |ha sido |fue )?(retenid[oa]|detenid[oa]|bloquead[oa]) (en|por)|retenid[oa] en (la )?aduana|pag(a|ue|ar|ando) [\d.,]+\s?(€|eur|euros) (de )?(tasas|gastos|aduana|envio|gestion|reexpedicion|reprogramacion)|reprogramar (la )?(entrega|el envio)|(tasas|gastos) de (aduana|liberacion|reexpedicion)|(your|the) (parcel|package) (is|has been) (held|on hold).{0,60}(fee|pay)/ },
+        { id: 'held_order', w: 2,
+          es: 'Dice que tu pedido o paquete está retenido', en: 'Says your order or parcel is held',
+          re: /(paquete|envio|pedido)( de \w+)? (esta |ha sido |fue )?(retenid[oa]|detenid[oa]|bloquead[oa])\b/ },
+        { id: 'pay_to_release', w: 2,
+          es: 'Te pide pagar una pequeña cantidad para liberar o recibir algo', en: 'Asks you to pay a small amount to release or receive something',
+          re: /(pago|importe|cantidad) de [\d.,]+\s?(€|eur|euros) para (liberar|recibir|desbloquear|reactivar|entregar)|(paga|pague|abona|abone|ingresa|ingrese)(r)? [\d.,]+\s?(€|eur|euros) para (liberar|recibir|desbloquear|reactivar|entregar)/ },
+        { id: 'fine_pressure', w: 2,
+          es: 'Multa con descuento si pagas ya o recargo si esperas', en: 'Fine with a discount if you pay now or a surcharge if you wait',
+          re: /pague (hoy|ahora|ya|antes de).{0,40}(descuento|bonificacion|recargo)|(se duplicara|se incrementara|se recargara).{0,30}(importe|multa|sancion|deuda)|(descuento|bonificacion) (del )?\d+ ?%.{0,40}(pague|pago|abone)/ },
+        { id: 'tax_refund', w: 3,
+          es: 'Devolución o multa «oficial» inesperada', en: 'Unexpected «official» refund or fine',
+          re: /(hacienda|agencia tributaria|aeat|dgt|seguridad social).{0,60}(devolucion|reembolso)|(hacienda|agencia tributaria|aeat|dgt|seguridad social|trafico).{0,60}(tiene|tienes|consta|figura).{0,30}(multa|deuda|sancion)|devolucion (pendiente )?de [\d.,]+\s?(€|eur|euros)|reembolso pendiente|(tax refund|irs).{0,40}(refund|owe)/ },
+        { id: 'family_scam', w: 3,
+          es: 'Típico mensaje de «soy tu hijo/a, número nuevo, necesito dinero»', en: 'Typical «it\'s your child, new number, I need money» message',
+          re: /(se me ha (roto|estropeado|caido)|he perdido|me han robado) (el |mi )?(movil|telefono)|(hazme|me hagas|me haces|me puedes hacer|necesito) (un |una )?(bizum|transferencia) (urgente)?|(bizum|transferencia) urgente|hi mom.{0,40}new number/ },
+        // «Número nuevo» solo: mensaje normal entre conocidos; suma poco y avisa junto a una petición de dinero.
+        { id: 'new_number', w: 2,
+          es: 'Dice que es un número nuevo', en: 'Says it is a new number',
+          re: /(este es |es |desde )?mi (numero|telefono|movil) nuevo|this is my new number/ },
+        { id: 'boss_scam', w: 3,
+          es: 'Falso jefe o director que pide una transferencia', en: 'Fake boss asking for a transfer',
+          re: /soy (el|tu) (director|jefe|ceo|gerente|presidente|administrador).{0,100}(transferencia|pago|bizum|tarjetas)|necesito que (hagas|realices|me hagas) (una |un )?(transferencia|pago|bizum)|(transferencia|pago|bizum) (urgente|hoy mismo|inmediata)/ },
+        { id: 'secrecy', w: 2,
+          es: 'Te pide que no se lo cuentes a nadie', en: 'Asks you not to tell anyone',
+          re: /no se lo (cuentes|digas|comentes) a nadie|no (cuentes|digas|hables|comentes) (esto |de esto )?(a|con) nadie|no lo (cuentes|comentes|hables)( con nadie| a nadie)|keep this (a secret|secret|between us)|don't tell anyone/ },
+        { id: 'secret_offer', w: 2,
+          es: 'Oferta «secreta» o «exclusiva»', en: '«Secret» or «exclusive» offer',
+          re: /oportunidad (secreta|exclusiva|unica)|solo (unos pocos|unas pocas|conocemos|lo sabemos)|informacion (privilegiada|confidencial) (para|sobre) invertir|secret (opportunity|method)/ },
+        { id: 'subscription_scam', w: 3,
+          es: 'Cobro de suscripción que no reconoces y un teléfono al que llamar', en: 'Charge for a subscription you don\'t recognise and a number to call',
+          re: /(suscripcion|membresia|cargo|pago) .{0,40}(renovara|renovada|renovado|se cobrara|se cargara|cargaremos).{0,40}[\d.,]+\s?(€|eur|euros|\$|usd)|si no (la |lo |el )?reconoces.{0,40}llama|llama (inmediatamente|ahora|urgentemente|ya) (a este|al)|call (this number|us) (immediately|now)/ },
+        { id: 'chain_hoax', w: 3,
+          es: 'Cadena: «compártelo antes de que lo borren»', en: 'Chain message: «share it before they delete it»',
+          re: /comparte (esto|este mensaje|este video) con \d+|reenvia(lo)? a \d+|antes de que (lo )?(borren|eliminen|censuren|bloqueen)|(los )?medios no (quieren|te lo)|no quieren que (lo )?sepas|difunde (esto|este mensaje)|share this with \d+/ },
+        { id: 'quick_return', w: 2,
+          es: 'Promete multiplicar una cantidad en pocos días', en: 'Promises to multiply a sum in a few days',
+          re: /inviert[ea] [\d.,]+\s?(€|eur|euros)?.{0,30}(recibe|recibiras|gana|ganaras|obten)|recibe [\d.,]+\s?(€|eur|euros) en \d+ (horas|dias)|invest [\d.,$]+.{0,30}(get|receive|earn) [\d.,$]+/ },
+        { id: 'personal_data', w: 2,
+          es: 'Pide documentos o datos bancarios', en: 'Asks for ID documents or bank details',
+          re: /(envia(nos)?|manda(nos)?|adjunta|facilita(nos)?|proporciona(nos)?) (tu|una copia de tu|foto de tu) (dni|nie|pasaporte|documento de identidad|numero de cuenta|iban|datos bancarios|tarjeta)|(send|provide|share|upload) (us )?(a )?(copy of )?your (passport|id card|driver'?s licen[cs]e|ssn|social security|bank (account|details)|iban|credit card)|numero de la seguridad social/ },
+        { id: 'prize', w: 3,
+          es: 'Anuncia premios, herencias o fondos inesperados', en: 'Announces unexpected prizes, inheritances or funds',
+          re: /has ganado|enhorabuena.{0,40}(ganado|premio|ganador)|ha(s)? sido (seleccionad[oa]|elegid[oa]) (como )?ganador|(reclamar|reclama|recoger|recoge) (el|tu|su) premio|felicidades.{0,40}(ganador|premio)|you('ve| have) won|congratulations.{0,40}(won|winner|prize|selected)|loteria|lottery|herencia (de|millonaria)|inheritance|unclaimed (funds|prize)|fondos (sin reclamar|congelados)/ },
+        { id: 'fake_income', w: 2,
+          es: 'Ingresos fáciles o irreales', en: 'Easy or unrealistic income',
+          re: /gana(r|s)? (hasta )?\d[\d.,]*\s?(€|eur|euros|\$|usd|dolares)\s?(al dia|diarios|por dia|a la semana|semanales|por hora|al mes)|earn (up to )?\$?\d[\d,.]*\s?(usd|\$|dollars)?\s?(per|a|\/)\s?(day|hour|week)|ingresos? pasivos?|passive income|libertad financiera|financial freedom|dinero facil|easy money|get rich|trabaja desde casa (y )?gana|work from home (and )?earn/ },
+        { id: 'offplatform', w: 2,
+          es: 'Te saca de la plataforma (WhatsApp/Telegram)', en: 'Moves you off-platform (WhatsApp/Telegram)',
+          re: /(escribe|contacta|habla|anade|agrega|manda|envia)(me|nos|le)? .{0,30}(whatsapp|telegram|wa\.me|t\.me)|(write|message|contact|text|add|dm) (me|us) .{0,25}(whatsapp|telegram)|wa\.me\/|t\.me\/|escribeme al privado|mensajes? al privado|text me (at|on)|dm me for/ },
+        { id: 'offplatform_mention', w: 1, skipIf: 'offplatform', skipHosts: /(^|\.)(whatsapp\.com|telegram\.org|t\.me)$/,
+          es: 'Menciona WhatsApp/Telegram', en: 'Mentions WhatsApp/Telegram',
+          re: /whatsapp|telegram/ },
+        // Frases típicas de quien necesita convencerte de que no es una estafa.
+        { id: 'reassure', w: 2, noWarn: true,
+          es: 'Insiste en que "no es una estafa"', en: 'Insists it is "not a scam"',
+          re: /no es (una )?(estafa|fraude|timo)|not a (scam|fraud)|100% (real|legal|legit)|sin estafas/ },
+        { id: 'urgency', w: 1,
+          es: 'Presión de urgencia', en: 'Urgency pressure',
+          re: /ultimas (plazas|unidades|horas)|solo (hoy|por hoy)|actua (ahora|ya)|oferta (limitada|termina hoy)|expira (hoy|en \d+ horas)|plazas limitadas|no (dejes|pierdas) (pasar )?(esta|la) oportunidad|urgente|ultima oportunidad|caduca en \d+ (minutos|horas)|act now|limited (spots|time offer)|expires (today|soon|in \d+ hours)|last chance|hurry/ }
+    ];
+
+
+    // ── Contexto: avisos, noticias y consejos contra estafas no deben puntuar ──
+    // Si cerca de la coincidencia hay una palabra de advertencia ("cuidado", "nunca",
+    // "no existe", "la policía alerta"…), esa coincidencia se ignora. Excepción: si el
+    // mismo contexto tiene "no es una estafa", se trata como señal, no como aviso.
+    const WARN = /\b(cuidado|ojo|alerta|alertan|advierte|advierten|advertencia|desconfia|desconfiar|desconfien|no (existe|hay|te fies|caigas|garantiza)|nunca|jamas|evita|evitar|evitan|detecta|detectan|estafa|estafas|fraude|fraudes|suplanta|suplantan|scam|scams|phishing|beware|warns|warning|never|avoid|do not|don't|no guarantee|policia|guardia civil)\b/;
+    const REASSURE = /no es (una )?(estafa|fraude|timo)|not a (scam|fraud)/;
+
+    function hits(rule, text) {
+        const g = new RegExp(rule.re.source, 'g');
+        let m;
+        while ((m = g.exec(text)) !== null) {
+            if (m[0] === '') { g.lastIndex++; continue; }
+            if (rule.noWarn) return true;
+            const ctx = text.slice(Math.max(0, m.index - 90), m.index + m[0].length + 40)
+                .replace(/(para|a fin de|con el fin de) evitar/g, '');
+            if (!WARN.test(ctx) || REASSURE.test(ctx)) return true;
+        }
+        return false;
+    }
+
+    // ── Enlaces ──────────────────────────────────────────────────────────
+    const SECOND_LEVEL = new Set(['co', 'com', 'org', 'net', 'gov', 'edu', 'ac']);
+    const BRANDS = ['linkedin', 'paypal', 'amazon', 'microsoft', 'google', 'apple', 'netflix',
+        'facebook', 'instagram', 'whatsapp', 'binance', 'coinbase', 'santander', 'bbva',
+        'caixabank', 'correos', 'dhl', 'fedex'];
+    const BRAND_ALLOW = new Set(['google-analytics.com']);
+    // Dominios que reescriben enlaces: el texto visible NO coincide con el href y es normal.
+    const REDIRECTORS = new Set(['lnkd.in', 'linkedin.com', 't.co', 'facebook.com', 'google.com',
+        'bit.ly', 'youtu.be', 'goo.gl']);
+    const SHORTENERS = new Set(['bit.ly', 'tinyurl.com', 'cutt.ly', 'is.gd', 'rb.gy', 'shorturl.at', 't.ly', 'ow.ly']);
+    // Terminaciones que son extensiones de archivo / tecnologías, no dominios en un texto de enlace.
+    const NOT_TLD = new Set(['js', 'ts', 'py', 'md', 'json', 'zip', 'mov', 'exe', 'pdf', 'doc', 'docx', 'xls', 'xlsx',
+        'ppt', 'pptx', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'txt', 'csv', 'css', 'html', 'php', 'jsx', 'tsx', 'rs', 'sh', 'rb']);
+    const RISKY_TLD = new Set(['top', 'xyz', 'click', 'icu', 'cfd', 'sbs', 'monster', 'rest', 'zip', 'mov']);
+
+    function registrable(host) {
+        const p = host.split('.').filter(Boolean);
+        if (p.length <= 2) return host;
+        const last = p[p.length - 1], prev = p[p.length - 2];
+        return (last.length === 2 && SECOND_LEVEL.has(prev)) ? p.slice(-3).join('.') : p.slice(-2).join('.');
+    }
+    const labelOf = (reg) => reg.split('.')[0];
+
+    function brandSpoof(host) {
+        const reg = registrable(host);
+        if (BRAND_ALLOW.has(reg)) return null;
+        const label = labelOf(reg);
+        const tokens = host.split(/[.-]/);
+        const variants = [host, host.replace(/0/g, 'o'), host.replace(/1/g, 'l'),
+            host.replace(/1/g, 'i'), host.replace(/rn/g, 'm'), host.replace(/vv/g, 'w'),
+            host.replace(/ln/g, 'in')];
+        for (const b of BRANDS) {
+            if (label === b) continue;                       // dominio legítimo (amazon.es, google.com…)
+            if (tokens.includes(b)) return b;                // amazon-seguridad.com, linkedin.com.verify.top
+            for (let i = 1; i < variants.length; i++) {      // paypa1.com, amaz0n.es, linkedln.com
+                if (variants[i] !== host && variants[i].split(/[.-]/).includes(b)) return b;
+            }
+        }
+        return null;
+    }
+
+    function scoreLinks(links) {
+        const found = new Map(); // id -> {w, example}
+        const add = (id, w, ex) => { if (!found.has(id)) found.set(id, { w, example: ex }); };
+        (links || []).slice(0, 150).forEach(l => {
+            let u;
+            try { u = new URL(l.href); } catch (e) { return; }
+            if (u.protocol !== 'http:' && u.protocol !== 'https:') return;
+            const host = u.hostname.toLowerCase();
+            const reg = registrable(host);
+            if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host) || u.username) add('link_obfuscated', 3, host); // IP o usuario@: casi nunca es legítimo
+            if (host.includes('xn--')) add('link_obfuscated', 2, host);
+            if (SHORTENERS.has(reg)) add('link_shortener', 1, host);
+            if (RISKY_TLD.has(host.split('.').pop()) && !BRAND_ALLOW.has(reg)) add('link_risky_tld', 1, host);
+            const spoof = brandSpoof(host);
+            if (spoof) add('link_brand_spoof', 3, host);
+            // Texto visible que parece un dominio pero el enlace va a otro.
+            // Solo si TODO el texto es un dominio (con ruta opcional): "Node.js docs", "e.g. X"
+            // o "main.zip" no son dominios. Se descartan extensiones de archivo y TLD de 1 letra.
+            const shown = (l.text || '').trim().toLowerCase();
+            const m = shown.match(/^(?:https?:\/\/)?(?:www\.)?([a-z0-9-]+(?:\.[a-z0-9-]+)+)(?:[\/?#]\S*)?$/);
+            const shownTld = m ? m[1].split('.').pop() : '';
+            if (m && shownTld.length >= 2 && !NOT_TLD.has(shownTld) && !REDIRECTORS.has(reg)) {
+                const shownReg = registrable(m[1]);
+                if (shownReg !== reg) add('link_mismatch', 3, `${shownReg} → ${reg}`);
+            }
+        });
+        return found;
+    }
+
+    const LINK_LABELS = {
+        link_obfuscated: { es: 'Enlace con IP, usuario@ o caracteres disfrazados', en: 'Link with IP, user@ or disguised characters' },
+        link_shortener:  { es: 'Enlace acortado que oculta el destino', en: 'Shortened link hiding the destination' },
+        link_risky_tld:  { es: 'Enlace a un dominio de riesgo (.top, .xyz…)', en: 'Link to a risky domain (.top, .xyz…)' },
+        link_brand_spoof:{ es: 'Enlace que imita a una marca conocida', en: 'Link imitating a well-known brand' },
+        link_mismatch:   { es: 'El texto del enlace dice una web pero lleva a otra', en: 'Link text shows one site but goes to another' }
+    };
+
+    // ── Enlaces escritos DENTRO del texto (SMS, WhatsApp, correo) ──────────────────────
+    // En un SMS no hay <a href>: el enlace es solo texto. Se extraen y pasan por el mismo
+    // análisis que los enlaces de una página.
+    const TLD_TEXT = 'com|net|org|es|info|eu|xyz|top|icu|click|cfd|sbs|monster|rest|vip|cc|online|site|link|live|shop|app';
+    const TEXT_URL_RE = new RegExp(
+        '(?:https?:\\/\\/|www\\.)[^\\s<>"\'\\)\\]]+' +
+        '|\\b(?:' + Array.from(SHORTENERS).map(d => d.replace(/\./g, '\\.')).join('|') + ')\\/[^\\s<>"\'\\)\\]]*' +
+        '|\\b[a-z0-9][a-z0-9-]*(?:\\.[a-z0-9-]+)*\\.(?:' + TLD_TEXT + ')\\b(?:\\/[^\\s<>"\'\\)\\]]*)?', 'gi');
+
+    function textLinks(raw) {
+        const out = [], seen = new Set();
+        (String(raw).toLowerCase().match(TEXT_URL_RE) || []).slice(0, 20).forEach(m => {
+            const clean = m.replace(/[.,;:!?]+$/, '');
+            const href = /^https?:\/\//.test(clean) ? clean : 'https://' + clean;
+            if (!seen.has(href)) { seen.add(href); out.push({ href, text: '' }); }
+        });
+        return out;
+    }
+
+    // Organismos y empresas que más se suplantan por SMS, con sus dominios oficiales.
+    // Si el mensaje se presenta como uno de ellos (en sus primeras palabras) y enlaza a otro
+    // dominio, avisa. Ampliar con bancos cuando se tenga la lista de dominios verificada.
+    const ENTITIES = [
+        { id: 'dgt',     re: /\b(dgt|direccion general de trafico)\b/, ok: ['dgt.es', 'dgt.gob.es'] },
+        { id: 'correos', re: /\bcorreos\b/, ok: ['correos.es', 'correosexpress.com', 'correosexpress.es'] },
+        { id: 'aeat',    re: /\b(agencia tributaria|aeat|hacienda)\b/, ok: ['agenciatributaria.gob.es', 'agenciatributaria.es', 'hacienda.gob.es'] },
+        { id: 'segsoc',  re: /\bseguridad social\b/, ok: ['seg-social.es', 'seg-social.gob.es'] },
+        { id: 'dhl',     re: /\bdhl\b/, ok: ['dhl.com', 'dhl.es', 'dhl.de'] },
+        { id: 'seur',    re: /\bseur\b/, ok: ['seur.com', 'seur.es'] },
+        { id: 'mrw',     re: /\bmrw\b/, ok: ['mrw.es'] },
+        { id: 'amazon',  re: /\bamazon\b/, ok: ['amazon.es', 'amazon.com', 'amzn.eu', 'amzn.to', 'a.co'] },
+        { id: 'netflix', re: /\bnetflix\b/, ok: ['netflix.com'] },
+        { id: 'bizum',   re: /\bbizum\b/, ok: ['bizum.es'] }
+    ];
+    const SAFE_GENERIC = ['google.com', 'youtube.com', 'youtu.be', 'wikipedia.org', 'whatsapp.com', 'wa.me'];
+    const isHostOf = (host, dom) => host === dom || host.endsWith('.' + dom);
+
+    function impersonation(text, urls) {
+        if (!urls.length || text.length > 500) return null;   // pensado para mensajes cortos
+        const head = text.slice(0, 100);
+        for (const e of ENTITIES) {
+            if (!e.re.test(head)) continue;
+            for (const l of urls) {
+                let h; try { h = new URL(l.href).hostname; } catch (_) { continue; }
+                if (e.ok.some(d => isHostOf(h, d)) || SAFE_GENERIC.some(d => isHostOf(h, d))) continue;
+                return { entity: e.id, host: h };
+            }
+        }
+        return null;
+    }
+
+    const LEVELS = { yellowFrom: 3, redFrom: 6 };
+
+    function evaluate(rawText, links, opts) {
+        const host = String((opts && opts.host) || '').toLowerCase();
+        const text = norm(rawText);
+        const reasons = [];
+        if (text.length >= 25) {
+            const fired = new Set();
+            TEXT_RULES.forEach(r => {
+                if (r.skipIf && fired.has(r.skipIf)) return;
+                if (r.skipHosts && host && r.skipHosts.test(host)) return;
+                if (hits(r, text)) { fired.add(r.id); reasons.push({ id: r.id, w: r.w, es: r.es, en: r.en }); }
+            });
+        }
+        const tl = textLinks(rawText);
+        scoreLinks((links || []).concat(tl)).forEach((v, id) => {
+            const lab = LINK_LABELS[id];
+            reasons.push({ id, w: v.w, es: lab.es, en: lab.en, example: v.example });
+        });
+        const imp = impersonation(text, tl);
+        if (imp) reasons.push({ id: 'impersonation_link', w: 3,
+            es: 'Dice ser un organismo o empresa de confianza, pero el enlace no es el oficial',
+            en: 'Claims to be a trusted agency or company, but the link is not the official one', example: imp.host });
+        reasons.sort((a, b) => b.w - a.w);
+        const score = reasons.reduce((s, r) => s + r.w, 0);
+        const level = score >= LEVELS.redFrom ? 'red' : (score >= LEVELS.yellowFrom ? 'yellow' : 'green');
+        return { score, level, reasons };
+    }
+
+    root.ArgiraRules = { evaluate, scoreLinks, norm, LEVELS };
+})(globalThis);
+
+</script>
+<script>
+(function(){var g=function(i){return document.getElementById(i)},ta=g('rv-t'),go=g('rv-go'),cl=g('rv-x'),out=g('rv-o');if(!ta||!go||!out)return;
+var H={green:'🟢 Sin señales conocidas',yellow:'🟡 Atención: hay señales de posible estafa o presión',red:'🔴 Cuidado: varias señales de estafa'};
+var A={green:'Esto no garantiza que sea seguro: la revisión solo conoce algunas señales. Si dudas, no pulses enlaces del mensaje y entra tú a la web oficial.',yellow:'No pulses enlaces del mensaje ni respondas con datos. Busca tú la web oficial o llama a un teléfono que hayas buscado tú.',red:'No pagues, no pulses enlaces ni des datos. Si dice ser un organismo o una empresa, entra tú a su web oficial o llama a un teléfono que hayas buscado tú.'};
+function el(t,x,c){var e=document.createElement(t);if(x)e.textContent=x;if(c)e.className=c;return e}
+function run(){out.replaceChildren();var t=ta.value.trim();if(!t){out.append(el('p','Pega primero el mensaje que quieres revisar.','nota'));ta.focus();return}
+ var R=globalThis.ArgiraRules;if(!R){out.append(el('p','No se pudo cargar la revisión en este dispositivo.','nota'));return}
+ var r=R.evaluate(t.slice(0,10000),[]),box=el('div','',''),h=el('p',H[r.level]);h.style.fontWeight='700';h.tabIndex=-1;box.append(h);
+ if(r.reasons.length){var ul=el('ul','','nota');r.reasons.slice(0,6).forEach(function(x){ul.append(el('li',x.es+(x.example?' ('+x.example+')':'')))});box.append(ul)}
+ box.append(el('p',A[r.level],'nota'),el('p','La revisión se hace aquí, en tu dispositivo: el texto no se envía ni se guarda.','nota'));
+ box.style.cssText='border:2px solid currentColor;border-radius:.6rem;padding:.6rem .8rem;margin:.5rem 0';out.append(box);if(t.length>10000)out.append(el('p','Solo se han revisado los primeros 10.000 caracteres.','nota'))}
+go.onclick=run;cl.onclick=function(){ta.value='';out.replaceChildren();ta.focus()}})();
+</script>
+<script>
+/* v11e · P6: «Volver a IDEAKEY» solo si se llega desde IDEAKEY (?from=ideakey). Sin datos, sin guardar nada. */
+(function(){try{if(new URLSearchParams(location.search).get('from')!=='ideakey')return;document.getElementById('vik').hidden=false}catch(e){}})();
+</script>
+</body></html>
