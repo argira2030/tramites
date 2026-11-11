@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trámites · webs oficiales</title><style>
+:root{color-scheme:light dark;--bg:#FBF5EC;--tx:#2a1d14;--mu:#5d4b3e;--pri:#B4532A;--pt:#fff;--bd:#8c6a55;--ok:#176a2e;--wn:#8a4b00;--tar:#fff;--soft:#F3E6D4;--hi:#ffe3a8}
+@media (prefers-color-scheme:dark){:root{--bg:#1c1511;--tx:#f6ebe0;--mu:#cdb9a8;--pri:#F0A07A;--pt:#1c1511;--bd:#a88b76;--ok:#8be0a4;--wn:#ffc46b;--tar:#271d17;--soft:#33261d;--hi:#4d3a14}}
+@media (prefers-contrast:more){:root{--bg:#fff;--tx:#000;--mu:#1a1a1a;--pri:#7a2a0c;--pt:#fff;--bd:#000;--ok:#0b4a1e;--wn:#5a2f00;--tar:#fff;--soft:#f0f0f0;--hi:#ffe08a}.org,.atajos,.pill,.pop,.bd,input[type=search],.xb{border-width:3px}}
+@media (prefers-contrast:more) and (prefers-color-scheme:dark){:root{--bg:#000;--tx:#fff;--mu:#fff;--pri:#ffc9ad;--pt:#000;--bd:#fff;--ok:#a8f0bd;--wn:#ffd88a;--tar:#000;--soft:#1a1a1a;--hi:#5a4200}}
+@media (max-width:20em){details.tr>summary{flex-wrap:wrap}}
+.ikp a{color:var(--pri);font-weight:700;text-underline-offset:.15em}
+@media (forced-colors:active){:focus-visible{outline-color:Highlight}.pill[aria-pressed=true]{forced-color-adjust:none;background:Highlight;color:HighlightText;border-color:Highlight}}
+*{box-sizing:border-box}html{font-size:clamp(100%,.85rem + .45vw,125%)}
+body{margin:0;background:var(--bg);color:var(--tx);font:1.05rem/1.5 system-ui,sans-serif;padding:max(1rem,env(safe-area-inset-top)) 1rem max(1.5rem,env(safe-area-inset-bottom))}
+main{max-width:40rem;margin:0 auto}h1{font-size:1.7rem;margin:.3rem 0}h2{font-size:1.25rem;margin:1.6rem 0 .6rem}
+.nota{color:var(--mu);font-size:.95rem;margin:.4rem 0}
+:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+button,summary,input,a.btn{font:inherit;min-height:56px}
+.pills{display:flex;flex-wrap:wrap;gap:.5rem;margin:.6rem 0}
+.pill,.pop{border:2px solid var(--bd);background:var(--tar);color:var(--tx);border-radius:999px;padding:.5rem 1.1rem;cursor:pointer}
+.pill[aria-pressed=true]{background:var(--pri);color:var(--pt);border-color:var(--pri);font-weight:700}
+.atajos{border:2px solid var(--bd);border-radius:1rem;margin:1.2rem 0;background:var(--tar)}.atajos>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;padding:.5rem 1rem;font-size:1.2rem;font-weight:700}.atajos>summary::after{content:"";width:.6rem;height:.6rem;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg)}.atajos[open]>summary::after{transform:rotate(-135deg)}.atajos>p,.atajos>.pops{margin:.4rem 1rem 1rem}.pops{display:grid;gap:.6rem}.pop{border-radius:1rem;text-align:left;font-weight:600;display:flex;gap:.6rem;align-items:center}
+input[type=search]{width:100%;border:2px solid var(--bd);border-radius:999px;padding:.5rem 1.1rem;background:var(--tar);color:var(--tx)}
+.org{background:var(--tar);border:2px solid var(--bd);border-radius:1.1rem;padding:1rem;margin:1rem 0}
+.org h4{margin:0;font-size:1.2rem}.lvh{font-size:1.2rem;margin:1.4rem 0 .2rem}.org header{display:flex;gap:.7rem;align-items:flex-start;margin-bottom:.6rem}
+.ic{font-size:1.8rem;line-height:1}.lv{display:inline-block;background:var(--soft);border-radius:999px;padding:.1rem .7rem;font-size:.85rem;font-weight:700;margin-top:.3rem}
+details.tr{border:2px solid var(--bd);border-radius:1rem;margin:.5rem 0;background:var(--bg)}
+details.tr>summary{list-style:none;cursor:pointer;display:flex;gap:.6rem;align-items:center;justify-content:space-between;padding:.5rem .9rem;font-weight:700}
+details.tr>summary::-webkit-details-marker{display:none}
+details.tr>summary::after{content:"";flex:none;width:.6rem;height:.6rem;border-right:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(45deg)}
+details.tr[open]>summary::after{transform:rotate(-135deg)}details.tr[open]>summary{background:var(--soft);border-radius:.9rem .9rem 0 0}
+details.hi{outline:4px solid var(--pri);background:var(--hi)}
+.bd{display:inline-block;border:2px solid currentColor;border-radius:999px;padding:0 .6rem;font-size:.85rem;font-weight:700;white-space:normal;max-width:100%}.bd.ok{color:var(--ok)}.bd.no{color:var(--wn)}.bd.rd{color:var(--mu);border-style:dashed}.bd.fe{color:var(--tx);font-weight:600}
+.body{padding:.2rem 1rem 1rem}ol{padding-left:1.3rem}li{margin:.4rem 0}
+a.btn{display:flex;align-items:center;justify-content:center;background:var(--pri);color:var(--pt);border-radius:999px;font-weight:700;text-decoration:none;padding:.5rem 1.2rem;margin-top:.8rem}
+.xb{border-top:2px solid var(--bd);margin-top:.8rem;padding-top:.3rem}.xb h5{font-size:1.05rem;margin:.4rem 0;display:flex;gap:.5rem;align-items:center;flex-wrap:wrap}.xb p{margin:.3rem 0}.aviso{border-left:5px solid var(--wn);padding-left:.7rem}
+</style></head><body><main>
+<h1>Trámites</h1>
+<p>Trámites te lleva a la web oficial de cada gestión: la cita del DNI, pedir el paro, pedir información a un ayuntamiento…</p>
+<ol><li>Elige un trámite en los atajos o busca por organismo.</li><li>Lee los pasos y qué necesitas.</li><li>Pulsa «Ir a la web oficial».</li></ol>
+<p class="nota">No pide ni guarda tus datos y no hace el trámite por ti: solo te acompaña hasta la web oficial.</p>
+<details class="atajos" open><summary>Atajos: donde más gente se atasca</summary><p class="nota">Elegidos por las esperas de cita previa (OCU), no medidos: esta web no cuenta lo que haces.</p><div id="pop" class="pops"></div></details>
+<h2>Todos los organismos</h2>
+<input id="q" type="search" placeholder="Buscar organismo o trámite" aria-label="Buscar organismo o trámite">
+<div id="lv" class="pills" role="group" aria-label="Nivel"></div>
+<p id="cnt" class="nota" role="status" aria-live="polite"></p><div id="orgs"></div>
+<p class="nota">No sustituye a la web oficial. Los enlaces se revisan a mano y pueden cambiar.</p>
+</main><script>
+const SC=[
+{t:'Cita para el DNI',n:'DNI',q:'Marta necesita pedir cita para renovar el DNI.',b:'cita previa dni',
+ r:[[1,'citas-dni-rapido.example','Tu cita del DNI en 24 horas'],[1,'tramitesya.example','Gestionamos tu cita previa'],[0,'citapreviadnie.es','Cita previa DNI y pasaporte']],
+ p:[['¿Qué quieres?',['Pedir cita','Qué papeles necesito','Teléfono'],0]],
+ d:['citapreviadnie.es','https://www.citapreviadnie.es/','La cita se pide en esa web o llamando al 060.',1,'Comprobado antes con fuente oficial (nota municipal de 22/05/2026 citada en el análisis).']},
+{t:'Cita en la Seguridad Social',n:'Seguridad Social',q:'Marta necesita cita en la Seguridad Social.',b:'cita previa seguridad social',
+ r:[[1,'citas-seg-social.example','Cita Seguridad Social sin esperas'],[1,'gestoria-rapida.example','Te lo tramitamos hoy'],[0,'sede.seg-social.gob.es','Sede electrónica de la Seguridad Social']],
+ p:[['¿Qué quieres?',['Pedir cita','Consultar mi cita','Teléfono'],0]],
+ d:['sede.seg-social.gob.es','https://sede.seg-social.gob.es/','La cita previa se pide por internet desde la sede electrónica.',1,'Comprobado antes con fuente oficial (lista del encargo).']},
+{t:'Ayuda por dependencia',n:'Dependencia',q:'Marta quiere informarse de la ayuda por dependencia.',b:'ayuda dependencia como pedirla',
+ r:[[1,'ayudas-dependencia-ya.example','Cobra tu ayuda ya'],[1,'subvenciones-ya.example','Solicítala con nosotros'],[0,'imserso.es','Órganos gestores de cada comunidad']],
+ p:[['¿Qué quieres?',['Cómo se pide','Qué papeles necesito','Cuánto me pagan'],0],['¿Dónde?',['Mi comunidad autónoma','Mi ciudad'],0]],
+ d:['imserso.es','https://imserso.es/en/autonomia-personal-dependencia/sistema-autonomia-atencion-dependencia-saad/organos-gestores-ca-direcciones-territoriales-imserso','La ayuda la gestiona cada comunidad. Esa página del Imserso indica dónde pedirla en la tuya.',1,'Comprobado antes con fuente oficial: Imserso (lista del encargo).']}
+];
+const OFICIAL='Página abierta el 8 nov 2026';
+const MENU=(s)=>'Enlace del menú oficial de '+s+', leído el 8 nov 2026';
+const TUYA='Comprobado antes con fuente oficial (lista del encargo); no reabierto el 8 nov 2026';
+const LEIDO11='Texto de la página oficial leído el 11 nov 2026, sin abrirla en el navegador';
+const ABIERTA11='Página abierta el 11 nov 2026';
+const LANPAG='Enlace de la página oficial de Lanbide «¿Qué hacer si me he quedado en paro?», leído el 8 nov 2026';
+/* am = ámbito: mun (municipio), ccaa (comunidad), est (Estado). ic = icono. Un organismo nuevo = un bloque más. */
+const ORGS=[
+{n:'Lan Ekintza',s:'hoy Bilbao Ekintza',am:'mun',ic:'🏢',
+ nota:'Lan Ekintza Bilbao se integró en Bilbao Ekintza en 2011 (BORME). Las webs son de bilbaoekintza.eus.',
+ tr:[
+  {t:'Buscar trabajo',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'La página trata de planes de empleo; la selección va por Lanbide. En el menú del sitio también hay «Intermediación laboral».',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/empleo/mejora-de-la-empleabilidad','Mejora de la empleabilidad, de Bilbao Ekintza.']},
+  {t:'Intermediación laboral',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'Es sobre todo un servicio para empresas. Si estás en paro, la página indica escribir por su formulario de contacto, en el área «Empleo y talento».',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/empleo/intermediacion-laboral','Intermediación laboral: Bilbao Ekintza es agencia de colocación colaboradora de Lanbide.']},
+  {t:'Quiero emprender',w:'Ver la información',v:1,f:MENU('bilbaoekintza.eus'),
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/emprende','Apartado «Emprende» de Bilbao Ekintza.']},
+  {t:'Ver ayudas y convocatorias',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'La lista cambia con cada convocatoria: mira las fechas dentro de cada ayuda.',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/ayudas-y-convocatorias','Apartado «Ayudas» de Bilbao Ekintza.']},
+  {t:'Empleo público',w:'Ver la información',v:1,f:OFICIAL+' (bilbaoekintza.eus)',
+   a:'Desde esa página se entra a la plataforma de los procesos selectivos (opebilbaoekintza.bilbao.eus).',
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/conocenos/oferta-publica-de-empleo','Oferta Pública de Empleo de Bilbao Ekintza.']},
+  {t:'Contactar con Bilbao Ekintza',w:'Ver cómo contactar',v:1,f:MENU('bilbaoekintza.eus'),
+   d:['bilbaoekintza.eus','https://www.bilbaoekintza.eus/contacto','Contacto y atención ciudadana de Bilbao Ekintza.']}]},
+{n:'Ayuntamiento de Bilbao',s:'Pedir información pública',am:'mun',ic:'🏙️',
+ nota:'Información que tiene el ayuntamiento (Ley 19/2013). Para otro municipio, usa la web de ese ayuntamiento.',
+ tr:[
+  {id:'info-bilbao',ik:'m=Bilbao&c=País Vasco&d=a',t:'Pedir información pública',w:'Ir al formulario',v:1,f:LEIDO11+' (bilbao.eus)',
+   a:'Hace falta identificarse con certificado electrónico o BakQ. La web también dice que se puede presentar en el Registro General o en el de los Distritos, pero otra página del ayuntamiento dice que este trámite es solo electrónico: si no puedes identificarte, llama al 010 (944 010 010) antes de ir.',
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite/transparencia/es/derecho-de-acceso-a-la-informacion/acceso-a-la-informacion-publica/solicitud-acceso-a-la-informacion-publica','Formulario de solicitud de acceso a la información pública del Ayuntamiento de Bilbao.']},
+  {id:'info-bilbao-plazos',t:'Cómo funciona y qué plazos hay',w:'Ver la información',v:1,f:LEIDO11+' (bilbao.eus)',
+   a:'La página indica un mes para resolver, ampliable otro mes, y que sin respuesta se entiende denegada.',
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite/transparencia/es/derecho-de-acceso-a-la-informacion/acceso-a-la-informacion-publica/procedimiento-ejercicio-derecho-acceso-informacion-publica','Procedimiento para ejercer el derecho de acceso: qué debe contener la solicitud, plazos y silencio.']},
+  {id:'info-bilbao-seguimiento',t:'Seguir mi solicitud',w:'Ver cómo se sigue',v:1,f:LEIDO11+' (bilbao.eus)',
+   a:'La página da un correo de contacto: registro@bilbao.eus.',
+   d:['bilbao.eus','https://www.bilbao.eus/cs/Satellite/transparencia/es/derecho-de-acceso-a-la-informacion/seguimiento-mi-solicitud','Seguimiento de mi solicitud de acceso a información pública.']}]},
+{n:'Lanbide',s:'Servicio Vasco de Empleo',am:'ccaa',ic:'💼',
+ tr:[
+  {t:'Buscar empleo',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-empleo/es/empleo/buscar-empleo','Apartado «Buscar empleo» de Lanbide.']},
+  {t:'Me he quedado en paro',w:'Darme de alta',v:1,f:OFICIAL+' (lanbide.euskadi.eus)',
+   a:'Lanbide no gestiona la prestación por desempleo: la pide el SEPE (mira el organismo SEPE, en «Estado»). Antes hay que estar de alta como demandante en Lanbide.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/que-hacer-si-me-he-quedado-en-paro/weblan01-empleo/es/','Esa página explica qué hacer y cómo darte de alta en Lanbide.']},
+  {t:'Renovar mi demanda de empleo',w:'Ir a Mi Lanbide',v:1,f:'Enlace del menú oficial («Mi Lanbide»). La renovación se hace ahí: comprobado por el responsable de la web en la web oficial el 11 nov 2026.',
+   a:'Es tu área personal: pide identificarte. IDEAKEY no escribe tus datos.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-app/es/mi-lanbide/mi-perfil','Área personal «Mi Lanbide».']},
+  {t:'Pedir cita en Lanbide',w:'Pedir cita',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-app/es/cita-previa','Apartado «Solicitar cita» de Lanbide.']},
+  {t:'Buscar cursos',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/weblan01-formacion/es/formacion/buscar-cursos','Apartado «Buscar cursos» de Lanbide.']},
+  {t:'Renta de Garantía de Ingresos',w:'Ver la información',v:1,f:LANPAG,
+   a:'Los requisitos se leen en esa web.',
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/ayuda_subvencion/2016/renta-de-garantia-de-ingresos-rgi/weblan01-prestaciones/es/','Página de la RGI en Lanbide.']},
+  {t:'Empleo público',w:'Ver la información',v:1,f:MENU('lanbide.euskadi.eus'),
+   d:['lanbide.euskadi.eus','https://www.lanbide.euskadi.eus/empleo-publico/weblan01-empleo/es/','Apartado «Empleo público» de Lanbide.']}]},
+{n:'Etxebide',s:'Vivienda protegida (Gobierno Vasco)',am:'ccaa',ic:'🏠',
+ tr:[
+  {t:'Apuntarme como solicitante de vivienda',w:'Ver cómo se hace',v:1,f:OFICIAL+' (etxebide.euskadi.eus)',
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/tramitar-solicitud-vivienda','«Cómo solicitar vivienda»: registro de solicitantes de vivienda.']},
+  {t:'Adjudicaciones de vivienda',w:'Ver la información',v:1,f:OFICIAL+' (etxebide.euskadi.eus)',
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/inscripcion-adjudicacion','Inscripción para participar en los procesos de adjudicación.']},
+  {t:'Mi solicitud',w:'Ver la información',v:1,f:MENU('etxebide.euskadi.eus'),
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/mi-solicitud','«Mi solicitud»: consulta y gestión de tu solicitud de vivienda.']},
+  {t:'Derecho a una vivienda',w:'Ver la información',v:1,f:MENU('etxebide.euskadi.eus'),
+   d:['etxebide.euskadi.eus','https://www.etxebide.euskadi.eus/derecho-subjetivo-acceso-vivienda','Información sobre el derecho subjetivo de acceso a una vivienda. Los requisitos se leen en esa web.']}]},
+{n:'Información pública · Euskadi',s:'Gobierno Vasco y Comisión Vasca',am:'ccaa',ic:'⚖️',
+ nota:'El formulario es solo para el Gobierno Vasco y su administración institucional. La reclamación vale también para ayuntamientos y otras entidades públicas vascas.',
+ tr:[
+  {id:'info-euskadi',ik:'c=País Vasco&d=c',t:'Pedir información al Gobierno Vasco',w:'Ir al formulario',v:1,f:ABIERTA11+' (euskadi.eus)',
+   a:'No es para ayuntamientos: cada uno tiene su propia web. Para presentarla por internet hace falta un medio de identificación electrónica. Ojo: esta web dice 20 días para resolver, y la Ley 19/2013 y la web de Bilbao dicen un mes; confírmalo en tu resolución.',
+   d:['euskadi.eus','https://www.euskadi.eus/interaccion_ciudadania/acceso-a-la-informacion-publica/web01-sede/es/','Trámite «Acceso a la información pública» de la sede electrónica del Gobierno Vasco.']},
+  {id:'reclamar-euskadi',t:'Reclamar si me deniegan o no responden',w:'Ver cómo se reclama',v:1,f:ABIERTA11+' (euskadi.eus)',
+   a:'Baja hasta «Reclamación ante la Comisión Vasca». Según esa web: 1 mes si te han contestado que no; si no te han contestado, no hay plazo. Es previa a ir a los tribunales.',
+   d:['euskadi.eus','https://www.euskadi.eus/interaccion_ciudadania/acceso-a-la-informacion-publica/web01-sede/es/','Reclamación ante la Comisión Vasca de Acceso a la Información Pública (administración autonómica y local).']},
+  {id:'gardena-euskadi',t:'Ver la información ya publicada',w:'Ver la información',v:1,f:ABIERTA11+' (enlace del menú de euskadi.eus)',
+   d:['gardena.euskadi.eus','https://www.gardena.euskadi.eus/inicio/','Gardena, portal de transparencia del Gobierno Vasco.']}]},
+{n:'DNI',s:'Policía Nacional',am:'est',ic:'🆔',
+ tr:[
+  {t:'Cita para el DNI',w:'Pedir cita',x:{mano:['DNI actual (si lo perdiste, la denuncia). Si cambias de domicilio: certificado de empadronamiento de menos de 3 meses. Tasa: 12 € (hay exenciones, por ejemplo familia numerosa). Foto: las fuentes no coinciden (unas piden foto reciente, otras dicen que la hace la comisaría); pregúntalo al pedir la cita.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],vias:['Cita por internet en la web de cita previa de la Policía Nacional, o por teléfono en el 060. La tasa se puede pagar por internet al confirmar la cita o en la oficina; las fuentes no coinciden en si se admite tarjeta o solo efectivo.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.']},v:1,f:SC[0].d[4],
+   d:[SC[0].d[0],SC[0].d[1],SC[0].d[2]]},
+  {t:'Información del DNI electrónico',w:'Ver la información',v:0,f:'No comprobado: lo enlaza una web oficial (Lanbide) como «DNI electrónico», pero yo no lo he abierto.',
+   d:['dnielectronico.es','https://www.dnielectronico.es/PortalDNIe/','Portal del DNI electrónico.']}]},
+{n:'SEPE',s:'Prestación por desempleo',am:'est',ic:'🧾',
+ tr:[
+  {t:'Pedir cita en el SEPE',w:'Pedir cita',v:1,f:LANPAG+'. No lo he abierto en la web del SEPE.',
+   d:['sede.sepe.gob.es','https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/cita-previa.html','Cita previa en la sede electrónica del SEPE.']},
+  {t:'Pedir la prestación por desempleo',x:{mano:['Estar inscrito como demandante de empleo. Por internet hace falta Cl@ve, DNI electrónico o certificado digital. Ten a mano el DNI o NIE en vigor.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],plazo:['15 días hábiles desde el cese (no cuentan sábados, domingos ni festivos). Si la empresa te pagó vacaciones al terminar, cuentan desde que acaban. Fuera de plazo no se pierde el derecho, pero no se cobran los días de retraso.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],vias:['Sede electrónica del SEPE; formulario de pre-solicitud por internet (evita pedir cita); oficina de prestaciones con cita previa; registro público; correo administrativo.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.']},w:'Ver cómo se pide',v:1,f:LANPAG+'. No lo he abierto en la web del SEPE.',
+   a:'Por internet hace falta Cl@ve, certificado digital o DNI electrónico (lo indica Lanbide).',
+   d:['sede.sepe.gob.es','https://sede.sepe.gob.es/portalSede/procedimientos-y-servicios/personas/proteccion-por-desempleo/solicitud-de-prestaciones.html','Solicitud de prestaciones por internet en la sede del SEPE.']}]},
+{n:'Seguridad Social',s:'Sede electrónica',am:'est',ic:'🛡️',
+ tr:[
+  {t:'Cita en la Seguridad Social',w:'Pedir cita',x:{mano:['Para reservar la cita: DNI, NIE o pasaporte y teléfono móvil. No hace falta certificado digital ni Cl@ve para pedirla.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.'],vias:['Por internet en la sede electrónica (apartado de cita previa, con o sin certificado) o por teléfono: 91 541 25 30 o 901 10 65 70. Los formularios oficiales de la Seguridad Social también citan run.gob.es/trdcita.',1,'Comprobado por el responsable de la web en la web oficial el 11 nov 2026.']},v:SC[1].d[3],f:SC[1].d[4],
+   d:[SC[1].d[0],SC[1].d[1],SC[1].d[2]]}]},
+{n:'Imserso',s:'Dependencia: dónde pedirla',am:'est',ic:'🤝',
+ tr:[
+  {t:'Ayuda por dependencia',w:'Ver dónde se pide',v:SC[2].d[3],f:SC[2].d[4],
+   d:[SC[2].d[0],SC[2].d[1],SC[2].d[2]]}]},
+{n:'Transparencia del Estado',s:'Información pública de la Administración del Estado',am:'est',ic:'🔎',
+ nota:'Solo para ministerios y organismos del Estado. El Portal no tiene la información de comunidades ni ayuntamientos.',
+ tr:[
+  {id:'info-estado',ik:'d=e',t:'Pedir información pública al Estado',w:'Ir a pedirla',v:1,f:LEIDO11+' (transparencia.gob.es)',
+   a:'Por internet hay que identificarse con Cl@ve o con usuario y contraseña. También se puede presentar en una oficina de registro.',
+   d:['transparencia.gob.es','https://transparencia.gob.es/derecho-acceso/solicite-informacion-publica','Solicite información pública, en el Portal de la Transparencia de la Administración General del Estado.']},
+  {id:'info-estado-pasos',t:'Ver los pasos de la solicitud',w:'Ver los pasos',v:1,f:LEIDO11+' (sede.transparencia.gob.es)',
+   d:['sede.transparencia.gob.es','https://sede.transparencia.gob.es/pagina/index/directorio/PasosSolicitudAcceso','Pasos de la solicitud de acceso, en la sede electrónica del Portal de la Transparencia.']},
+  {id:'reclamar-estado',t:'Reclamar al Consejo de Transparencia',w:'Ver cómo se reclama',v:1,f:ABIERTA11+' (consejodetransparencia.es, «Qué debes saber para reclamar»)',
+   a:'Es opcional y gratuita; también puedes ir directo a los tribunales. Si te contestó el Portal de la Transparencia del Estado: 1 mes desde que te notifican. Si no te contestaron: sin plazo límite. El Consejo estatal solo resuelve lo del Estado y de Asturias, Illes Balears, Cantabria, Extremadura, La Rioja, Ceuta y Melilla. En otras comunidades, como Euskadi, reclama ante su órgano propio (mira «Información pública · Euskadi»); algunas tienen plazos más cortos.',
+   d:['consejodetransparencia.es','https://consejodetransparencia.es/reclamaciones/como_reclamar/que-debes-saber','Qué debes saber para reclamar: plazo, quién resuelve y dónde se presenta.']}]}
+];
+
+const $=id=>document.getElementById(id);
+const h=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const norm=t=>t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+const slug=t=>norm(t).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const LV={mun:'Municipal · Bilbao',ccaa:'Autonómico · Euskadi',est:'Estatal · toda España'};
+ORGS.forEach(o=>o.tr.forEach(t=>{if(!t.id)t.id=slug(o.n+' '+t.t);{t.u=1;t.v=1}}));
+/* Ids cortos fijados a mano. El id largo antiguo (slug) sigue valiendo como alias para enlaces ya guardados. */
+const IDS={'lan-ekintza-buscar-trabajo':'ekintza-trabajo','lan-ekintza-intermediacion-laboral':'ekintza-intermediacion','lan-ekintza-quiero-emprender':'ekintza-emprender','lan-ekintza-ver-ayudas-y-convocatorias':'ekintza-ayudas','lan-ekintza-empleo-publico':'ekintza-empleo-publico','lan-ekintza-contactar-con-bilbao-ekintza':'ekintza-contacto','lanbide-buscar-empleo':'lanbide-empleo','lanbide-me-he-quedado-en-paro':'lanbide-paro','lanbide-renovar-mi-demanda-de-empleo':'lanbide-renovar','lanbide-pedir-cita-en-lanbide':'lanbide-cita','lanbide-buscar-cursos':'lanbide-cursos','lanbide-renta-de-garantia-de-ingresos':'lanbide-rgi','lanbide-empleo-publico':'lanbide-empleo-publico','etxebide-apuntarme-como-solicitante-de-vivienda':'etxebide-apuntarme','etxebide-adjudicaciones-de-vivienda':'etxebide-adjudicaciones','etxebide-mi-solicitud':'etxebide-solicitud','etxebide-derecho-a-una-vivienda':'etxebide-derecho','dni-cita-para-el-dni':'dni-cita','dni-informacion-del-dni-electronico':'dni-electronico','sepe-pedir-cita-en-el-sepe':'sepe-cita','sepe-pedir-la-prestacion-por-desempleo':'sepe-prestacion','seguridad-social-cita-en-la-seguridad-social':'segsocial-cita','imserso-ayuda-por-dependencia':'dependencia'};const ALIAS=Object.create(null);
+ORGS.forEach(o=>o.tr.forEach(t=>{if(IDS[t.id]){ALIAS[t.id]=IDS[t.id];t.id=IDS[t.id]}}));
+const POP=[['info-bilbao','🏙️'],['info-euskadi','⚖️'],['info-estado','🔎'],['dni-cita','🆔'],['sepe-prestacion','🧾'],['segsocial-cita','🛡️']];
+const find=id=>{for(const o of ORGS){const t=o.tr.find(x=>x.id===id);if(t)return[o,t]}return null};
+let lv='',q='';
+const ST=t=>t.u?['ok','✔ Verificado']:!t.v?['no','⚠ Por verificar']:/sin abrirla|No lo he abierto|leído el/.test(t.f||'')?['rd','👁 Leído, no abierto']:['ok','✔ Verificado'];
+const FE=t=>{if(t.u)return 'Enlace comprobado: 11 nov 2026';const m=(t.f||'').match(/\d{1,2} nov 2026/);return /no reabierto/.test(t.f||'')?'Última apertura: antes del '+(m?m[0]:'8 nov 2026'):m?'Revisado: '+m[0]:'Sin fecha de revisión'};
+function trm(o,t){
+ const d=h('details','tr');d.id=t.id;
+ const s=h('summary');s.append(h('span','',t.t),h('span','bd '+ST(t)[0],ST(t)[1]));
+ const b=h('div','body');
+ const ol=h('ol');
+ ol.append(h('li','','Qué encontrarás: '+t.d[2]+' Para ir, pulsa «Ir a la web oficial».'));
+ if(t.a)ol.append(h('li','',t.a));
+ ol.append(h('li','','Antes de escribir ningún dato, comprueba que el nombre de la web es «'+t.d[0]+'».'));
+ const xs=[];[['mano','Qué tener a mano'],['plazo','Plazo'],['vias','Otras vías']].forEach(([k,l])=>{const x=t.x&&t.x[k];if(!x)return;
+  const d=h('div','xb'),hd=h('h5','',l+' ');hd.append(h('span','bd '+(x[1]?'ok':'no'),x[1]?'✔ Verificado':'⚠ Por verificar'));d.append(hd,h('p','',x[0]),h('p','nota',x[2]));xs.push(d)});
+ const f=h('p','nota'+(t.v?'':' aviso'));f.append(h('strong','',ST(t)[1]+'. '),(t.f||'Enlace sin comprobar: revísalo a mano.')+(t.u?' Enlace comprobado por el responsable de la web el 11 nov 2026 (no por mí).':''));
+ const a=h('a','btn','Ir a la web oficial');a.href=t.d[1];a.target='_blank';a.rel='noopener noreferrer';
+ const fe=h('p','');fe.append(h('span','bd fe','📅 '+FE(t)));b.append(ol,...xs,fe,f,a);
+ if(t.ik!==undefined){const p=h('p','nota ikp'),l=h('a','','Prepara el texto con IdeaKey');l.href='https://argira.eus/ideakey/#preguntar'+(t.ik?'?'+new URLSearchParams(t.ik).toString():'');l.target='_blank';l.rel='noopener';
+  p.append('¿No sabes qué escribir? ',l,'. Es opcional: crea un texto para tu IA y no envía nada.');b.append(p)}d.append(s,b);return d}
+function render(){
+ const box=$('orgs'),n=norm(q.trim());box.replaceChildren();let hay=false;
+ let cnt=0;
+ Object.keys(LV).forEach(k=>{
+  const L=ORGS.filter(o=>(o.am||'est')===k&&(!lv||lv===k)&&(!n||norm([o.n,o.s,...o.tr.map(x=>x.t)].join(' ')).includes(n)));
+  if(!L.length)return;hay=true;cnt+=L.length;box.append(h('h3','lvh',LV[k]));
+  L.forEach(o=>{const c=h('section','org');c.setAttribute('aria-label',o.n);
+   const hd=h('header'),ic=h('span','ic',o.ic||'🏢');ic.setAttribute('aria-hidden','true');
+   const w=h('div');w.append(h('h4','',o.n),h('div','nota',o.s),h('span','lv',LV[k]));hd.append(ic,w);c.append(hd);
+   if(o.nota)c.append(h('p','nota',o.nota));
+   o.tr.forEach(t=>c.append(trm(o,t)));box.append(c)})});
+ $('cnt').textContent=cnt+(cnt===1?' organismo':' organismos');
+ if(!hay)box.append(h('p','nota','Nada coincide con «'+q+'».'));
+}
+function irAlTramite(id,noHash){
+ id=String(id||'').toLowerCase();id=ALIAS[id]||id;if(!/^[a-z0-9-]+$/.test(id)||!find(id))return false;
+ if(lv||q){lv='';q='';$('q').value='';pills();render()}
+ const d=$(id);if(!d)return false;d.open=true;
+ document.querySelectorAll('details.hi').forEach(x=>x.classList.remove('hi'));d.classList.add('hi');
+ d.scrollIntoView({block:'start'});d.querySelector('summary').focus({preventScroll:true});
+ if(!noHash&&location.hash!=='#'+id)history.replaceState(null,'','#'+id);return true}
+function pills(){
+ $('lv').replaceChildren(...[['','Todos'],['mun','Municipal'],['ccaa','Autonómico'],['est','Estatal']].map(([k,t])=>{
+  const b=h('button','pill',t);b.type='button';b.setAttribute('aria-pressed',lv===k);b.onclick=()=>{lv=k;pills();render()};return b}))}
+$('pop').replaceChildren(...POP.map(([id,ic])=>{const [o,t]=find(id)||[];if(!t)return h('span');
+ const b=h('button','pop');b.type='button';const i=h('span','',ic);i.setAttribute('aria-hidden','true');b.append(i,h('span','',t.t+' · '+o.n));b.onclick=()=>irAlTramite(id);return b}));
+$('q').oninput=e=>{q=e.target.value;render()};
+pills();render();
+const hash=()=>{const id=location.hash.slice(1);if(id)irAlTramite(id,true)};
+addEventListener('hashchange',hash);hash();
+</script></body></html>
